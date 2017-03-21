@@ -1,21 +1,23 @@
 
 
-<div class="container">
+<div class="container evolution_bar">
   <div class="row">
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
       <table>
         <thead>
-          <div class="content">
-            <div class="progress">
-              <div class="label">
-                <span>33% completed</span>
-              </div>
-              <div class="bar">
-                <div class="wrapper"></div>
-                <div class="progress" style="width: 33%"></div>
+          <th>
+            <div class="content">
+              <div class="progress">
+                <div class="label">
+                  <span>33% completed</span>
+                </div>
+                <div class="bar">
+                  <div class="wrapper"></div>
+                  <div class="progress" style="width: 33%"></div>
+                </div>
               </div>
             </div>
-          </div>
+          </th>
         </thead>
         <tbody>
           <tr>
@@ -34,10 +36,73 @@
 </div>
 
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-      FORMULAIRE A REDIGER
+<div class="all_customer_form">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <%= simple_form_for(@customer) do |f| %>
+          <%= f.error_notification %>
+
+          <%= f.input :customer_company_name, label: "Nom de la société",  placeholder: 'Renoloco' %>
+          <%= f.input :position_in_company, label: "Votre poste dans la société ?", placeholder: 'Directeur général' %>
+          <%= f.input :first_name, label: " Prénom", placeholder: 'Michel' %>
+          <%= f.input :last_name, label: "Nom",  placeholder: 'Dupont' %>
+          <%= f.input :email, label: "Email",  placeholder: 'michel@dupont.fr' %>
+          <%= f.input :mobile_phone_number, label: "Téléphone portable",  placeholder: '06 XX XX XX XX' %>
+          <%= f.input :office_phone_number, label: "Téléphone de bureau", placeholder: '01 XX XX XX XX' %>
+          <%= f.input :customer_address, label: "Adresse actuelle de vos locaux", placeholder: "8 place de l'opéra Paris" %>
+          <%= f.input :works_address, label: "Si vous déménagez, adresse de vos futurs locaux", placeholder: "32 rue Etienne Marcel Paris" %>
+          <%= f.input :needs_surface, label: "Superficie à rénover (en m2)", placeholder: 300 %>
+          <%= f.input :nb_of_employees, label: "Nombre d'employés dans les locaux", placeholder: 30 %>
+          <%= f.input :budget, label: "Budget travaux", placeholder: '40 000' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+        <div class="date-styles">
+          <div class="date-style">
+            <%= f.input :starts_at, label: "Début des travaux :", input_html: {type: "text" , class: "datepicker"}, html5: true %>
+          </div>
+          <div class="date-style">
+            <%= f.input :ends_at, label: "Fin des travaux :", input_html: {type: "text" , class: "datepicker"}, html5: true %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <div class="customer-styles">
+          <div class="customer-style">
+            <%= f.input :customer_startup_style, label: "Esprit startup" %>
+            <%= image_tag "startup", class: "form_images" %>
+          </div>
+          <div class="customer-style">
+            <%= f.input :customer_classical_style, label: "Style ancien" %>
+            <%= image_tag "ancien", class: "form_images" %>
+          </div>
+          <div class="customer-style">
+            <%= f.input :customer_modern_style, label: "Moderne et efficace" %>
+            <%= image_tag "moderne industrie", class: "form_images" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+          <%= f.input :description, label: "Dites-nous en plus sur votre projet", placeholder: "Rénovation des sols et pose du cablage informatique. Aménagement d'un espace détente" %>
+
+          <%= f.button :submit, label: "Valider" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
