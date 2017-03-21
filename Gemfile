@@ -16,6 +16,10 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 
+# geocoder pour autocomplete adresses dans formulaires
+gem "geocoder"
+
+#gem date picker bootstrap
 source "https://rails-assets.org" do
   gem 'rails-assets-bootstrap-datepicker'
 end
