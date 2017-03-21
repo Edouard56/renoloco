@@ -1,0 +1,36 @@
+.form_images {
+  width: 300px;
+  margin: 5px;
+}
+
+.customer-styles {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.customer-style {
+  width: 300px;
+  text-align: center;
+}
+
+.customer-style img {
+  height: 200px;
+}
+
+.date-styles {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.date-style {
+
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #C8C8C8;
+
+}
