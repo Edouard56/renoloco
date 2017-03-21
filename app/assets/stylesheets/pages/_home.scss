@@ -2,3 +2,48 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+#frontpage-presentation {
+    padding-top: 8px;
+}
+
+.presentation-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.title-h2 {
+  margin-bottom: 10px;
+}
+
+#frontpage-presentation hr {
+    border-color: #b9204f;
+    width: 200px;
+    margin-top: 4px;
+    margin-bottom: 25px;
+}
+
+#frontpage-presentation .col-sm-4 {
+    padding: 0 50px;;
+}
+
+#frontpage-presentation .fa {
+    font-size: 72px;
+    color: #938181;
+}
+
+#frontpage-presentation .presentation-text {
+    color: #54565b;
+    margin-top: 10px;
+    font-size: 13pt;
+}
+
+#frontpage-presentation .presentation-text a {
+    font-size: 14pt;
+}
+
+a:hover, a:focus {
+    color: #23527c;
+    text-decoration: underline;
+}
