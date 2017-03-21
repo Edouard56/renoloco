@@ -8,6 +8,9 @@ gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'redis'
 
+#installing devise pour suppliers
+gem 'devise'
+
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
@@ -30,5 +33,7 @@ group :development, :test do
   gem 'listen', '~> 3.0.5'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+
+
 
 
