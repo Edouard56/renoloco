@@ -5,6 +5,13 @@ class CustomersController < ApplicationController
 
   def create
     @customer = Customer.new(customer_params)
+
+    if params[:styles].present?
+      @customer.customer_startup_style    = params[:styles].include?("startup")
+      @customer.customer_classical_style  = params[:styles].include?("classical")
+      @customer.customer_modern_style     = params[:styles].include?("modern")
+    end
+
       raise
     if @customer.save
       redirect_to root_path
