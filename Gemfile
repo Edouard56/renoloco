@@ -33,6 +33,7 @@ gem "geocoder"
 #gem date picker bootstrap
 source "https://rails-assets.org" do
   gem 'rails-assets-bootstrap-datepicker'
+  gem 'rails-assets-image-picker'
 end
 
 group :development, :test do
