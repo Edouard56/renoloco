@@ -5,4 +5,7 @@ class RegistrationsController < Devise::RegistrationsController
   def after_sign_up_path_for(resource)
     pro_path(current_pro) # Or :prefix_to_your_route
   end
+
+  # attachinary installé ici a la pla ce du pros controller
+
 end
