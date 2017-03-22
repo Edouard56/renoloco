@@ -69,10 +69,16 @@
               <a href="/cats/new?class=text-center">
                 <p> doudou@mail.com </p>
                 <p> 01 47 71 27 71 </p>
+
               </a>
             </div>
         </div>
       </div>
     </div>
   </div>
+
+  <% current_pro.photos.each do |photo| %>
+  <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
+  <% end %>
+
 </div>

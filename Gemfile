@@ -8,8 +8,16 @@ gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'redis'
 
-#installing devise pour suppliers
+#installing devise pour les pros
 gem 'devise'
+
+#installing cloudinary
+gem 'cloudinary'
+
+#installing attachinary
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'jquery-fileupload-rails'
+gem 'coffee-rails'
 
 gem 'sass-rails'
 gem 'jquery-rails'
