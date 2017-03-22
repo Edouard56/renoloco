@@ -1,7 +1,8 @@
 
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,1,3,0.2) 0%, rgba(123,2,1,0.2) 50%), url(<%= asset_path 'banner_photo.jpg' %>) ">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,1,3,0.1) 0%, rgba(123,2,1,0.1) 50%), url(<%= asset_path 'banner_photo.jpg' %>) ">
   <div class="banner-content">
-    <h1>Titre</h1>
+    <h1>Créez l'espace de rêve de votre entreprise</h1>
+    <h2>Nous vous aidons à trouver les entreprises de rénovation qui créeront le bureau de vos rêves.</h2>
   </div>
 </div>
 
@@ -55,8 +56,10 @@
       </div>
       <div class="row">
         <div class="presentation-bloc">
-          <div class="col-sm-12 text-center">
-            <a class="btn-treehouse"> <%= link_to "Remplir le questionnaire en 1 minute", new_customer_path %></a>
+          <div class="col-sm-12">
+            <div class= "main-call-to-action text-center">
+              <a class="btn-treehouse text-center"> <%= link_to "Remplir le questionnaire en 1 minute", new_customer_path %></a>
+            </div>
           </div>
         </div>
       </div>
