@@ -8,9 +8,10 @@ class Customer < ApplicationRecord
   geocoded_by :customer_address
   after_validation :geocode, if: :customer_address_changed?
 
-  validates :customer_company_name, presence: true
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+
+  # validates :customer_company_name, presence: true
+  # validates :first_name, presence: true
+  # validates :last_name, presence: true
   # validates :position_in_company, presence: true
   # validates :mobile_phone_number, presence: true
   # validates :office_phone_number, presence: true

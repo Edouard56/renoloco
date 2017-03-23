@@ -4,6 +4,9 @@ class CustomersController < ApplicationController
   end
 
   def create
+
+    #if @customer
+
     @customer = Customer.new(customer_params)
 
     if params[:styles].present?
