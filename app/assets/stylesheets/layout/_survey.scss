@@ -1,3 +1,9 @@
+.questions-container {
+  background: #367591;
+  color: white;
+}
+
+
 .questions-footer {
   position: fixed;
   bottom: 0px;
@@ -18,11 +24,12 @@
       display: flex;
       margin: 2px;
       align-items: center;
-      background-color: darken(#5E9387, 10%);
+      background-color: darken(#367591, 10%);
       border-radius: 2px;
     }
   }
 }
+
 .progress-container {
   display: flex;
   align-items: center;
@@ -38,7 +45,6 @@
     }
   }
 }
-
 
 .question-container {
   height: calc(100vh - 55px);
@@ -86,7 +92,7 @@
     color: black;
     font-size: 14px;
     .ok {
-      background-color: #5E9387;
+      background-color: #367591;
       color: #36554e;
       padding: 10px;
       border-radius: 8px;
@@ -99,3 +105,45 @@
     }
   }
 }
+
+.all-skills-btn {
+  display: flex;
+
+  justify-content: space-around;
+  flex-direction: wrap;
+}
+
+.skills-btn {
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  padding:2px;
+
+  &:hover {
+      transition: all 800ms ease;
+      background-color:#367591;
+    }
+}
+
+
+.image_picker_selector {
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    min-width: 25%;
+
+    .thumbnail.selected {
+      background-color: #61D2B4 !important;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

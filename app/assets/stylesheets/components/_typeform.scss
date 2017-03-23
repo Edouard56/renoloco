@@ -1,9 +1,5 @@
 
 
-.questions-container {
-  background: #5E9387;
-  color: white;
-}
 
 
 
@@ -54,18 +50,7 @@
   margin-top: 20px;
 }
 
-.image_picker_selector {
-  display: flex;
-  justify-content: space-between;
 
-  li {
-    min-width: 25%;
-
-    .thumbnail.selected {
-      background-color: $yellow !important;
-    }
-  }
-}
 
 
 .date-styles {
