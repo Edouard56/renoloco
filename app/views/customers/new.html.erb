@@ -20,13 +20,18 @@
 </div>
 
 
+
+
+
+
 <%= simple_form_for(@customer) do |f| %>
+
 <div class='questions-container'>
   <!-- ERROR NOTIFICATION NE MARCHE PAS -->
   <%= f.error_notification %>
   <div class="question-container">
     <div class="question-content">
-      <h3><span>1</span> <i class="fa fa-arrow-right"></i> L'adresse actuelle de mes bureaux est</h3>
+      <h3><span>1</span> <i class="fa fa-arrow-right"></i> Qu'elle est l'adresse actuelle de vos bureaux ?</h3>
       <div class="input-container">
         <%= f.input :customer_address, placeholder: "8 place de l'opéra Paris", label: false %>
       </div>
@@ -39,74 +44,118 @@
     </div>
   </div>
 
-<% if false %>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-        <div class="question-container" id='next8' data-prev='#next7' data-next='#next9'>
-          <div class="question-content align-boxes">
-            <div>
-              L'adresse actuelle de mes bureaux est
-            </div>
-            <div class='question-input-container'>
-              <%= f.input :customer_address, placeholder: "8 place de l'opéra Paris", label: false %>
-            </div>
-          </div>
-          <div class="question-content align-boxes">
-            <div>
-              et je souhaite faire des travaux au
-            </div>
-            <div class='question-input-container'>
-              <%= f.input :works_address, placeholder: "32 rue Etienne Marcel Paris", label: false %>
-            </div>
-            <div class='question-next-button'>
-              <a href='#next9' id="button1" >Ok!</a>
-            </div>
-          </div>
-        </div>
+
+  <div class="question-container">
+    <div class="question-content">
+      <h3><span>2</span> <i class="fa fa-arrow-right"></i> Ou voulez vous faire des travaux ?</h3>
+      <div class="input-container">
+        <%= f.input :works_address, placeholder: "32 rue Etienne Marcel Paris", label: false %>
       </div>
+      <button>
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>press <strong>ENTER</strong></small>
+      </button>
     </div>
   </div>
-  <div class="question-container" id='next2' data-prev='#next1' data-next='#next3'>
+
+
+  <div class="question-container">
     <div class="question-content">
-      <div>
-        Qu'elle superficie souhaitez vous rénover ?
-      </div>
-      <div class='question-input-container'>
+      <h3><span>3</span> <i class="fa fa-arrow-right"></i> Quelle superficie fait la surface ?</h3>
+      <div class="input-container">
         <%= f.input :needs_surface, label: false, placeholder: '300' %>
       </div>
-      <div>
-        Combien serez vous dans les locaux ?
-      </div>
-      <div class='question-input-container'>
+      <button>
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>press <strong>ENTER</strong></small>
+      </button>
+    </div>
+  </div>
+
+  <div class="question-container">
+    <div class="question-content">
+      <h3><span>4</span> <i class="fa fa-arrow-right"></i> Combien serez-vous dans les locaux ?</h3>
+      <div class="input-container">
         <%= f.input :nb_of_employees, label: false, placeholder: '30' %>
       </div>
-      <div class='question-next-button'>
-        <a href='#next3' id="button1" >Ok!</a>
-      </div>
+      <button>
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>press <strong>ENTER</strong></small>
+      </button>
     </div>
   </div>
 
 
-  <h2>ETAT GENERAL + SOLS + MURS +PAFONDS + CABLAGE INFO+ MOBILIER + ARCHITECTE </h2>
+ <!-- <h2>ETAT GENERAL + SOLS + MURS +PAFONDS + CABLAGE INFO+ MOBILIER + ARCHITECTE </h2> -->
 
-  <div class="question-container" id='next14' data-prev='#next13' data-next='#next15'>
+  <div class="question-container">
     <div class="question-content">
-      <div class="customer-styles">
-        Quel est votre style ?
-            <select name="styles" multiple="multiple" class="image-picker show-html">
-                  <option data-img-src="<%= image_path 'startup.jpg' %>" value="startup">Dynamique / Startup</option>
-                  <option data-img-src="<%= image_path 'ancien.jpg' %>" value="classical">Ancien / Standing</option>
-                  <option data-img-src="<%= image_path 'modern_office.jpg' %>" value="modern">Moderne / Efficace</option>
-            </select>
-        <div class='question-next-button'>
-          <a href='#next15' id="button1" >Ok!</a>
+      <h3><span>5</span> <i class="fa fa-arrow-right"></i> Quels travaux faut il prévoir ?</h3>
+      <div class="input-container">
+        <div class="all-skills-btn">
+          <button>
+            <div class="skills-btn">
+              Peinture <i class="fa fa-paint-brush"></i>
+            </div>
+          </button>
+          <button>
+            <div class="skills-btn">
+              Réseau informatique <i class="fa fa-usb"></i>
+            </div>
+          </button>
+          <button>
+            <div class="skills-btn">
+              Peinture <i class="fa fa-paint-brush"></i>
+            </div>
+          </button>
+          <button>
+            <div class="skills-btn">
+              Réseau informatique <i class="fa fa-usb"></i>
+            </div>
+          </button>
         </div>
       </div>
+      <button>
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>press <strong>ENTER</strong></small>
+      </button>
     </div>
   </div>
 
-  <h2>VISUELS PARTENAIRES</h2>
+
+  <div class="question-container">
+    <div class="question-content">
+      <h3><span>6</span> <i class="fa fa-arrow-right"></i> Quel style de locaux voulez-vous ?</h3>
+      <div class="input-container">
+        <select name="styles" multiple="multiple" class="image-picker show-html">
+          <option data-img-src="<%= image_path 'startup.jpg' %>" value="startup">Dynamique / Startup</option>
+          <option data-img-src="<%= image_path 'ancien.jpg' %>" value="classical">Ancien / Standing</option>
+          <option data-img-src="<%= image_path 'modern_office.jpg' %>" value="modern">Moderne / Efficace</option>
+        </select>
+      </div>
+      <button>
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>press <strong>ENTER</strong></small>
+      </button>
+    </div>
+  </div>
+
+   <!-- <h2>VISUELS PARTENAIRES</h2> -->
+
+<% if false %>
+
+
+
 
   <div class="question-container" id='next1' data-next='#next2'>
     <div class="question-content">
