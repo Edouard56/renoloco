@@ -14,6 +14,9 @@ gem 'devise'
 #installing cloudinary
 gem 'cloudinary'
 
+#installing faker
+gem 'faker'
+
 #installing attachinary
 gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
