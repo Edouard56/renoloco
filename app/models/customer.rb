@@ -1,10 +1,13 @@
 class Customer < ApplicationRecord
 
+  has_many :matches, dependent: :destroy
+
   #attachinary
   has_attachments :photos, maximum: 3
 
   geocoded_by :customer_address
   after_validation :geocode, if: :customer_address_changed?
+
 
   # validates :customer_company_name, presence: true
   # validates :first_name, presence: true
