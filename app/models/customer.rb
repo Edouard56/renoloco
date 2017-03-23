@@ -6,8 +6,8 @@ class Customer < ApplicationRecord
   has_attachments :photos, maximum: 3
 
   #geocoder
-  geocoded_by :customer_address
-  after_validation :geocode, if: :customer_address_changed?
+  geocoded_by :works_address
+  after_validation :geocode, if: :works_address_changed?
 
 
   # validates :customer_company_name, presence: true
