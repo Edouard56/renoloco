@@ -13,6 +13,9 @@ class ApplicationController < ActionController::Base
         :contact_last_name,
         :contact_position,
         :contact_phone_number,
+        :operating_radius,
+        :min_operating_surface,
+        :max_operating_surface,
         { photos: []}
       ])
 
