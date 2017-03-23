@@ -34,6 +34,7 @@ gem "geocoder"
 source "https://rails-assets.org" do
   gem 'rails-assets-bootstrap-datepicker'
   gem 'rails-assets-image-picker'
+  gem 'rails-assets-mdi'
 end
 
 group :development, :test do

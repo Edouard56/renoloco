@@ -6,6 +6,20 @@ $(function() {
   $(".image-picker").imagepicker();
 
 
+  // Autocomplete second field for works address
+
+  $(function(){
+    var $foo = $('#customer_customer_address');
+    var $bar = $('#customer_works_address');
+    function onChange() {
+        $bar.val($foo.val());
+    };
+    $('#customer_customer_address')
+        .change(onChange)
+        .keyup(onChange);
+  });
+
+
 
   // Placeholder qui change ;)
 

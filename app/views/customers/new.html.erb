@@ -1,69 +1,73 @@
+<%= content_for(:footer_not_here, true) %>
 
 
-<div class="container evolution_bar">
-  <div class="row">
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-      <table>
-        <thead>
-          <th>
-            <div class="content">
-              <div class="progress">
-                <div class="label">
-                  <span>33% completed</span>
-                </div>
-                <div class="bar">
-                  <div class="wrapper"></div>
-                  <div class="progress" style="width: 33%"></div>
-                </div>
-              </div>
-            </div>
-          </th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Superficie</td>
-            <td>Effectifs</td>
-            <td>Budget</td>
-            <td>Timing</td>
-            <td>Ambiance</td>
-            <td>Visuels</td>
-            <td>Coordonnées</td>
-          </tr>
-        </tbody>
-      </table>
+
+<div class="questions-footer">
+  <div class="progress-container">
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+        60%
+      </div>
     </div>
+    <p>2 / <strong>10</strong></p>
   </div>
+
+  <div class="controls">
+    <div class="control"><i class="fa fa-chevron-up"></i></div>
+    <div class="control"><i class="fa fa-chevron-down"></i></div>
+  </div>
+
 </div>
 
 
 <%= simple_form_for(@customer) do |f| %>
 <div class='questions-container'>
-
-<!-- ERROR NOTIFICATION NE MARCHE PAS -->
-
+  <!-- ERROR NOTIFICATION NE MARCHE PAS -->
   <%= f.error_notification %>
-
-  <div class="question-container" id='next8' data-prev='#next7' data-next='#next9'>
+  <div class="question-container">
     <div class="question-content">
-      <div>
-        Qu'elle est l'adresse actuelle de vos locaux ?
-      </div>
-      <div class='question-input-container'>
+      <h3><span>1</span> <i class="fa fa-arrow-right"></i> L'adresse actuelle de mes bureaux est</h3>
+      <div class="input-container">
         <%= f.input :customer_address, placeholder: "8 place de l'opéra Paris", label: false %>
       </div>
-      <div>
-        et de vos travaux ?
-      </div>
-      <div class='question-input-container'>
-        <%= f.input :works_address, label: false, placeholder: "32 rue Etienne Marcel Paris" %>
-      </div>
-      <div class='question-next-button'>
-        <a href='#next9' id="button1" >Ok!</a>
-      </div>
+      <button>
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>press <strong>ENTER</strong></small>
+      </button>
     </div>
   </div>
 
-  <div class="question-container" id='next10' data-prev='#next9' data-next='#next11'>
+<% if false %>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <div class="question-container" id='next8' data-prev='#next7' data-next='#next9'>
+          <div class="question-content align-boxes">
+            <div>
+              L'adresse actuelle de mes bureaux est
+            </div>
+            <div class='question-input-container'>
+              <%= f.input :customer_address, placeholder: "8 place de l'opéra Paris", label: false %>
+            </div>
+          </div>
+          <div class="question-content align-boxes">
+            <div>
+              et je souhaite faire des travaux au
+            </div>
+            <div class='question-input-container'>
+              <%= f.input :works_address, placeholder: "32 rue Etienne Marcel Paris", label: false %>
+            </div>
+            <div class='question-next-button'>
+              <a href='#next9' id="button1" >Ok!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="question-container" id='next2' data-prev='#next1' data-next='#next3'>
     <div class="question-content">
       <div>
         Qu'elle superficie souhaitez vous rénover ?
@@ -78,7 +82,7 @@
         <%= f.input :nb_of_employees, label: false, placeholder: '30' %>
       </div>
       <div class='question-next-button'>
-        <a href='#next11' id="button1" >Ok!</a>
+        <a href='#next3' id="button1" >Ok!</a>
       </div>
     </div>
   </div>
@@ -204,10 +208,13 @@
     </div>
   </div>
 
-
   <div class='question-next-button' id="button1">
     <%= f.button :submit, label: "Valider" %>
   </div>
+
+  <% end %>
+
+
 
 <% end %>
 </div>
