@@ -89,11 +89,11 @@
   <div class="question-container" id='next14' data-prev='#next13' data-next='#next15'>
     <div class="question-content">
       <div class="customer-styles">
-        Quel style ?
-            <select name="styles" multiple="multiple" class="image-picker show-html list-inline">
+        Quel est votre style ?
+            <select name="styles" multiple="multiple" class="image-picker show-html">
                   <option data-img-src="<%= image_path 'startup.jpg' %>" value="startup">Dynamique / Startup</option>
                   <option data-img-src="<%= image_path 'ancien.jpg' %>" value="classical">Ancien / Standing</option>
-                  <option data-img-src="<%= image_path 'moderne.jpg' %>" value="modern">Moderne / Efficace</option>
+                  <option data-img-src="<%= image_path 'modern_office.jpg' %>" value="modern">Moderne / Efficace</option>
             </select>
         <div class='question-next-button'>
           <a href='#next15' id="button1" >Ok!</a>
@@ -127,15 +127,6 @@
       <div class='question-input-container'>
         <%= f.input :first_name, placeholder: 'Michel', label: false %>
       </div>
-      <div class='question-next-button'>
-        <a href='#next4' id="button1" >Ok!</a>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="question-container" id='next4' data-prev='#next3' data-next='#next5'>
-    <div class="question-content">
       <div>
         Quel est votre nom?
       </div>
@@ -143,11 +134,10 @@
         <%= f.input :last_name, placeholder: 'Dupont', label: false %>
       </div>
       <div class='question-next-button'>
-        <a href='#next5' id="button1" >Ok!</a>
+        <a href='#next4' id="button1" >Ok!</a>
       </div>
     </div>
   </div>
-
 
   <div class="question-container" id='next5' data-prev='#next4' data-next='#next6'>
     <div class="question-content">
@@ -157,15 +147,6 @@
       <div class='question-input-container'>
         <%= f.input :email, placeholder: 'michel@dupont.fr', label: false %>
       </div>
-      <div class='question-next-button'>
-        <a href='#next6' id="button1" >Ok!</a>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="question-container" id='next6' data-prev='#next5' data-next='#next7'>
-    <div class="question-content">
       <div>
         Votre portable?
       </div>
@@ -173,42 +154,39 @@
         <%= f.input :mobile_phone_number, placeholder: '06 XX XX XX XX', label: false %>
       </div>
       <div class='question-next-button'>
-        <a href='#next7' id="button1" >Ok!</a>
+        <a href='#next6' id="button1" >Ok!</a>
       </div>
     </div>
   </div>
 
 
-
- <div class="question-container" id='next13' data-prev='#next12' data-next='#next14'>
-  <div class="question-content">
-    <div class="date-styles">
-      <div>
-        Début des travaux :
-      </div>
-      <div class='question-input-container'>
-        <div class="date-style">
-          <%= f.input :starts_at, label: false, input_html: {type: "text" , class: "datepicker"}, html5: true %>
+  <div class="question-container" id='next13' data-prev='#next12' data-next='#next14'>
+    <div class="question-content">
+      <div class="date-styles">
+        <div class="align-boxes">
+          <div>
+            Début des travaux :
+          </div>
+          <div class='question-input-container'>
+            <div class="date-style">
+              <%= f.input :starts_at, label: false, input_html: {type: "text" , class: "datepicker"}, html5: true %>
+            </div>
+          </div>
+          <div>
+            Fin des travaux :
+          </div>
+          <div class='question-input-container'>
+            <div class="date-style">
+              <%= f.input :ends_at, label: false, input_html: {type: "text" , class: "datepicker"}, html5: true %>
+            </div>
+          </div>
         </div>
-      </div>
-      <div>
-        Fin des travaux :
-      </div>
-      <div class='question-input-container'>
-        <div class="date-style">
-          <%= f.input :ends_at, label: false, input_html: {type: "text" , class: "datepicker"}, html5: true %>
-        </div>
-      </div>
-      <div class='question-next-button'>
-        <a href='#next14' id="button1" >Ok!</a>
+          <div class='question-next-button'>
+            <a href='#next14' id="button1" >Ok!</a>
+          </div>
       </div>
     </div>
   </div>
-</div>
-
-
-
-
 
 
 
