@@ -26,21 +26,36 @@ class CustomersController < ApplicationController
   private
 
   def compute_matches
-    pros = Pro.near(@customer.works_address, 200)
-    #@pros = Pro.where(@pro.operating_radius < @pro.distance_to(@customer.works_address)
 
-    # TODO: take into account the radius
+    # TODO: Function that find all renovators around a customer word address within their operating radius
+    pros =  []
+    Pro.all.each do |pro|
+      beta = @customer.distance_to(pro.address).to_i
+      if beta < pro.operating_radius
+        pros << pro
+      end
+    end
 
-    #@pros = @pros.where(@pro.min_operating_surface < @customer.needs_surface < @pro.max_operating_surface )
-    pros = pros.where(
-      "min_operating_surface < :needs_surface AND :needs_surface < max_operating_surface",
-      needs_surface: @customer.needs_surface
-    )
+    if pros == []
+      pros = Pro.near(@customer.works_address, 200)
+    else
+      new_pros = []
+      pros.each do |pro|
+        if pro.min_operating_surface < @customer.needs_surface && @customer.needs_surface < pro.max_operating_surface
+          new_pros << pro
+        end
+      end
 
-    pros = pros.limit(3)
 
-    pros.each do |pro|
-      Match.create(pro: pro , customer: @customer, status: 'pending')
+      # pros = pros.where(
+      #   "min_operating_surface < :needs_surface AND :needs_surface < max_operating_surface",
+      #   needs_surface: @customer.needs_surface
+      # )
+
+
+      new_pros.each do |pro|
+        Match.create(pro: pro , customer: @customer, status: 'pending')
+      end
     end
   end
 
