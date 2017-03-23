@@ -13,7 +13,9 @@
     <%= render "shared/navbar" %>
     <%= render 'shared/flashes' %>
     <%= yield %>
-    <%= render "shared/footer" %>
+    <% unless content_for(:footer_not_here) %>
+      <%= render "shared/footer" %>
+    <% end %>
     <%= javascript_include_tag 'application' %>
     <%= cloudinary_js_config %>
     <%= javascript_include_tag "https://maps.google.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
