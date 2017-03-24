@@ -134,16 +134,37 @@
     min-width: 25%;
 
     .thumbnail.selected {
-      background-color: #61D2B4 !important;
+      background-color: #5D5D5D !important;
+      border:0px;
+      border-color: transparent;
     }
   }
 }
 
 
+#final-btn {
+
+}
 
 
+.image_picker_image {
+  border-radius: 5px;
+  &:hover {
+  filter:gray;
+  border-radius:20px;
+  }
+}
 
+.thumbnail {
+  border-radius: 5px;
+  border-width: 0px;
+  background-color: transparent;
+  border-color: transparent;
 
-
+  &:hover {
+  filter: gray;
+  border-radius:20px;
+  }
+}
 
 
