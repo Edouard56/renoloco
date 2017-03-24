@@ -20,10 +20,6 @@
 </div>
 
 
-
-
-
-
 <%= simple_form_for(@customer) do |f| %>
 
 <div class='questions-container'>
@@ -31,7 +27,7 @@
   <%= f.error_notification %>
   <div class="question-container">
     <div class="question-content">
-      <h3><span>1</span> <i class="fa fa-arrow-right"></i> Qu'elle est l'adresse actuelle de vos bureaux ?</h3>
+      <h3><span>1</span> <i class="fa fa-arrow-right"></i> Mes bureaux actuels sont situés au </h3>
       <div class="input-container">
         <%= f.input :customer_address, placeholder: "8 place de l'opéra Paris", label: false %>
       </div>
@@ -47,7 +43,7 @@
 
   <div class="question-container">
     <div class="question-content">
-      <h3><span>2</span> <i class="fa fa-arrow-right"></i> Ou voulez vous faire des travaux ?</h3>
+      <h3><span>2</span> <i class="fa fa-arrow-right"></i> et je souhaite faire les travaux au </h3>
       <div class="input-container">
         <%= f.input :works_address, placeholder: "32 rue Etienne Marcel Paris", label: false %>
       </div>
@@ -63,7 +59,7 @@
 
   <div class="question-container">
     <div class="question-content">
-      <h3><span>3</span> <i class="fa fa-arrow-right"></i> Quelle superficie fait la surface ?</h3>
+      <h3><span>3</span> <i class="fa fa-arrow-right"></i> La superficie à rénover est de </h3>
       <div class="input-container">
         <%= f.input :needs_surface, label: false, placeholder: '300' %>
       </div>
@@ -78,7 +74,7 @@
 
   <div class="question-container">
     <div class="question-content">
-      <h3><span>4</span> <i class="fa fa-arrow-right"></i> Combien serez-vous dans les locaux ?</h3>
+      <h3><span>4</span> <i class="fa fa-arrow-right"></i> Dans ces locaux nous serons </h3>
       <div class="input-container">
         <%= f.input :nb_of_employees, label: false, placeholder: '30' %>
       </div>
@@ -96,7 +92,7 @@
 
   <div class="question-container">
     <div class="question-content">
-      <h3><span>5</span> <i class="fa fa-arrow-right"></i> Quels travaux faut il prévoir ?</h3>
+      <h3><span>5</span> <i class="fa fa-arrow-right"></i> Voici les travaux que je prévois de faire </h3>
       <div class="input-container">
         <div class="all-skills-btn">
           <button>
@@ -133,12 +129,12 @@
 
   <div class="question-container">
     <div class="question-content">
-      <h3><span>6</span> <i class="fa fa-arrow-right"></i> Quel style de locaux voulez-vous ?</h3>
+      <h3><span>6</span> <i class="fa fa-arrow-right"></i> Parmis les styles de locaux suivants, mes préférés sont : </h3>
       <div class="input-container">
         <select name="styles" multiple="multiple" class="image-picker show-html">
-          <option data-img-src="<%= image_path 'startup.jpg' %>" value="startup">Dynamique / Startup</option>
-          <option data-img-src="<%= image_path 'ancien.jpg' %>" value="classical">Ancien / Standing</option>
-          <option data-img-src="<%= image_path 'modern_office.jpg' %>" value="modern">Moderne / Efficace</option>
+          <option data-img-src="<%= image_path 'startup.jpg' %>" class="image-picker-photo" value="startup">Dynamique / Startup</option>
+          <option data-img-src="<%= image_path 'ancien.jpg' %>" class="image-picker-photo" value="classical">Ancien / Standing</option>
+          <option data-img-src="<%= image_path 'modern_office.jpg' %>" class="image-picker-photo" value="modern">Moderne / Efficace</option>
         </select>
       </div>
       <button>
@@ -152,114 +148,146 @@
 
    <!-- <h2>VISUELS PARTENAIRES</h2> -->
 
+  <div class="question-container">
+    <div class="question-content">
+      <h3><span>7</span> <i class="fa fa-arrow-right"></i> J'ai la chance de travailler pour la société </h3>
+      <div class="input-container">
+        <%= f.input :customer_company_name, placeholder: 'Renoloco', label: false %>
+      </div>
+      <button>
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>press <strong>ENTER</strong></small>
+      </button>
+    </div>
+  </div>
+
+    <div class="question-container">
+    <div class="question-content">
+      <h3><span>8</span> <i class="fa fa-arrow-right"></i> Mon prénom est </h3>
+      <div class="input-container">
+        <%= f.input :first_name, placeholder: 'Michel', label: false %>
+      </div>
+      <button>
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>press <strong>ENTER</strong></small>
+      </button>
+    </div>
+  </div>
+
+  <div class="question-container">
+    <div class="question-content">
+      <h3><span>9</span> <i class="fa fa-arrow-right"></i> et mon nom </h3>
+      <div class="input-container">
+        <%= f.input :last_name, placeholder: 'Dupont', label: false %>
+      </div>
+      <button>
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>press <strong>ENTER</strong></small>
+      </button>
+    </div>
+  </div>
+
+  <div class="question-container">
+    <div class="question-content">
+      <h3><span>10</span> <i class="fa fa-arrow-right"></i> Voici mon numéro de téléphone portable si besoin </h3>
+      <div class="input-container">
+        <%= f.input :mobile_phone_number, placeholder: '06 XX XX XX XX', label: false %>
+      </div>
+      <button>
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>press <strong>ENTER</strong></small>
+      </button>
+    </div>
+  </div>
+
+
+  <div class="question-container">
+    <div class="question-content">
+      <h3><span>11</span> <i class="fa fa-arrow-right"></i> et voici mon adresse email préférée </h3>
+      <div class="input-container">
+        <%= f.input :email, placeholder: 'michel@dupont.fr', label: false %>
+      </div>
+      <button>
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>press <strong>ENTER</strong></small>
+      </button>
+    </div>
+  </div>
+
+  <div class="question-container">
+    <div class="question-content">
+      <h3><span>12</span> <i class="fa fa-arrow-right"></i> Je souhaite démarrer mes travaux le  </h3>
+      <div class="input-container">
+        <%= f.input :starts_at, label: false, input_html: {type: "text" , class: "datepicker"}, html5: true, placeholder: "27/11/2017" %>
+      </div>
+      <button>
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>press <strong>ENTER</strong></small>
+      </button>
+    </div>
+  </div>
+
+
+  <div class="question-container">
+    <div class="question-content">
+      <h3><span>13</span> <i class="fa fa-arrow-right"></i> Il faut absolument que ce soit terminé le  </h3>
+      <div class="input-container">
+        <%= f.input :ends_at, label: false, input_html: {type: "text" , class: "datepicker"}, html5: true, placeholder: "24/12/2017" %>
+      </div>
+      <button>
+        <div class="ok">
+          OK <i class="fa fa-check"></i>
+        </div>
+        <small>press <strong>ENTER</strong></small>
+      </button>
+    </div>
+  </div>
+
+
+  <div class="question-container">
+    <div class="question-content">
+      <h3><span>14</span> <i class="fa fa-arrow-right"></i> Et j'allais oublier, je voulais vous dire que </h3>
+      <div class="input-container">
+        <%= f.input :description, label: false, placeholder: "J'ai besoin d'une salle informatique sécurisée et il me faut un espace détente et déjeuner" %>
+      </div>
+      <div class="ok" id="final-btn">
+        <%= f.submit "Trouvez moi les meilleurs partenaires !" %>
+      </div>
+    </div>
+  </div>
+
+
 <% if false %>
 
 
 
 
-  <div class="question-container" id='next1' data-next='#next2'>
-    <div class="question-content">
-      <div>
-        Nom de la société
-      </div>
-      <div class='question-input-container'>
-        <%= f.input :customer_company_name, placeholder: 'Renoloco', label: false %>
-      </div>
-      <div class='question-next-button'>
-        <a href='#next2' id="button1" >Ok!</a>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="question-container" id='next3' data-prev='#next2' data-next='#next4'>
-    <div class="question-content">
-      <div>
-        Quel est votre prénom?
-      </div>
-      <div class='question-input-container'>
-        <%= f.input :first_name, placeholder: 'Michel', label: false %>
-      </div>
-      <div>
-        Quel est votre nom?
-      </div>
-      <div class='question-input-container'>
-        <%= f.input :last_name, placeholder: 'Dupont', label: false %>
-      </div>
-      <div class='question-next-button'>
-        <a href='#next4' id="button1" >Ok!</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="question-container" id='next5' data-prev='#next4' data-next='#next6'>
-    <div class="question-content">
-      <div>
-        Votre email s'il vous plait?
-      </div>
-      <div class='question-input-container'>
-        <%= f.input :email, placeholder: 'michel@dupont.fr', label: false %>
-      </div>
-      <div>
-        Votre portable?
-      </div>
-      <div class='question-input-container'>
-        <%= f.input :mobile_phone_number, placeholder: '06 XX XX XX XX', label: false %>
-      </div>
-      <div class='question-next-button'>
-        <a href='#next6' id="button1" >Ok!</a>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="question-container" id='next13' data-prev='#next12' data-next='#next14'>
-    <div class="question-content">
-      <div class="date-styles">
-        <div class="align-boxes">
-          <div>
-            Début des travaux :
-          </div>
-          <div class='question-input-container'>
-            <div class="date-style">
-              <%= f.input :starts_at, label: false, input_html: {type: "text" , class: "datepicker"}, html5: true %>
-            </div>
-          </div>
-          <div>
-            Fin des travaux :
-          </div>
-          <div class='question-input-container'>
-            <div class="date-style">
-              <%= f.input :ends_at, label: false, input_html: {type: "text" , class: "datepicker"}, html5: true %>
-            </div>
-          </div>
-        </div>
-          <div class='question-next-button'>
-            <a href='#next14' id="button1" >Ok!</a>
-          </div>
-      </div>
-    </div>
-  </div>
-
-
-
-  <div class="question-container" id='next15' data-prev='#next14' data-next='#next16'>
+<!--   <div class="question-container" id='next15' data-prev='#next14' data-next='#next16'>
     <div class="question-content">
       <div>
         Autre chose à nous dire?
       </div>
       <div class='question-input-container'>
-        <%= f.input :description, label: false, placeholder: "Rénovation des sols et pose du cablage informatique. Aménagement d'un espace détente" %>
+        <%#= f.input :description, label: false, placeholder: "J'ai besoin d'une salle informatique sécurisée et il me faut un espace détente et déjeuner" %>
       </div>
       <div class='question-next-button'>
         <a href='#next14' id="button1" >Ok!</a>
       </div>
     </div>
   </div>
-
-  <div class='question-next-button' id="button1">
-    <%= f.button :submit, label: "Valider" %>
-  </div>
+ -->
 
   <% end %>
 
@@ -268,6 +296,9 @@
 <% end %>
 </div>
 
-
+<br>
+<br>
+<br>
+<br>
 
 <%#= f.input :photos, as: :attachinary %>
