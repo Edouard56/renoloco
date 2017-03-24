@@ -72,14 +72,16 @@
         <div id="front-articles">
           <div class="col-xs-12 col-sm-6 left-square">
             <div class="card-text-left" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.56) 0%, rgba(123, 2, 1, 0.23) 50%), url(<%= asset_path 'article_renovation.jpg' %>) ">
-              <span class='h1 text-center'>Rénovation</span>
-              <h3>L'essentiel à savoir pour l'office manager</h3>
+              <div class="banner-content">
+                <h1 class="card-title-h1">Rénovation</h1>
+                <h2 class="card-title-h2">L'essentiel à savoir pour l'office manager</h2>
+              </div>
             </div>
           </div>
           <div class="col-xs-12 col-sm-6 right-square">
             <div class="articles-bloc">
               <div class="row">
-                <h3 class="text-center">Les 3 articles à lire</h3>
+                <h3 class="text-center">L'essentiel de la <strong>rénovation</strong> en 3 articles</h3>
                 <div class="col-sm-6">
                   <div class="article-card">
                     <a href="#"><span class="project-icon text-center"></span><span>L'isolation des murs</span></a>
@@ -109,3 +111,68 @@
     </div>
 </div>
 
+<div class="presentation_wrapper">
+  <div class="container">
+    <div id="frontpage-presentation">
+      <div class="row">
+        <div class="col-sm-12 text-center">
+          <span class="title-h2">
+            <h3>Ils nous ont fait confiance</h3>
+          </span>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="presentation-bloc">
+          <div class="col-xs-12 col-sm-4 text-center">
+            <div class="photo-card">
+              <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.56) 0%, rgba(123, 2, 1, 0.23) 50%), url(<%= asset_path 'design_atypique.jpg' %>) ">
+              </div>
+              <div class="presentation-text">
+                <p>
+                  <strong>Le Wagon</strong>
+                  <span>Paris</span>
+                  <span>2017</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 text-center">
+            <div class="photo-card">
+              <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.56) 0%, rgba(123, 2, 1, 0.23) 50%), url(<%= asset_path 'modern_office.jpg' %>) ">
+              </div>
+              <div class="presentation-text">
+                <p>
+                  <strong>Le Petit Ballon</strong>
+                  <span>Paris</span>
+                  <span>2017</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-4 text-center">
+            <div class="photo-card">
+              <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.56) 0%, rgba(123, 2, 1, 0.23) 50%), url(<%= asset_path 'startup.jpg' %>) ">
+              </div>
+              <div class="presentation-text">
+                <p>
+                  <strong>La fromagerie</strong>
+                  <span>Lyon</span>
+                  <span>2017</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="presentation-bloc">
+          <div class="col-sm-12">
+            <div class= "main-call-to-action text-center">
+              <%= link_to "Trouver ses bureaux avec Renoloco", new_customer_path, class: "btn-treehouse"%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

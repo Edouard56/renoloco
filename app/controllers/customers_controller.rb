@@ -4,7 +4,6 @@ class CustomersController < ApplicationController
   end
 
   def create
-
     @customer = Customer.new(customer_params)
 
     if params[:styles].present?
@@ -15,12 +14,13 @@ class CustomersController < ApplicationController
 
     if @customer.save
       compute_matches
-      redirect_to root_path
+      redirect_to customer_path
     else
       render :new
     end
+  end
 
-
+  def show
   end
 
   private
