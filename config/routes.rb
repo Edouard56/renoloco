@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # Edouard : j'ai overridé devise pour la redirection du sign up en créant un registrations controller
   devise_for :pros, controllers: { registrations: "registrations" }
 
-resources :customers, only: [:new, :create]
+resources :customers, only: [:new, :create, :show]
 resources :pros, only: :show
 
   root to: 'pages#home'
