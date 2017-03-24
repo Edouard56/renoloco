@@ -25,13 +25,13 @@
 <div class='questions-container'>
   <!-- ERROR NOTIFICATION NE MARCHE PAS -->
   <%= f.error_notification %>
-  <div class="question-container">
+  <div id="question_<%= question = 0 %>" class="question-container">
     <div class="question-content">
       <h3><span>1</span> <i class="fa fa-arrow-right"></i> Mes bureaux actuels sont situés au </h3>
       <div class="input-container">
         <%= f.input :customer_address, placeholder: "8 place de l'opéra Paris", label: false %>
       </div>
-      <button>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
         <div class="ok">
           OK <i class="fa fa-check"></i>
         </div>
@@ -41,13 +41,13 @@
   </div>
 
 
-  <div class="question-container">
+  <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
       <h3><span>2</span> <i class="fa fa-arrow-right"></i> et je souhaite faire les travaux au </h3>
       <div class="input-container">
         <%= f.input :works_address, placeholder: "32 rue Etienne Marcel Paris", label: false %>
       </div>
-      <button>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
         <div class="ok">
           OK <i class="fa fa-check"></i>
         </div>
@@ -57,13 +57,13 @@
   </div>
 
 
-  <div class="question-container">
+  <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
       <h3><span>3</span> <i class="fa fa-arrow-right"></i> La superficie à rénover est de </h3>
       <div class="input-container">
         <%= f.input :needs_surface, label: false, placeholder: '300' %>
       </div>
-      <button>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
         <div class="ok">
           OK <i class="fa fa-check"></i>
         </div>
@@ -72,13 +72,13 @@
     </div>
   </div>
 
-  <div class="question-container">
+  <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
       <h3><span>4</span> <i class="fa fa-arrow-right"></i> Dans ces locaux nous serons </h3>
       <div class="input-container">
         <%= f.input :nb_of_employees, label: false, placeholder: '30' %>
       </div>
-      <button>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
         <div class="ok">
           OK <i class="fa fa-check"></i>
         </div>
@@ -90,34 +90,34 @@
 
  <!-- <h2>ETAT GENERAL + SOLS + MURS +PAFONDS + CABLAGE INFO+ MOBILIER + ARCHITECTE </h2> -->
 
-  <div class="question-container">
+  <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
       <h3><span>5</span> <i class="fa fa-arrow-right"></i> Voici les travaux que je prévois de faire </h3>
       <div class="input-container">
         <div class="all-skills-btn">
-          <button>
+          <button type="button">
             <div class="skills-btn">
               Peinture <i class="fa fa-paint-brush"></i>
             </div>
           </button>
-          <button>
+          <button type="button">
             <div class="skills-btn">
               Réseau informatique <i class="fa fa-usb"></i>
             </div>
           </button>
-          <button>
+          <button type="button">
             <div class="skills-btn">
               Peinture <i class="fa fa-paint-brush"></i>
             </div>
           </button>
-          <button>
+          <button type="button">
             <div class="skills-btn">
               Réseau informatique <i class="fa fa-usb"></i>
             </div>
           </button>
         </div>
       </div>
-      <button>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
         <div class="ok">
           OK <i class="fa fa-check"></i>
         </div>
@@ -127,7 +127,7 @@
   </div>
 
 
-  <div class="question-container">
+  <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
       <h3><span>6</span> <i class="fa fa-arrow-right"></i> Parmis les styles de locaux suivants, mes préférés sont : </h3>
       <div class="input-container">
@@ -137,7 +137,7 @@
           <option data-img-src="<%= image_path 'modern_office.jpg' %>" class="image-picker-photo" value="modern">Moderne / Efficace</option>
         </select>
       </div>
-      <button>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
         <div class="ok">
           OK <i class="fa fa-check"></i>
         </div>
@@ -148,13 +148,13 @@
 
    <!-- <h2>VISUELS PARTENAIRES</h2> -->
 
-  <div class="question-container">
+  <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
       <h3><span>7</span> <i class="fa fa-arrow-right"></i> J'ai la chance de travailler pour la société </h3>
       <div class="input-container">
         <%= f.input :customer_company_name, placeholder: 'Renoloco', label: false %>
       </div>
-      <button>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
         <div class="ok">
           OK <i class="fa fa-check"></i>
         </div>
@@ -163,13 +163,13 @@
     </div>
   </div>
 
-    <div class="question-container">
+    <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
       <h3><span>8</span> <i class="fa fa-arrow-right"></i> Mon prénom est </h3>
       <div class="input-container">
         <%= f.input :first_name, placeholder: 'Michel', label: false %>
       </div>
-      <button>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
         <div class="ok">
           OK <i class="fa fa-check"></i>
         </div>
@@ -178,13 +178,13 @@
     </div>
   </div>
 
-  <div class="question-container">
+  <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
       <h3><span>9</span> <i class="fa fa-arrow-right"></i> et mon nom </h3>
       <div class="input-container">
         <%= f.input :last_name, placeholder: 'Dupont', label: false %>
       </div>
-      <button>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
         <div class="ok">
           OK <i class="fa fa-check"></i>
         </div>
@@ -193,13 +193,13 @@
     </div>
   </div>
 
-  <div class="question-container">
+  <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
       <h3><span>10</span> <i class="fa fa-arrow-right"></i> Voici mon numéro de téléphone portable si besoin </h3>
       <div class="input-container">
         <%= f.input :mobile_phone_number, placeholder: '06 XX XX XX XX', label: false %>
       </div>
-      <button>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
         <div class="ok">
           OK <i class="fa fa-check"></i>
         </div>
@@ -209,13 +209,13 @@
   </div>
 
 
-  <div class="question-container">
+  <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
       <h3><span>11</span> <i class="fa fa-arrow-right"></i> et voici mon adresse email préférée </h3>
       <div class="input-container">
         <%= f.input :email, placeholder: 'michel@dupont.fr', label: false %>
       </div>
-      <button>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
         <div class="ok">
           OK <i class="fa fa-check"></i>
         </div>
@@ -224,13 +224,13 @@
     </div>
   </div>
 
-  <div class="question-container">
+  <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
       <h3><span>12</span> <i class="fa fa-arrow-right"></i> Je souhaite démarrer mes travaux le  </h3>
       <div class="input-container">
         <%= f.input :starts_at, label: false, input_html: {type: "text" , class: "datepicker"}, html5: true, placeholder: "27/11/2017" %>
       </div>
-      <button>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
         <div class="ok">
           OK <i class="fa fa-check"></i>
         </div>
@@ -240,13 +240,13 @@
   </div>
 
 
-  <div class="question-container">
+  <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
       <h3><span>13</span> <i class="fa fa-arrow-right"></i> Il faut absolument que ce soit terminé le  </h3>
       <div class="input-container">
         <%= f.input :ends_at, label: false, input_html: {type: "text" , class: "datepicker"}, html5: true, placeholder: "24/12/2017" %>
       </div>
-      <button>
+      <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
         <div class="ok">
           OK <i class="fa fa-check"></i>
         </div>
@@ -256,14 +256,14 @@
   </div>
 
 
-  <div class="question-container">
+  <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
       <h3><span>14</span> <i class="fa fa-arrow-right"></i> Et j'allais oublier, je voulais vous dire que </h3>
       <div class="input-container">
         <%= f.input :description, label: false, placeholder: "J'ai besoin d'une salle informatique sécurisée et il me faut un espace détente et déjeuner" %>
       </div>
-      <div class="ok" id="final-btn">
-        <%= f.submit "Trouvez moi les meilleurs partenaires !" %>
+      <div class="ok">
+        <%= f.submit "Trouvez moi les meilleurs partenaires !", id: "final-btn" %>
       </div>
     </div>
   </div>
