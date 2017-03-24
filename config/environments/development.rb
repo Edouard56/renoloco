@@ -9,6 +9,10 @@ Rails.application.configure do
   #url default for devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
+  # confi letter opener
+  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
   # Do not eager load code on boot.
   config.eager_load = false
 
