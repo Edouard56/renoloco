@@ -1,5 +1,5 @@
 .questions-container {
-  background: #367591;
+  background: #52AA5E;
   color: white;
 }
 
@@ -92,8 +92,8 @@
     color: black;
     font-size: 14px;
     .ok {
-      background-color: #367591;
-      color: #36554e;
+      background-color: #52AA5E;
+      color: white;
       padding: 10px;
       border-radius: 8px;
       font-size: 18px;
@@ -134,7 +134,7 @@
     min-width: 25%;
 
     .thumbnail.selected {
-      background-color: #5D5D5D !important;
+      background-color: #F7FDB6 !important;
       border:0px;
       border-color: transparent;
     }
@@ -143,7 +143,11 @@
 
 
 #final-btn {
-
+  margin-top: 50px;
+  border-width: 5px;
+  border: solid;
+  border-radius: 30px;
+  background-color: #388659;
 }
 
 
@@ -166,4 +170,7 @@
   }
 }
 
-
+.not-active {
+   pointer-events: none;
+   cursor: default;
+}
