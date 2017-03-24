@@ -1,6 +1,7 @@
 class Customer < ApplicationRecord
-
   has_many :matches, dependent: :destroy
+
+  after_create :send_confirmation_email
 
   #attachinary
   has_attachments :photos, maximum: 3
@@ -8,7 +9,6 @@ class Customer < ApplicationRecord
   #geocoder
   geocoded_by :works_address
   after_validation :geocode, if: :works_address_changed?
-
 
   # validates :customer_company_name, presence: true
   # validates :first_name, presence: true
@@ -28,5 +28,11 @@ class Customer < ApplicationRecord
   # validates :customer_classical_style, presence: true
   # validates :customer_modern_style, presence: true
   # validates :description, presence: true
+
+  private
+
+   def send_confirmation_email
+    CustomerMailer.confirmation(self).deliver_now
+  end
 
 end

@@ -17,6 +17,7 @@ gem 'cloudinary'
 #installing faker
 gem 'faker'
 
+
 #installing attachinary
 gem 'attachinary', github: 'assembler/attachinary'
 gem 'jquery-fileupload-rails'
@@ -49,6 +50,9 @@ group :development, :test do
   gem 'spring'
   gem 'listen', '~> 3.0.5'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  #installing letter_opener
+  gem "letter_opener"
 end
 
 
