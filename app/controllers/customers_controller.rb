@@ -14,7 +14,7 @@ class CustomersController < ApplicationController
 
     if @customer.save
       compute_matches
-      redirect_to customer_path
+      redirect_to customer_path(@customer)
     else
       render :new
     end
