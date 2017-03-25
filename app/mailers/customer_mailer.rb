@@ -7,6 +7,6 @@ class CustomerMailer < ApplicationMailer
   #
   def confirmation(customer)
     @customer = customer
-    mail(to: @customer.email, subject: 'Welcome to Le Wagon')
+    mail(to: @customer.email, subject: 'Votre demande de devis_Renoloco')
   end
 end

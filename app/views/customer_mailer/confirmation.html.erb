@@ -1,5 +1,22 @@
-<h1>Customer#confirmation</h1>
-
 <p>
  find me in app/views/customer_mailer/confirmation.html.erb
 </p>
+<div class="wrapper_grey">
+  <div class="row">
+    <div class="col-xs-12">
+
+      <h1><%= @customer.first_name %> <%= @customer.last_name %>, votre demande de confirmation a bien été prise en compte</h1>
+      <br>
+      <h1>Récapitulatif de votre demande </h1>
+
+      <p>L'adresse de vos locaux à rénover: <%= @customer.works_address %></p>
+      <p>Travaux à prévoir entre le <%= @customer.starts_at %> et le <%= @customer.ends_at %></p>
+      <p>votre style de rénovation: <%= @customer.customer_startup_style %></p>
+<br>
+      <h3>Votre demande va être analysée puis transférée sous 1 journée à nos pros</h3>
+      <h3>N'hésitez pas à nous appeler en cas de doute</h3>
+      <h3>L'équipe renoloco</h3>
+
+    </div>
+  </div>
+</div>
