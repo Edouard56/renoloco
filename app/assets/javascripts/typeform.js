@@ -23,14 +23,21 @@ $(function() {
 
   // Placeholder qui change ;)
 
-  // var jobs = ["Directeur général", "Office manager", "Directeur Administratif et Financier", "Partner", "Responsable RH"]
+  var adresses = ["8 place de l'opéra, Paris", "40 rue de verdun, Suresnes", "65 boulevard haussmann, Paris", "32 rue thiers, Boulogne-Billancourt", "74 rue Anatole France, Levallois Perret", "32 rue de paradis, Paris", "48 boulevard des belges, Lyon", "6 rue Ménars, Paris"]
 
-  // setInterval(function(){
-  //   var job = jobs[Math.floor(Math.random()*jobs.length)];
-  //   $("#challenge_activity").attr("placeholder", job);
-  // }, 2000);
+  setInterval(function(){
+    var adresse = adresses[Math.floor(Math.random()*adresses.length)];
+    $("#customer_customer_address").attr("placeholder", adresse);
+    $("#customer_works_address").attr("placeholder", adresse);
+  }, 2000);
 
 
+  var jobs = ["Directeur général", "Office manager", "Directeur Administratif et Financier", "Partner", "Responsable RH"]
+
+    setInterval(function(){
+    var job = jobs[Math.floor(Math.random()*jobs.length)];
+    $("#customer_customer_company_name").attr("placeholder", job);
+  }, 1000);
 
   // Smooth scroll
 

@@ -64,21 +64,24 @@
   input {
     background: transparent;
     padding: 30px;
-    border: 2px dashed white;
+    border-bottom: 1px solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: darken(#52AA5E, 10%);
     font-size: 20px;
     border-image-slice: 2;
+    outline: none;
   }
   input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.3);
   }
   input::-moz-placeholder { /* Firefox 19+ */
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.3);
   }
   input:-ms-input-placeholder { /* IE 10+ */
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.3);
   }
   input:-moz-placeholder { /* Firefox 18- */
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.3);
   }
 
   button {
@@ -91,13 +94,15 @@
     opacity: 1;
     color: black;
     font-size: 14px;
+    &:hover {
+      opacity: 0.7;
+    }
     .ok {
       background-color: #52AA5E;
       color: white;
       padding: 10px;
       border-radius: 8px;
       font-size: 18px;
-      border: 1px solid #36554e;
       font-weight: bold;
     }
     small {
@@ -164,7 +169,6 @@
   border-width: 0px;
   background-color: transparent;
   border-color: transparent;
-
   &:hover {
   border-radius:20px;
   }
@@ -173,4 +177,9 @@
 .not-active {
    pointer-events: none;
    cursor: default;
+}
+
+.form-control {
+  font-weight: lighter;
+  box-shadow: none;
 }
