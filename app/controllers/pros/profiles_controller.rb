@@ -10,4 +10,6 @@ class Pros::ProfilesController < Pros::BaseController
     @pro = current_pro
     # TODO
   end
+
+  #dssd
 end
