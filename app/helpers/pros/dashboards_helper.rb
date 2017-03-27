@@ -1,0 +1,2 @@
+module Pros::DashboardsHelper
+end
