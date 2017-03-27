@@ -23,7 +23,6 @@ $(function() {
 
 
 
-
   // Placeholder qui change ;)
 
   var adresses = ["8 place de l'opéra, Paris", "40 rue de verdun, Suresnes", "65 boulevard haussmann, Paris", "32 rue thiers, Boulogne-Billancourt", "74 rue Anatole France, Levallois Perret", "32 rue de paradis, Paris", "48 boulevard des belges, Lyon", "6 rue Ménars, Paris"]
@@ -35,12 +34,12 @@ $(function() {
   }, 2000);
 
 
-  var jobs = ["Directeur général", "Office manager", "Directeur Administratif et Financier", "Partner", "Responsable RH"]
+  // var jobs = ["Directeur général", "Office manager", "Directeur Administratif et Financier", "Partner", "Responsable RH"]
 
-    setInterval(function(){
-    var job = jobs[Math.floor(Math.random()*jobs.length)];
-    $("#customer_customer_company_name").attr("placeholder", job);
-  }, 1000);
+  //   setInterval(function(){
+  //   var job = jobs[Math.floor(Math.random()*jobs.length)];
+  //   $("#customer_customer_company_name").attr("placeholder", job);
+  // }, 1000);
 
   // Smooth scroll
 
@@ -91,11 +90,5 @@ $(function() {
 
   // On enter in an input, switch to next question
 
-  // $('.questions-container input').on('keydown', function(e) {
-  //   if(e.keyCode == 13) {
-  //     e.preventDefault();
-  //     $(this).parent().parent().parent().find('a').click()
-  //   }
-  // })
 
 });
