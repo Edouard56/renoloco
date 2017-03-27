@@ -4,8 +4,13 @@ Rails.application.routes.draw do
   # Edouard : j'ai overridé devise pour la redirection du sign up en créant un registrations controller
   devise_for :pros, controllers: { registrations: "registrations" }
 
-resources :customers, only: [ :create ]
-resources :pros, only: :show
+  resources :customers, only: [ :create ]
+  # resources :pros, only: :show
+
+  namespace :pros do
+    resource :dashboard, only: :show
+    resource :profile, only: [:show, :edit, :update]
+  end
 
   get 'formulaire', to: 'customers#new'
   get 'confirmation', to: 'customers#show'
