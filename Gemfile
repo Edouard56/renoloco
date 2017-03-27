@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 ruby '2.3.3'
 
 gem 'rails', '5.0.2'
+gem 'rails-i18n'
 gem 'puma'
 gem 'pg'
 gem 'figaro'
@@ -10,6 +11,7 @@ gem 'redis'
 
 #installing devise pour les pros
 gem 'devise'
+gem 'devise-i18n'
 
 #installing cloudinary
 gem 'cloudinary'

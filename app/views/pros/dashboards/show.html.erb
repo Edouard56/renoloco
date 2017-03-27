@@ -14,7 +14,7 @@
               <h3>Mes demandes de devis</h3>
             </div>
             <div class="dashboard-tab">
-              <h3>Mon profil</h3>
+              <h3>Mes paiements</h3>
             </div>
           </div>
         </div>
@@ -49,140 +49,47 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="dashboard-match-informations">
-            <div class="match-id">
-              <span>ref 34</span>
-            </div>
-              <div class="match-date">
-              <span>27 mars 2017</span>
-            </div>
-            <div class="work-date">
-              <ul>
-                <li>du lundi 25 avril 2017</li>
-                <li>au vendredi 28 mai 2017</li>
-              </ul>
-            </div>
-            <div class="match-distance">
-              <p>situé à 10 km</p>
-            </div>
-            <div class="match-surface">
-              <p>200 m2</p>
-            </div>
-            <div class="match-Type">
-              <p>style start-up</p>
-            </div>
-            <div class="match-status">
-              <p> Envoyer un devis !</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="dashboard-match-informations">
-            <div class="match-id">
-              <span>ref 345</span>
-            </div>
-            <div class="match-date">
-              <span>27 mars</span>
-            </div>
-            <div class="work-date">
-              <ul>
-                <li>du lundi 25 avril 2017</li>
-                <li>au vendredi 28 mai 2017</li>
-              </ul>
-            </div>
-            <div class="match-distance">
-              <p>situé à 10 km</p>
-            </div>
-            <div class="match-surface">
-              <p>200 m2</p>
-            </div>
-            <div class="match-Type">
-              <p>style start-up</p>
-            </div>
-            <div class="match-status">
-              <p> Envoyer un devis !</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="dashboard-match-informations">
-            <div class="match-id">
-              <span>réf 452</span>
-            </div>
-             <div class="match-date">
-              <span>27 mars</span>
-            </div>
-            <div class="work-date">
-              <ul>
-                <li>du lundi 25 avril 2017</li>
-                <li>au vendredi 28 mai 2017</li>
-              </ul>
-            </div>
-            <div class="match-distance">
-              <p>situé à 10 km</p>
-            </div>
-            <div class="match-surface">
-              <p>200 m2</p>
-            </div>
-            <div class="match-Type">
-              <p>style start-up</p>
-            </div>
-            <div class="match-status">
-              <p> Envoyer un devis !</p>
-            </div>
-          </div>
-        </div>
-      </div>
+            <% current_pro.matches.each do |match| %>
+              <div class="match-infos">
+                <div class="match-id">
+                    <%= match.id %>
+                </div>
+                <div class="match-date">
+                  <%= l(match.created_at.to_date) %>
+                </div>
+                <div class="work-date">
+                  <ul>
+                    <li><%= l(match.customer.starts_at.to_date) %></li>
+                    <li><%= l(match.customer.ends_at.to_date) %></li>
+                  </ul>
+                </div>
+                <div class="match-distance">
+                  <span><%= match.customer.distance_to(current_pro.address).to_i %> km</span>
+                </div>
+                <div class="match-surface">
+                  <span><%= match.customer.needs_surface%> m 2</span>
+                </div>
+                <div class="match-Type">
+                  <% if match.customer.customer_startup_style == true %>
+                    <span>start-up</span>
+                  <% end %>
 
-    </div>
+                  <% if match.customer.customer_classical_style == true %>
+                    <span>classique</span>
+                  <% end %>
 
-
-      <div class="row">
-        <div class="col-xs-12 col-md-3">
-          <div class="left-card text-center">
-            <div class="left-card-elem">
-                <h3>Mon profil</h3>
-            </div>
-            <div class="left-card-elem">
-              <img src="https://res.cloudinary.com/das218bbz/image/upload/c_crop,g_face,h_900,r_max,w_900/c_scale,w_150/v1489592039/jfbs2cwncsz1drf95boe.jpg" alt="Jfbs2cwncsz1drf95boe" />
-            </div>
-            <div class="left-card-elem"->
-                <span>Edouard Castaignet</span>
-            </div>
-              <div class="left-card-elem"->
-                  <p> doudou@mail.com </p>
-                  <p> 01 47 71 27 71 </p>
+                  <% if match.customer.customer_modern_style == true %>
+                    <span>moderne</span>
+                  <% end %>
+                </div>
+                <div class="match-status">
+                  <%= match.status %>
+                </div>
               </div>
+            <% end %>
           </div>
         </div>
-        <div class="col-xs-12 col-md-9">
-          <div class="right-card">
-            <div class="right-card-elem text-center">
-              <h3>Le profil de ma société</h3>
-            </div>
-            <div class="right-card-elem">
-              <span>Nom de l'entreprise : <strong><%= current_pro.pro_company_name %></strong></span>
-            </div>
-            <div class="right-card-elem">
-              <span>Adresse : <strong><%= current_pro.address %></strong></span>
-            </div>
-            <div class="right-card-elem">
-                <span>Capacité de déplacement : <strong><%= current_pro.operating_radius %></strong> kilomètres </span>
-            </div>
-            <div class="right-card-elem">
-                <span> Surface : de <strong><%= current_pro.min_operating_surface%></strong> à <strong><%= current_pro.max_operating_surface%></strong> mètres carrés.</span>
-            </div>
-            <div class="right-card-elem">
-                <span>photos et types</span>
-                <% current_pro.photos.each do |photo| %>
-                <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
-                <% end %>
-            </div>
-          </div>
-        </div>
+      </div>
     </div>
   </div>
 </div>
