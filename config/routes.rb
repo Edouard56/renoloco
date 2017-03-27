@@ -10,6 +10,18 @@ Rails.application.routes.draw do
   namespace :pros do
     resource :dashboard, only: :show
     resource :profile, only: [:show, :edit, :update]
+
+  # pour dispatcher les matches entre les pending et les acceptés
+    resources :matches do
+      collection do
+        get :accepted
+      end
+
+      member do
+        patch :accept
+        patch :refuse
+      end
+    end
   end
 
   get 'formulaire', to: 'customers#new'

@@ -68,7 +68,22 @@
 }
 
  // Informations bookings
-.dashboard-match-informations {
+// .dashboard-match-informations {
+//     margin-top: 10px;
+//     margin-bottom: 10px;
+//     margin-right: 10px;
+//     margin-left: 10px;
+//     padding-right: 20px;
+//     padding-left: 20px;
+//     background-color: lightgrey;
+//     border-radius: 5px;
+//     color: black;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+// }
+
+.match-infos {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
@@ -81,6 +96,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+//refused matches
+.dashboard-refused-matches {
+  background: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 // Profile informations
