@@ -20,114 +20,68 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="dashboard-match-type-of-informations">
-            <div class="match-customer-name">
-              <span>Prénom Nom</span>
-            </div>
-            <div class="match-customer-position">
-              <span>Position dans la compagnie</span>
-            </div>
-            <div class="match-customer-telephone">
-              <span>Téléphone</span>
-            </div>
-            <div class="match-customer-mail">
-              <span>Mail</span>
-            </div>
-            <div class="match-company-name">
-              <span>Nom société</span>
-            </div>
-            <div class="match-company-address">
-              <span>Adresse</span>
-            </div>
-             <div class="match-work-description">
-              <span>description</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="dashboard-match-informations">
-            <% @matches.each do |match| %>
-              <div class="match-infos">
-                <div class="match-customer-name">
-                  <%= match.customer.first_name %> <%= match.customer.last_name %>
+      <div class="accepted-match">
+        <% @matches.each do |match| %>
+          <div class="row">
+            <div class="col-xs-12 col-md-4">
+              <div class="accepted-match-card text-center">
+                <div class="left-card-elem">
+                  <h3>Devis n° : <%= match.id %></h3>
                 </div>
-                <div class="match-customer-position">
-                  <%= match.customer.position_in_company %>
+                <div class="left-card-elem">
+                   <h3><%= match.customer.customer_company_name %></h3>
                 </div>
-                <div class="match-customer-telephone">
-                  <%= match.customer.mobile_phone_number %>
+                <br>
+                <div class="left-card-elem">
+                  <span>Date d'émission : <%= l(match.created_at.to_date) %></span>
                 </div>
-                <div class="match-customer-mail">
-                  <%= match.customer.email %>
-                </div>
-                <div class="match-company-address">
-                  <%= match.customer.customer_address%>
-                </div>
-                <div class="match-work-description">
-                  <%= match.customer.description %>
-                </div>
-                <div class="match-status-accepted">
-                  <%= match.status %>
+                <div class="left-card-elem">
+                  <span>Statut : <%= match.status %></span>
                 </div>
               </div>
-            <% end %>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="dashboard-match-type-of-informations">
-            <div class="match-type-id">
-              <span>réf devis</span>
             </div>
-            <div class="match-type-id-date">
-              <span>date du devis</span>
-            </div>
-            <div class="match-type-date">
-              <span>Dates des travaux</span>
-            </div>
-            <div class="match-distance">
-              <span>Distance</span>
-            </div>
-            <div class="match-surface">
-              <span>Surface</span>
-            </div>
-            <div class="match-Type">
-              <span>style</span>
-            </div>
-            <div class="match-status">
-              <span>statut</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="dashboard-match-informations">
-            <% @matches.each do |match| %>
-              <div class="match-infos">
-                <div class="match-id">
-                  <span>réf n° : <%= match.id %></span>
+            <div class="col-xs-12 col-md-4">
+              <div class="accepted-match-card text-center">
+                <div class="left-card-elem">
+                  <h3>Infos contact</h3>
                 </div>
-                <div class="match-date">
-                  <%= l(match.created_at.to_date) %>
+                <div class="left-card-elem">
+                  <span>Nom : <%= match.customer.first_name %> <%= match.customer.last_name %></span>
                 </div>
-                <div class="work-date">
-                    <%= l(match.customer.starts_at.to_date) %>
-                    <br>
-                    <%= l(match.customer.ends_at.to_date) %>
+                <div class="left-card-elem">
+                  <span>Téléphone : <%= match.customer.mobile_phone_number %></span>
                 </div>
-                <div class="match-distance">
-                  <span><%= match.customer.distance_to(current_pro.address).to_i %> km</span>
+                <div class="left-card-elem">
+                  <span>Email : <%= match.customer.email %></span>
                 </div>
-                <div class="match-surface">
-                  <span><%= match.customer.needs_surface%> m 2</span>
+                <div class="left-card-elem">
+                  <span>Adresse : <%= match.customer.customer_address%></span>
                 </div>
-                <div class="match-Type">
+                <div class="left-card-elem">
+                  <span>Description : <%= match.customer.description %></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+              <div class="accepted-match-card text-center">
+                <div class="left-card-elem">
+                  <h3>Chantier </h3>
+                </div>
+                 <div class="left-card-elem">
+                  <span>Adresse : <%= match.customer.works_address%></span>
+                </div>
+                <div class="left-card-elem">
+                  <span>Début des travaux : <%= l(match.customer.starts_at.to_date) %></span>
+                  <br>
+                  <span>Fin des travaux : <%= l(match.customer.ends_at.to_date) %></span>
+                </div>
+                <div class="left-card-elem">
+                  <span>Distance : <%= match.customer.distance_to(current_pro.address).to_i %></span>
+                </div>
+                <div class="left-card-elem">
+                  <span>Surface : <%= match.customer.needs_surface %></span>
+                </div>
+                <div class="left-card-elem">
                   <% if match.customer.customer_startup_style == true %>
                     <span>start-up</span>
                   <% end %>
@@ -140,13 +94,10 @@
                     <span>moderne</span>
                   <% end %>
                 </div>
-                <div class="match-status">
-                  <%= match.status %>
-                </div>
               </div>
-            <% end %>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
     </div>
   </div>
