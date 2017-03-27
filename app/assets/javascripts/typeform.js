@@ -8,16 +8,18 @@ $(function() {
 
   // Autocomplete second field for works address
 
-  $(function(){
-    var $foo = $('#customer_customer_address');
-    var $bar = $('#customer_works_address');
-    function onChange() {
-        $bar.val($foo.val());
-    };
-    $('#customer_customer_address')
-        .change(onChange)
-        .keyup(onChange);
-  });
+  // $(function(){
+  //   var $foo = $('#customer_customer_address');
+  //   var $bar = $('#customer_works_address');
+  //   function onChange() {
+  //       $bar.val($foo.val());
+  //   };
+  //   $('#customer_customer_address')
+  //       .change(onChange)
+  //       .keyup(onChange);
+  // });
+
+
 
 
 
@@ -32,12 +34,12 @@ $(function() {
   }, 2000);
 
 
-  var jobs = ["Directeur général", "Office manager", "Directeur Administratif et Financier", "Partner", "Responsable RH"]
+  // var jobs = ["Directeur général", "Office manager", "Directeur Administratif et Financier", "Partner", "Responsable RH"]
 
-    setInterval(function(){
-    var job = jobs[Math.floor(Math.random()*jobs.length)];
-    $("#customer_customer_company_name").attr("placeholder", job);
-  }, 1000);
+  //   setInterval(function(){
+  //   var job = jobs[Math.floor(Math.random()*jobs.length)];
+  //   $("#customer_customer_company_name").attr("placeholder", job);
+  // }, 1000);
 
   // Smooth scroll
 
@@ -88,11 +90,5 @@ $(function() {
 
   // On enter in an input, switch to next question
 
-  // $('.questions-container input').on('keydown', function(e) {
-  //   if(e.keyCode == 13) {
-  //     e.preventDefault();
-  //     $(this).parent().parent().parent().find('a').click()
-  //   }
-  // })
 
 });
