@@ -266,31 +266,14 @@
       </div>
     </div>
   </div>
-
-
-
-
-<!--   <div class="question-container" id='next15' data-prev='#next14' data-next='#next16'>
-    <div class="question-content">
-      <div>
-        Autre chose à nous dire?
-      </div>
-      <div class='question-input-container'>
-        <%#= f.input :description, label: false, placeholder: "J'ai besoin d'une salle informatique sécurisée et il me faut un espace détente et déjeuner" %>
-      </div>
-      <div class='question-next-button'>
-        <a href='#next14' id="button1" >Ok!</a>
-      </div>
-    </div>
-  </div>
- -->
-
-
-
 <% end %>
 </div>
 
+
+
+
 <% content_for :after_js do %>
+
   <script>
   $('.input-container').keydown(function(e) {
     if ( e.which == 13 ) {
@@ -317,5 +300,10 @@
     };
   });
   </script>
+
 <% end %>
+
 <%#= f.input :photos, as: :attachinary %>
+
+
+
