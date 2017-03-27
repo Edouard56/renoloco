@@ -155,3 +155,32 @@
     border-bottom: #F7F7F7;
 }
 
+//accepted devis
+
+.accepted-match-card {
+    border: solid;
+    border-color: #F7F7F7;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #333333;
+    background-color: white;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1)
+}
+
+.accepted-match {
+  border: solid;
+  border-color: #F7F7F7;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #333333;
+  background-color: grey;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1)
+}
