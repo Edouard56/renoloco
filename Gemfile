@@ -17,6 +17,9 @@ gem 'cloudinary'
 #installing faker
 gem 'faker'
 
+#installing pundit
+gem "pundit"
+
 
 #installing attachinary
 gem 'attachinary', github: 'assembler/attachinary'
