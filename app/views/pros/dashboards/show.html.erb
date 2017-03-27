@@ -136,53 +136,6 @@
           </div>
         </div>
       </div>
-
-    </div>
-
-
-      <div class="row">
-        <div class="col-xs-12 col-md-3">
-          <div class="left-card text-center">
-            <div class="left-card-elem">
-                <h3>Mon profil</h3>
-            </div>
-            <div class="left-card-elem">
-              <img src="https://res.cloudinary.com/das218bbz/image/upload/c_crop,g_face,h_900,r_max,w_900/c_scale,w_150/v1489592039/jfbs2cwncsz1drf95boe.jpg" alt="Jfbs2cwncsz1drf95boe" />
-            </div>
-            <div class="left-card-elem"->
-                <span>Edouard Castaignet</span>
-            </div>
-              <div class="left-card-elem"->
-                  <p> doudou@mail.com </p>
-                  <p> 01 47 71 27 71 </p>
-              </div>
-          </div>
-        </div>
-        <div class="col-xs-12 col-md-9">
-          <div class="right-card">
-            <div class="right-card-elem text-center">
-              <h3>Le profil de ma société</h3>
-            </div>
-            <div class="right-card-elem">
-              <span>Nom de l'entreprise : <strong><%= current_pro.pro_company_name %></strong></span>
-            </div>
-            <div class="right-card-elem">
-              <span>Adresse : <strong><%= current_pro.address %></strong></span>
-            </div>
-            <div class="right-card-elem">
-                <span>Capacité de déplacement : <strong><%= current_pro.operating_radius %></strong> kilomètres </span>
-            </div>
-            <div class="right-card-elem">
-                <span> Surface : de <strong><%= current_pro.min_operating_surface%></strong> à <strong><%= current_pro.max_operating_surface%></strong> mètres carrés.</span>
-            </div>
-            <div class="right-card-elem">
-                <span>photos et types</span>
-                <% current_pro.photos.each do |photo| %>
-                <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
-                <% end %>
-            </div>
-          </div>
-        </div>
     </div>
   </div>
 </div>
