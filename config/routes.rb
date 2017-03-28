@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   # installation d'attachinary
   mount Attachinary::Engine => "/attachinary"
   # Edouard : j'ai overridé devise pour la redirection du sign up en créant un registrations controller

@@ -273,34 +273,45 @@
 
 
 <% content_for :after_js do %>
-
   <script>
-  $('.input-container').keydown(function(e) {
-    if ( e.which == 13 ) {
-      var id = $(this)[0].id;
-      input_id = parseInt(id.substr(id.indexOf("_") + 1));
-      input_id += 1;
-      document.getElementById('question_'+ input_id).scrollIntoView();;
-    };
-  });
-  $('.all-skills-btn').keydown(function(e) {
-    if ( e.which == 13 ) {
-      var id = $(this)[0].id;
-      input_id = parseInt(id.substr(id.indexOf("_") + 1));
-      input_id += 1;
-      document.getElementById('question_'+ input_id).scrollIntoView();;
-    };
-  });
-    $('.selected').keydown(function(e) {
-    if ( e.which == 13 ) {
-      var id = $(this)[0].id;
-      input_id = parseInt(id.substr(id.indexOf("_") + 1));
-      input_id += 1;
-      document.getElementById('question_'+ input_id).scrollIntoView();;
-    };
-  });
+    $(document).ready(function() {
+      $('.input-container').keydown(function(e) {
+        if ( e.which == 13 ) {
+          e.preventDefault();
+          var id = $(this)[0].id;
+          input_id = parseInt(id.substr(id.indexOf("_") + 1));
+          input_id += 1;
+          question = $('#question_'+ input_id);
+          question[0].scrollIntoView();
+          question.find("input").focus();
+        };
+      });
+      $('.all-skills-btn').keydown(function(e) {
+        if ( e.which == 13 ) {
+          e.preventDefault();
+          var id = $(this)[0].id;
+          input_id = parseInt(id.substr(id.indexOf("_") + 1));
+          input_id += 1;
+          document.getElementById('question_'+ input_id).scrollIntoView();
+        };
+      });
+        $('.selected').keydown(function(e) {
+        if ( e.which == 13 ) {
+          e.preventDefault();
+          var id = $(this)[0].id;
+          input_id = parseInt(id.substr(id.indexOf("_") + 1));
+          input_id += 1;
+          document.getElementById('question_'+ input_id).scrollIntoView();
+        };
+      });
+      $(window).scroll(function(e) {
+        // if $(this).scrollTop() === 458
+        // var theWidth = 100 * 1 / 14
+        // $('.progress-bar').css({'wdth': theWidth }).text(theWidth + '%')
+        console.log($(this).scrollTop());
+      });
+    });
   </script>
-
 <% end %>
 
 <%#= f.input :photos, as: :attachinary %>
