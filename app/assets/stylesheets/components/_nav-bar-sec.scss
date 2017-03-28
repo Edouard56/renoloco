@@ -1,0 +1,30 @@
+.tabs {
+  height: 55px;
+  background: #847681;
+  display: flex;
+}
+.tabs a {
+  color: white;
+  font-weight: bold,
+}
+.tabs a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.8;
+}
+.tabs h4 {
+  font-size: 17px;
+}
+
+.tab {
+  background: #847681;
+  height: 55px;
+  flex: 0 0 20%;
+  text-align: center;
+  padding: 5px ;
+}
+
+.tab.active {
+  background: #d3c2c2;
+  color: black;
+}
