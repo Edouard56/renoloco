@@ -108,8 +108,8 @@ Pro.destroy_all
     contact_position: "Président",
     contact_phone_number: Faker::Number,
     operating_radius: 50,
-    min_operating_surface: 500,
-    max_operating_surface: 1000,
+    min_operating_surface: 100,
+    max_operating_surface: 500,
     all_works: false,
     architecte: false,
     furnitures: false,
@@ -129,8 +129,52 @@ pro = Pro.new(
     contact_position: "Président",
     contact_phone_number: Faker::Number,
     operating_radius: 50,
-    min_operating_surface: 500,
-    max_operating_surface: 1000,
+    min_operating_surface: 100,
+    max_operating_surface: 500,
+    all_works: false,
+    architecte: false,
+    furnitures: false,
+    simulation: false
+  )
+  pro.save!
+
+
+pro = Pro.new(
+    pro_company_name: Faker::Company.name,
+    address: "Paris",
+    email: "paris5@mail.com",
+    password: 123456,
+    latitude: 48.8697246,
+    longitude: 2.3309619,
+    contact_first_name: "Edouard",
+    contact_last_name: Faker::Name,
+    contact_position: "Président",
+    contact_phone_number: Faker::Number,
+    operating_radius: 50,
+    min_operating_surface: 100,
+    max_operating_surface: 500,
+    all_works: false,
+    architecte: false,
+    furnitures: false,
+    simulation: false
+  )
+  pro.save!
+
+
+pro = Pro.new(
+    pro_company_name: Faker::Company.name,
+    address: "Paris",
+    email: "paris6@mail.com",
+    password: 123456,
+    latitude: 48.8697246,
+    longitude: 2.3309619,
+    contact_first_name: "Edouard",
+    contact_last_name: Faker::Name,
+    contact_position: "Président",
+    contact_phone_number: Faker::Number,
+    operating_radius: 50,
+    min_operating_surface: 100,
+    max_operating_surface: 500,
     all_works: false,
     architecte: false,
     furnitures: false,
