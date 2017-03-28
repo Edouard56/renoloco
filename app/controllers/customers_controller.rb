@@ -13,7 +13,6 @@ class CustomersController < ApplicationController
     end
 
     if @customer.save
-      @customer.compute_matches
       redirect_to confirmation_path
     else
       render :new

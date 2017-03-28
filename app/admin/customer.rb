@@ -38,6 +38,30 @@ ActiveAdmin.register Customer do
   actions
   end
 
+  # Accepter (pending) tous les matches du customer
+  action_item :view, only: :show do
+    if customer.matches.all? { |match| match.status == "waiting" }
+      link_to 'Accepter Matches', accept_matches_admin_customer_path(customer), method: :patch
+    end
+  end
+
+  member_action :accept_matches, method: :patch do
+    resource.matches.where(status: "waiting").update(status: "pending")
+    redirect_to resource_path, notice: "Matches acceptés!"
+  end
+
+  # Refuser (disqualified) tous les matches du customer
+  action_item :view, only: :show do
+    if customer.matches.all? { |match| match.status == "waiting" }
+      link_to 'Refuser Matches',  refuse_matches_admin_customer_path(customer), method: :patch
+    end
+  end
+
+  member_action :refuse_matches, method: :patch do
+    resource.matches.where(status: "waiting").update(status: "disqualified")
+    redirect_to resource_path, notice: "Matches disqualifiés!"
+  end
+
   permit_params :customer_company_name,
     :first_name,
     :last_name,

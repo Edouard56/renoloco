@@ -25,4 +25,7 @@ class Pro < ApplicationRecord
   geocoded_by :address
   after_validation :geocode, if: :address_changed?
 
+    def to_s
+    pro_company_name
+  end
 end
