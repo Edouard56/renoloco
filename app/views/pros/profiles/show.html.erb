@@ -1,10 +1,11 @@
+<%= content_for(:footer_not_here, true) %>
 <div class="wrapper_grey">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-3">
         <div class="left-card text-center">
           <div class="left-card-elem">
-            <h3>Mon profil</h3>
+            <h3>Profil du contact</h3>
           </div>
           <div class="left-card-elem">
             <img src="https://res.cloudinary.com/das218bbz/image/upload/c_crop,g_face,h_900,r_max,w_900/c_scale,w_150/v1489592039/jfbs2cwncsz1drf95boe.jpg" alt="Jfbs2cwncsz1drf95boe" />
@@ -21,7 +22,7 @@
       <div class="col-xs-12 col-md-9">
         <div class="right-card">
           <div class="right-card-elem text-center">
-            <h3>Profil : <strong> <%= current_pro.pro_company_name %> </strong></h3>
+            <h3>Profil de la société</h3>
           </div>
           <div class="right-card-elem">
             <span>Nom de l'entreprise : <strong><%= current_pro.pro_company_name %></strong></span>
@@ -35,12 +36,12 @@
           <div class="right-card-elem">
               <span> Je suis intéressé par les chantiers entre <strong><%= current_pro.min_operating_surface%></strong> et <strong><%= current_pro.max_operating_surface%></strong> mètres carrés.</span>
           </div>
-    <!--       <div class="right-card-elem">
+          <div class="right-card-elem">
               <span>photos et types</span>
-              <#% current_pro.photos.each do |photo| %>
-              <%#= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
-              <#% end %>
-          </div> -->
+              <% current_pro.photos.each do |photo| %>
+              <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
+              <% end %>
+          </div>
         </div>
       </div>
     </div>

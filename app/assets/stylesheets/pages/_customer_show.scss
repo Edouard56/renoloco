@@ -1,6 +1,11 @@
 .octocat {
   background-color: white;
   text-align: center;
+  height: 50px;
+}
+
+.text-description {
+  margin-bottom: 40px;
 }
 
 .confirmation-card {
@@ -8,10 +13,36 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 300px;
+  height: 220px;
+  position: relative;
+  background-size: cover !important;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3)
 }
 
-.number {
-  font-size: 35px
+.card-symbole {
+  position: absolute;
+  right: 60px;
+  top: 40px;
+  height: 46px;
+  width: 46px;
+}
+.card-number {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  font-size: 60px;
   color: red;
+
+}
+.card-description {
+  position: absolute;
+  bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.confirmation-call-to-action {
+  margin: 50px;
+  margin-bottom: 70px;
 }

@@ -1,19 +1,27 @@
-<div class="wrapper-light-grey">
+<%= content_for(:footer_not_here, true) %>
 
+<div class="wrapper">
   <div class="container">
+  <br>
     <div class="row">
       <div class="octocat">
-        <div class="col-xs-12 col-md-2">
+        <div class="col-xs-12 col-md-4">
             <%= image_tag "jenktocat.jpg" %>
         </div>
-        <div class="col-xs-12 col-md-10">
+      </div>
+        <div class="col-xs-12 col-md-8">
+          <div class="text-description text-align">
             <br>
             <p>Merci ! Votre demande de devis a bien été enregistrée.</p>
+          </div>
         </div>
-      </div>
     </div>
+  </div>
+</div>
 
-  <br><br>
+
+<div class="wrapper_grey">
+  <div class="container">
     <div class="row">
       <div class="col-sm-12">
         <span class="title-h2">
@@ -22,52 +30,56 @@
         <hr>
       </div>
     </div>
-
     <div class="row">
       <div class="col-xs-12 col-md-4 col-lg-4">
         <div class="confirmation-card">
-            <div class="row">
-              <div class="number">
-                <span>1</span>
-              </div>
-              <%= image_tag "operator.svg" %>
-            </div>
-            <div class="row">
-            <p>Votre demande est en cours de validation par nos conseillers. Ils pourront vous contacter pour compléter votre demande.</p>
-            </div>
+          <div class="card-number">
+            <span>1</span>
+          </div>
+          <div class="card-symbole">
+            <%= image_tag "telephone-operator.svg" %>
+          </div>
+          <div class="card-description">
+            <h4>Votre demande est en cours de validation par nos conseillers. Ils pourront éventuellement vous contacter.</h4>
+          </div>
         </div>
       </div>
       <div class="col-xs-12 col-md-4 col-lg-4">
         <div class="confirmation-card">
-            <div class="number">
-              <span>2</span>
-            </div>
+          <div class="card-number">
+            <span>2</span>
+          </div>
+          <div class="card-symbole">
             <%= image_tag "close-envelope.svg" %>
-            <div>
-              <p>Dès validation, vous recevrez les coordonnées des professionnels sélectionnés.</p>
-            </div>
+          </div>
+          <div class="card-description">
+            <h4>Dès validation, vous recevrez les coordonnées des professionnels sélectionnés.</h4>
+          </div>
         </div>
       </div>
       <div class="col-xs-12 col-md-4 col-lg-4">
         <div class="confirmation-card">
-            <div class="number">
-              <span>3</span>
-            </div>
+          <div class="card-number">
+            <span>3</span>
+          </div>
+          <div class="card-symbole">
             <%= image_tag "engineer.svg" %>
-            <div>
-              <p>Les professionnels disponibles vous contacteront dans les plus brefs délais.</p>
-            </div>
+          </div>
+          <div class="card-description">
+            <h4>Les professionnels disponibles vous contacteront dans les plus brefs délais.</h4>
+          </div>
         </div>
       </div>
     </div>
-
     <div class="row">
-      <div class="presentation-bloc">
-        <div class="col-sm-12">
-          <div class= "main-call-to-action text-center">
-            <%= link_to "Revenir à l'accueil", root_path, class: "btn-treehouse"%>
-            <%= link_to "une question ? Appelez-nous !", root_path, class: "btn-treehouse"%>
-          </div>
+      <div class="col-xs-12 col-md-6">
+        <div class= "confirmation-call-to-action text-center">
+          <%= link_to "Revenir à l'accueil", root_path, class: "btn-treehouse"%>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <div class= "confirmation-call-to-action text-center">
+          <%= link_to "une question ? Appelez-nous !", root_path, class: "btn-treehouse"%>
         </div>
       </div>
     </div>
