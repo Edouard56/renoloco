@@ -1,6 +1,6 @@
 class Pros::MatchesController < Pros::BaseController
   def accepted
-    @matches = current_pro.matches.where(status: "accepted")
+    @matches = current_pro.matches.where(status: "accepted").order(created_at: :desc)
   end
 
   def accept

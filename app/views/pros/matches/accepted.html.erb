@@ -20,83 +20,78 @@
           </div>
         </div>
       </div>
-      <div class="accepted-match">
+
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <% @matches.each do |match| %>
-          <div class="row">
-            <div class="col-xs-12 col-md-4">
-              <div class="accepted-match-card text-center">
-                <div class="left-card-elem">
-                  <h3>Devis n° : <%= match.id %></h3>
-                </div>
-                <div class="left-card-elem">
-                   <h3><%= match.customer.customer_company_name %></h3>
-                </div>
-                <br>
-                <div class="left-card-elem">
-                  <span>Date d'émission : <%= l(match.created_at.to_date) %></span>
-                </div>
-                <div class="left-card-elem">
-                  <span>Statut : <%= match.status %></span>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-md-4">
-              <div class="accepted-match-card text-center">
-                <div class="left-card-elem">
-                  <h3>Infos contact</h3>
-                </div>
-                <div class="left-card-elem">
-                  <span>Nom : <%= match.customer.first_name %> <%= match.customer.last_name %></span>
-                </div>
-                <div class="left-card-elem">
-                  <span>Téléphone : <%= match.customer.mobile_phone_number %></span>
-                </div>
-                <div class="left-card-elem">
-                  <span>Email : <%= match.customer.email %></span>
-                </div>
-                <div class="left-card-elem">
-                  <span>Adresse : <%= match.customer.customer_address%></span>
-                </div>
-                <div class="left-card-elem">
-                  <span>Description : <%= match.customer.description %></span>
-                </div>
-              </div>
-            </div>
-            <div class="col-xs-12 col-md-4">
-              <div class="accepted-match-card text-center">
-                <div class="left-card-elem">
-                  <h3>Chantier </h3>
-                </div>
-                 <div class="left-card-elem">
-                  <span>Adresse : <%= match.customer.works_address%></span>
-                </div>
-                <div class="left-card-elem">
-                  <span>Début des travaux : <%= l(match.customer.starts_at.to_date) %></span>
-                  <br>
-                  <span>Fin des travaux : <%= l(match.customer.ends_at.to_date) %></span>
-                </div>
-                <div class="left-card-elem">
-                  <span>Distance : <%= match.customer.distance_to(current_pro.address).to_i %></span>
-                </div>
-                <div class="left-card-elem">
-                  <span>Surface : <%= match.customer.needs_surface %></span>
-                </div>
-                <div class="left-card-elem">
-                  <% if match.customer.customer_startup_style == true %>
-                    <span>start-up</span>
-                  <% end %>
-
-                  <% if match.customer.customer_classical_style == true %>
-                    <span>classique</span>
-                  <% end %>
-
-                  <% if match.customer.customer_modern_style == true %>
-                    <span>moderne</span>
-                  <% end %>
-                </div>
-              </div>
-            </div>
+        <div class="panel panel-default">
+          <div class="panel-heading" role="tab" id="heading_<%= match.id %>">
+            <h4 class="panel-title">
+              <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_<%= match.id %>" aria-expanded="true" aria-controls="collapse_<%= match.id %>">
+                Devis n° : <%= match.id %> _ <%= match.customer.customer_company_name %> _ <%= l(match.created_at.to_date) %>
+              </a>
+            </h4>
           </div>
+          <div id="collapse_<%= match.id %>" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading_<%= match.id %>">
+            <div class="row">
+              <div class="col-xs-12 col-md-6">
+                <div class="accepted-match-card text-center">
+                  <div class="left-card-elem">
+                    <h3>Infos contact</h3>
+                  </div>
+                  <div class="left-card-elem">
+                    <span>Nom : <%= match.customer.first_name %> <%= match.customer.last_name %></span>
+                  </div>
+                  <div class="left-card-elem">
+                    <span>Téléphone : <%= match.customer.mobile_phone_number %></span>
+                  </div>
+                  <div class="left-card-elem">
+                    <span>Email : <%= match.customer.email %></span>
+                  </div>
+                  <div class="left-card-elem">
+                    <span>Adresse : <%= match.customer.customer_address%></span>
+                  </div>
+                  <div class="left-card-elem">
+                    <span>Description : <%= match.customer.description %></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <div class="accepted-match-card text-center">
+                  <div class="left-card-elem">
+                    <h3>Chantier </h3>
+                  </div>
+                   <div class="left-card-elem">
+                    <span>Adresse : <%= match.customer.works_address%></span>
+                  </div>
+                  <div class="left-card-elem">
+                    <span>Début des travaux : <%= l(match.customer.starts_at.to_date) %></span>
+                    <br>
+                    <span>Fin des travaux : <%= l(match.customer.ends_at.to_date) %></span>
+                  </div>
+                  <div class="left-card-elem">
+                    <span>Distance : <%= match.customer.distance_to(current_pro.address).to_i %></span>
+                  </div>
+                  <div class="left-card-elem">
+                    <span>Surface : <%= match.customer.needs_surface %></span>
+                  </div>
+                  <div class="left-card-elem">
+                    <% if match.customer.customer_startup_style == true %>
+                      <span>start-up</span>
+                    <% end %>
+
+                    <% if match.customer.customer_classical_style == true %>
+                      <span>classique</span>
+                    <% end %>
+
+                    <% if match.customer.customer_modern_style == true %>
+                      <span>moderne</span>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+        </div>
+          </div>
+        </div>
         <% end %>
       </div>
     </div>
