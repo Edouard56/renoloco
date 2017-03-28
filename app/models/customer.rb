@@ -2,6 +2,7 @@ class Customer < ApplicationRecord
   has_many :matches, dependent: :destroy
 
   after_create :send_confirmation_email
+  after_create :compute_matches
   after_update :update_matches, if: :works_address_changed?
 
   #attachinary
@@ -52,6 +53,11 @@ class Customer < ApplicationRecord
         Match.create(pro: pro , customer: self, status: 'waiting')
       end
     end
+
+  end
+
+  def to_s
+    customer_company_name
   end
 
   private

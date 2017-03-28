@@ -13,18 +13,22 @@ ActiveAdmin.register Match do
 # end
   index do
     selectable_column
-    column :customer_id
-    column :pro_if
+    column :customer do |match|
+      link_to match.customer.customer_company_name, admin_customer_path(match.customer)
+    end
+    column :pro do |match|
+      link_to match.pro.pro_company_name, admin_pro_path(match.pro)
+    end
     column :status
     actions
   end
 
-  batch_action :mark_as_pending do |ids|
-    batch_action_collection.find(ids).each do |m|
-      m.update(status: 'pending')
-    end
-    redirect_to collection_path, alert: "The matches are now pending."
-  end
+  # batch_action :mark_as_pending do |ids|
+  #   batch_action_collection.find(ids).each do |m|
+  #     m.update(status: 'pending')
+  #   end
+  #   redirect_to collection_path, alert: "The matches are now pending."
+  # end
 
 end
 
