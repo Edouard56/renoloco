@@ -19,6 +19,10 @@ gem 'cloudinary'
 #installing faker
 gem 'faker'
 
+#active_admin
+gem 'activeadmin', github: 'activeadmin/activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
 
 #installing attachinary
 gem 'attachinary', github: 'assembler/attachinary'
