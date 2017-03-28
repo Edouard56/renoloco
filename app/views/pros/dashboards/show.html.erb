@@ -22,57 +22,81 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12">
           <div class="dashboard-match-type-of-informations">
-            <div class="match-type-id">
-              <span>réf devis</span>
+            <div class="col-xs-12">
+              <div class="match-type-id">
+                <span>réf devis</span>
+              </div>
             </div>
-            <div class="match-type-id-date">
-              <span>date du devis</span>
+            <div class="col-xs-12">
+              <div class="match-type-id-date">
+                <span>date du devis</span>
+              </div>
             </div>
-            <div class="match-type-date">
-              <span>Dates des travaux</span>
+            <div class="col-xs-12">
+              <div class="match-type-date">
+                <span>Durée</span>
+              </div>
             </div>
-            <div class="match-distance">
-              <span>Distance</span>
+            <div class="col-xs-12">
+              <div class="match-distance">
+                <span>Distance</span>
+              </div>
             </div>
-            <div class="match-surface">
-              <span>Surface</span>
+            <div class="col-xs-12">
+              <div class="match-surface">
+                <span>Surface</span>
+              </div>
             </div>
-            <div class="match-Type">
-              <span>style</span>
+            <div class="col-xs-12">
+              <div class="match-Type">
+                <span>style</span>
+              </div>
             </div>
-            <div class="match-status">
-              <span>statut</span>
+            <div class="col-xs-12">
+              <div class="match-status">
+                <span>statut</span>
+              </div>
             </div>
-             <div class="match-action">
-              <span>action</span>
+            <div class="col-xs-12">
+               <div class="match-action">
+                <span>action</span>
+              </div>
             </div>
           </div>
-        </div>
       </div>
       <div class="row">
-        <div class="col-xs-12">
-          <div class="dashboard-match-informations">
-            <% @pending_matches.each do |match| %>
-              <div class="match-infos">
+        <div class="dashboard-match-informations">
+          <% @pending_matches.each do |match| %>
+            <div class="match-infos">
+              <div class="col-xs-12">
                 <div class="match-id">
                   <span>réf n° : <%= match.id %></span>
                 </div>
+              </div>
+              <div class="col-xs-12">
                 <div class="match-date">
                   <%= l(match.created_at.to_date) %>
                 </div>
+              </div>
+              <div class="col-xs-12">
                 <div class="work-date">
                     <%= l(match.customer.starts_at.to_date) %>
                     <br>
                     <%= l(match.customer.ends_at.to_date) %>
                 </div>
+              </div>
+              <div class="col-xs-12">
                 <div class="match-distance">
                   <span><%= match.customer.distance_to(current_pro.address).to_i %> km</span>
                 </div>
+              </div>
+              <div class="col-xs-12">
                 <div class="match-surface">
                   <span><%= match.customer.needs_surface%> m 2</span>
                 </div>
+              </div>
+              <div class="col-xs-12">
                 <div class="match-Type">
                   <% if match.customer.customer_startup_style == true %>
                     <span>start-up</span>
@@ -86,50 +110,63 @@
                     <span>moderne</span>
                   <% end %>
                 </div>
+              </div>
+              <div class="col-xs-12">
                 <div class="match-status">
                   <%= match.status %>
                 </div>
+              </div>
+              <div class="col-xs-12">
                 <div class="match-action">
-                  <%= link_to "Accepter", accept_pros_match_path(match), method: :patch, data: { confirm: "Etes-vous sûr(e), en acceptant le devis, vous souscrivez à nos conditions d'engagement ?" }, class: "btn btn-success" %>
-                  <br>
-                  <%= link_to "Refuser", refuse_pros_match_path(match), method: :patch, data: { confirm: "Etes-vous sûr(e) de vouloir refuser ce devis ?" }, class: "btn btn-danger" %>
+                  <%= link_to "Oui", accept_pros_match_path(match), method: :patch, data: { confirm: "Etes-vous sûr(e), en acceptant le devis, vous souscrivez à nos conditions d'engagement ?" }, class: "btn btn-success" %>
+                  <%= link_to "Non", refuse_pros_match_path(match), method: :patch, data: { confirm: "Etes-vous sûr(e) de vouloir refuser ce devis ?" }, class: "btn btn-danger" %>
                 </div>
               </div>
-            <% end %>
-          </div>
+            </div>
+          <% end %>
         </div>
       </div>
        <div class="row">
         <div class="col-xs-12">
           <div class="dashboard-refused-matches">
             <div class="match-type-id">
-              <span>Propositions de devis non acceptées</span>
+              <span class="text-center">Propositions de devis non acceptées</span>
             </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12">
-          <div class="dashboard-match-informations">
-            <% @not_accepted_matches.each do |match| %>
-              <div class="match-infos">
+        <div class="dashboard-match-informations">
+          <% @not_accepted_matches.each do |match| %>
+            <div class="match-infos">
+              <div class="col-xs-12">
                 <div class="match-id">
                   <span>réf n° : <%= match.id %></span>
                 </div>
+              </div>
+              <div class="col-xs-12">
                 <div class="match-date">
                   <%= l(match.created_at.to_date) %>
                 </div>
+              </div>
+              <div class="col-xs-12">
                 <div class="work-date">
                     <%= l(match.customer.starts_at.to_date) %>
                     <br>
                     <%= l(match.customer.ends_at.to_date) %>
                 </div>
+              </div>
+              <div class="col-xs-12">
                 <div class="match-distance">
                   <span><%= match.customer.distance_to(current_pro.to_coordinates).to_i %> km</span>
                 </div>
+              </div>
+              <div class="col-xs-12">
                 <div class="match-surface">
                   <span><%= match.customer.needs_surface%> m 2</span>
                 </div>
+              </div>
+              <div class="col-xs-12">
                 <div class="match-Type">
                   <% if match.customer.customer_startup_style == true %>
                     <span>start-up</span>
@@ -143,12 +180,23 @@
                     <span>moderne</span>
                   <% end %>
                 </div>
+              </div>
+              <div class="col-xs-12">
                 <div class="match-status">
                   <%= match.status %>
                 </div>
               </div>
-            <% end %>
-          </div>
+              <div class="col-xs-12">
+                <div class="match-action">
+                  <% if match.status == "refused" %>
+                    <%= link_to "réaccepter", accept_pros_match_path(match), method: :patch, data: { confirm: "Etes-vous sûr(e), en acceptant le devis, vous souscrivez à nos conditions d'engagement ?" }, class: "btn btn-success" %>
+                  <% else match.status == "lost" %>
+                    <%= "l'offre n'existe plus " %>
+                    <% end %>
+                </div>
+              </div>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>
