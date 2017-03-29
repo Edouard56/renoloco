@@ -4,7 +4,7 @@ class Pros::MatchesController < Pros::BaseController
   end
 
   def accept
-    match = current_pro.matches.where(status: "pending").find(params[:id])
+    match = current_pro.matches.where(status: ["pending", "refused"]).find(params[:id])
     accepted_count = match.customer.matches.where(status: "accepted").count
 
     if accepted_count == Match::MAX_ACCEPTED_COUNT - 1
