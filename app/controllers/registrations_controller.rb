@@ -3,10 +3,9 @@ class RegistrationsController < Devise::RegistrationsController
 
   # Edouard : Comme devise marche avec User de base, la redirection vers la show doit se faire manuellement (cf google : custom path after sign up)
   def after_sign_up_path_for(resource)
-    redirect_to pros_dashboard_path # Or :prefix_to_your_route
+    pros_dashboard_path(resource) # Or :prefix_to_your_route
   end
 
-  # attachinary installé ici a la pla ce du pros controller
 
 end
 
