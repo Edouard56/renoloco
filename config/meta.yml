@@ -1,4 +1,4 @@
 meta_title: "Renoloco - Trouvez le bon aménageur pour vos bureaux"
 meta_description: "Trouvez le bon professionnel de la rénovation de locaux professionnels selon vos gouts, gratuitement et en 1 minute"
-meta_image: "startup.jpg" # should exist in `app/assets/images/`
+meta_image: "og_img.jpg" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account" # required for Twitter Cards

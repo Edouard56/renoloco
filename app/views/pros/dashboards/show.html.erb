@@ -120,8 +120,12 @@
               </div>
               <div class="col-xs-12">
                 <div class="match-action">
-                  <%= link_to "Oui", accept_pros_match_path(match), method: :patch, data: { confirm: "Etes-vous sûr(e), en acceptant le devis, vous souscrivez à nos conditions d'engagement ?" }, class: "btn btn-success" %>
-                  <%= link_to "Non", refuse_pros_match_path(match), method: :patch, data: { confirm: "Etes-vous sûr(e) de vouloir refuser ce devis ?" }, class: "btn btn-danger" %>
+                  <div class="oui">
+                    <%= link_to "Oui", accept_pros_match_path(match), method: :patch, data: { confirm: "Etes-vous sûr(e), en acceptant le devis, vous souscrivez à nos conditions d'engagement ?" }, class: "btn btn-success" %>
+                  </div>
+                  <div class="non">
+                    <%= link_to "Non", refuse_pros_match_path(match), method: :patch, data: { confirm: "Etes-vous sûr(e) de vouloir refuser ce devis ?" }, class: "btn btn-danger" %>
+                  </div>
                 </div>
               </div>
             </div>
