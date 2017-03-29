@@ -274,7 +274,26 @@ customer = Customer.new(
   first_name: "Jean-Michel",
   last_name: "Duluma",
   mobile_phone_number: "0712345678",
-  email: "customesrgr@mail.com",
+  email: "customer2@mail.com",
+  customer_address: "Boulogne-Billancourt",
+  works_address: "Boulogne-Billancourt",
+  needs_surface: 200,
+  nb_of_employees: 25,
+  starts_at: "Thu, 30 Mar 2017 00:00:00 UTC +00:00",
+  ends_at: "Thu, 30 Mar 2017 00:00:00 UTC +00:00",
+  customer_startup_style: true,
+  description: "petite description",
+  latitude: 48.8167,
+  longitude: 2.2
+  )
+customer.save!
+
+customer = Customer.new(
+  customer_company_name: Faker::Company.name,
+  first_name: "Jean-Louis",
+  last_name: "Dupontel",
+  mobile_phone_number: "0712345678",
+  email: "customer3@mail.com",
   customer_address: "Versailles",
   works_address: "Versailles",
   needs_surface: 200,
@@ -287,6 +306,5 @@ customer = Customer.new(
   longitude: 2.2
   )
 customer.save!
-
 
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
