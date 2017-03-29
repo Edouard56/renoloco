@@ -3,6 +3,71 @@
  * (margin/padding adjustments)
  * ------------------------------------- */
 
+// CSS de la navbar secondaire
+
+
+.navbar {
+    background-color: #4b4d58;
+}
+
+nav {
+  .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 16px;
+  text-align: left;
+  background-color: darken(#4b4d58, 10%);
+  //border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+  border-radius: 5px;
+  }
+
+  .dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.4;
+    color: white;
+    white-space: nowrap;
+  }
+  .dropdown {
+  background-color: #4b4d58;
+  }
+}
+
+.navbar-inverse {
+    background-color: #4b4d58;
+    /* border-color: #090909; */
+}
+
+.navbar-collapse {
+  overflow-x: visible;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: darken(#4b4d58, 10%);
+    color: #fff;
+}
+
+
+//Wrapper de la suite
+
+
  .presentation_wrapper {
   margin-bottom: 40px;
  }
