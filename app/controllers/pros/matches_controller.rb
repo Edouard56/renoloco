@@ -9,7 +9,7 @@ class Pros::MatchesController < Pros::BaseController
 
     if accepted_count == Match::MAX_ACCEPTED_COUNT - 1
       match.update(status: "accepted")
-      match.customer.matches.where(status: "pending").each do |m|
+      match.customer.matches.where(status: ["pending", "refused"]).each do |m|
         m.update(status: "lost")
       end
       redirect_to pros_dashboard_path
