@@ -140,7 +140,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="dashboard-refused-matches">
-            <div class="match-type-id">
+            <div class="match-type-id text-center">
               <span class="text-center" >Clients refusés</span>
             </div>
           </div>
@@ -203,7 +203,7 @@
                   <% if match.status == "refused" %>
                     <%= link_to "réaccepter", accept_pros_match_path(match), method: :patch, data: { confirm: "Etes-vous sûr(e), en acceptant le devis, vous souscrivez à nos conditions d'engagement ?" }, class: "btn btn-success" %>
                   <% else match.status == "lost" %>
-                    <%= "l'offre n'existe plus " %>
+                    <%= "l'offre a dejà été attribuée 3 fois " %>
                     <% end %>
                 </div>
               </div>

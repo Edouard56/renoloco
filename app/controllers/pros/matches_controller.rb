@@ -7,13 +7,16 @@ class Pros::MatchesController < Pros::BaseController
     match = current_pro.matches.where(status: "pending").find(params[:id])
     accepted_count = match.customer.matches.where(status: "accepted").count
 
-    if accepted_count < Match::MAX_ACCEPTED_COUNT
+    if accepted_count == Match::MAX_ACCEPTED_COUNT - 1
+      match.update(status: "accepted")
+      match.customer.matches.where(status: "pending").each do |m|
+        m.update(status: "lost")
+      end
+      redirect_to pros_dashboard_path
+    else
+      accepted_count < Match::MAX_ACCEPTED_COUNT
       match.update(status: "accepted")
       redirect_to accepted_pros_matches_path
-    else
-      match.update(status: "lost")
-      flash[:alert] = "Vous arrivez trop tard"
-      redirect_to pros_dashboard_path
     end
   end
 
