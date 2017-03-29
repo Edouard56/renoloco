@@ -305,9 +305,18 @@
         };
       });
       $(window).scroll(function(e) {
-        // if $(this).scrollTop() === 458
-        // var theWidth = 100 * 1 / 14
-        // $('.progress-bar').css({'wdth': theWidth }).text(theWidth + '%')
+        if ($(this).scrollTop() === 502) {
+          var theWidth = 100 * 1 / 14
+          $('.progress-bar').css({'wdth': theWidth }).text(theWidth + '%');
+        };
+        else if ($(this).scrollTop() === 392) {
+        var theWidth = 100 * 1 / 14
+        $('.progress-bar').css({'wdth': theWidth }).text(theWidth + '%');
+        };
+        else ($(this).scrollTop()) {
+        var theWidth = 100 * 1 / 14
+        $('.progress-bar').css({'wdth': theWidth }).text(theWidth + '%');
+        };
         console.log($(this).scrollTop());
       });
     });
