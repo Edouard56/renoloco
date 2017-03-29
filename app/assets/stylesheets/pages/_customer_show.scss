@@ -1,13 +1,45 @@
-.octocat {
-  background-color: white;
-  text-align: center;
-  height: 50px;
+.titre-soc {
+  margin-top: 20px;
+  margin-bottom : 10px;
+}
+
+.photo-soc {
+  margin-top: 10px;
+}
+
+.comm-soc {
+  color:#FFDD06;
+  margin-top:10px;
+}
+
+.lien-soc {
+  margin-top:10px;
+}
+
+.wrapper-profile-client {
+  margin:15px;
+  padding:5px;
+}
+
+.customer-btn {
+  border-radius: 10px;
+  background-color: green;
+  position: relative;
 }
 
 .text-description {
+  padding-top: 30px;
   margin-bottom: 40px;
 }
 
+#espace-btn {
+    padding:30px;
+    padding-bottom: 70px;
+}
+
+#espace-cards {
+  margin-bottom:20px;
+}
 .confirmation-card {
   background-color: white;
   display: flex;
