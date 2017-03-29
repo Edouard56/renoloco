@@ -1,6 +1,6 @@
 <%= content_for(:footer_not_here, true) %>
 
-<div class="wrapper_grey">
+<div class="wrapper_grey full_page">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
@@ -12,11 +12,11 @@
         <div class="col-xs-12">
           <div class="dashboard-tabs">
             <div class="dashboard-tab active">
-              <h3>Mes demandes de devis</h3>
+              <h3>Clients disponibles</h3>
             </div>
             <div class="dashboard-tab">
               <%= link_to accepted_pros_matches_path do %>
-                <h3>Mes prospects acceptés</h3>
+                <h3>Mes clients</h3>
               <% end %>
             </div>
           </div>
@@ -66,6 +66,7 @@
             </div>
           </div>
       </div>
+      <% if @pending_matches.count > 0 %>
       <div class="row">
         <div class="dashboard-match-informations">
           <% @pending_matches.each do |match| %>
@@ -127,15 +128,25 @@
           <% end %>
         </div>
       </div>
-       <div class="row">
+      <% else %>
+      <div class="row">
+          <div class="text-center">
+            <div class="col-xs-12">
+               <p>Il n'y a pas de demande active pour le moment</p>
+            </div>
+          </div>
+      </div>
+      <% end %>
+      <div class="row">
         <div class="col-xs-12">
           <div class="dashboard-refused-matches">
             <div class="match-type-id">
-              <span class="text-center">Propositions de devis non acceptées</span>
+              <span class="text-center" >Clients refusés</span>
             </div>
           </div>
         </div>
       </div>
+      <% if @not_accepted_matches.count > 0 %>
       <div class="row">
         <div class="dashboard-match-informations">
           <% @not_accepted_matches.each do |match| %>
@@ -200,6 +211,15 @@
           <% end %>
         </div>
       </div>
+      <% else %>
+      <div class="row">
+        <div class="text-center">
+          <div class="col-xs-12">
+             <p>Vous n'avez pas refusé de prospects pour le moment</p>
+          </div>
+        </div>
+      </div>
+      <% end %>
     </div>
   </div>
 </div>

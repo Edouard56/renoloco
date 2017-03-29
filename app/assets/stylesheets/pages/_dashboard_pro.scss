@@ -4,14 +4,19 @@
   border-color: #53443F;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
+  padding-bottom: 3px;
+}
+
+.full_page {
+  height: 100vh;
 }
 
 // Dashboard tabs
 .dashboard-tabs {
-  background: #53443F;
+  background: #28262C;
   display: flex;
   padding: 10px 10px 0 10px;
-  border-radius: 5px 5px 0 0;
+  border-radius: 8px 8px 0 0;
   // background-color: #F7F7F7;
   color: white;
 }
@@ -38,7 +43,7 @@
 }
 
 .dashboard-tab {
-  background: #756A66;
+  background: #455561;
   flex: 0 0 50%;
   text-align: center;
   padding: 5px 0;
@@ -52,7 +57,7 @@
 }
   // table : titre des infos
 .dashboard-match-type-of-informations {
-  background: green;
+  background: #5EEB5B;
   color: white;
   font-weight: bold;
   border-radius: 5px;
@@ -101,7 +106,7 @@
 
 //refused matches
 .dashboard-refused-matches {
-  background: red;
+  background: #E23E57;
   color: white;
   font-weight: bold;
   border-radius: 5px;

@@ -1,6 +1,6 @@
 <%= content_for(:footer_not_here, true) %>
 
-<div class="wrapper_grey">
+<div class="wrapper_grey full_page">
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
@@ -13,23 +13,24 @@
           <div class="dashboard-tabs">
             <div class="dashboard-tab">
               <%= link_to pros_dashboard_path do %>
-                <h3>Mes demandes de devis</h3>
+                <h3>Clients disponibles</h3>
               <% end %>
             </div>
             <div class="dashboard-tab active">
-              <h3>Mes prospects acceptés</h3>
+              <h3>Mes clients</h3>
             </div>
           </div>
         </div>
       </div>
 
+      <% if @matches.count > 0 %>
       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
         <% @matches.each do |match| %>
         <div class="panel panel-default">
           <div class="panel-heading" role="tab" id="heading_<%= match.id %>">
             <h4 class="panel-title">
               <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse_<%= match.id %>" aria-expanded="true" aria-controls="collapse_<%= match.id %>">
-                Devis n° : <%= match.id %> _ <%= match.customer.customer_company_name %> _ <%= l(match.created_at.to_date) %>
+                Devis n° : <%= match.id %> - Société : <%= match.customer.customer_company_name %> - Date de la demande : <%= l(match.created_at.to_date) %>
               </a>
             </h4>
           </div>
@@ -71,22 +72,22 @@
                     <span>Fin des travaux : <%= l(match.customer.ends_at.to_date) %></span>
                   </div>
                   <div class="left-card-elem">
-                    <span>Distance : <%= match.customer.distance_to(current_pro.address).to_i %></span>
+                    <span>Distance : <%= match.customer.distance_to(current_pro.address).to_i %> km</span>
                   </div>
                   <div class="left-card-elem">
-                    <span>Surface : <%= match.customer.needs_surface %></span>
+                    <span>Surface à rénover : <%= match.customer.needs_surface %>m2</span>
                   </div>
                   <div class="left-card-elem">
                     <% if match.customer.customer_startup_style == true %>
-                      <span>start-up</span>
+                      <span> style : start-up</span>
                     <% end %>
 
                     <% if match.customer.customer_classical_style == true %>
-                      <span>classique</span>
+                      <span>style : classique, ancien</span>
                     <% end %>
 
                     <% if match.customer.customer_modern_style == true %>
-                      <span>moderne</span>
+                      <span>style : moderne</span>
                     <% end %>
                   </div>
                 </div>
@@ -94,6 +95,15 @@
         </div>
           </div>
         </div>
+        <% end %>
+        <% else %>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="">
+              <h4 class="panel-title">
+                <p> Vous n'avez pas encore accepté de clients, allez vite dans la rubrique <strong>"clients disponibles"</strong></p>
+              </h4>
+            </div>
+          </div>
         <% end %>
       </div>
     </div>
