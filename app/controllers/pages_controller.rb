@@ -3,4 +3,8 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def choisir_son_renovateur
+  end
+
 end
