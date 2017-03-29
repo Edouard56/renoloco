@@ -40,41 +40,59 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-4 hidden-xs">
-        <span class="title-h3 text-center">
-          <h3>Les <strong>services</strong> Renoloco</h3>
-          <hr>
-        </span>
-        <div class="presentation-bloc text-center">
-          <div class="presentation-card">
-            <a href="#" title="Calculer mes aides"><span class="fa fa-calculator"></span></a>
-            <div class="presentation-text">
-              <p>
-                <strong>Remplissez le questionnaire</strong>
-              </p>
+        <div class= "vertical-article-banner">
+          <span class="title-h3 text-center">
+            <h3>Trouvez votre entrepreneur pour vos rénovations</h3>
+          </span>
+          <div class="presentation-bloc text-center">
+            <div class="presentation-card">
+              <span class="fa fa-calculator"></span>
+              <div class="presentation-text">
+                <p>
+                  <strong>Remplissez le questionnaire</strong>
+                </p>
+              </div>
             </div>
+            <div class="presentation-card">
+                  <span class="fa fa-eur"></span>
+                <div class="presentation-text">
+                  <p>
+                    <strong>Recevez vos plans et devis</strong>
+                  </p>
+                </div>
+              </div>
+              <div class="presentation-card">
+                <span class="fa fa-home"></span>
+                <div class="presentation-text">
+                  <p>
+                    <strong>Trouvez les meilleurs prestataires</strong>.
+                  </p>
+                </div>
+              </div>
           </div>
-          <div class="presentation-card">
-            <a href="#" title="Calculer mes aides"><span class="fa fa-calculator"></span></a>
-            <div class="presentation-text">
-              <p>
-                <strong>Remplissez le questionnaire</strong>
-              </p>
-            </div>
-          </div>
-          <div class="presentation-card">
-            <a href="#" title="Calculer mes aides"><span class="fa fa-calculator"></span></a>
-            <div class="presentation-text">
-              <p>
-                <strong>Remplissez le questionnaire</strong>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="presentation-bloc">
-          <div class="col-sm-12">
+          <div class="presentation-bloc">
             <div class= "main-call-to-action text-center">
               <%= link_to "Remplir le questionnaire en 1 minute", formulaire_path, class: "btn-treehouse"%>
             </div>
+          </div>
+          <br>
+          <div class="all-articles">
+            <span class="title-h3 text-center">
+              <h3>Les autres articles</h3>
+          </span>
+            <%= link_to "Rénover en deux deux", root_path %>
+            <br>
+            <%= link_to "Le guide de la rénovation", root_path %>
+            <br>
+            <%= link_to "1,2, 3 je rénove avec Jean-Michel", root_path %>
+            <br>
+            <%= link_to "Rénover en deux trois", root_path %>
+            <br>
+            <%= link_to "Rénover en deux deux", root_path %>
+            <br>
+            <%= link_to "Rénover en deux deux", root_path %>
+            <br>
+            <%= link_to "Rénover en deux deux", root_path %>
           </div>
         </div>
       </div>
