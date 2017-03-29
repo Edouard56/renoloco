@@ -23,7 +23,29 @@ pro = Pro.new(
     longitude: 4.8309619,
     contact_first_name: "Edouard",
     contact_last_name: "Castaignet",
-    contact_position: "Admin",
+    contact_position: "Directeur",
+    contact_phone_number: "0112345678",
+    operating_radius: 50,
+    min_operating_surface: 100,
+    max_operating_surface: 500,
+    all_works: false,
+    architecte: false,
+    furnitures: false,
+    simulation: false,
+    admin: true
+  )
+  pro.save!
+
+  pro = Pro.new(
+    pro_company_name: "admin",
+    address: "1, rue de Maubeuge",
+    email: "gsalin@gmail.com",
+    password: 123456,
+    latitude: 45.7589419,
+    longitude: 4.8309619,
+    contact_first_name: "Edouard",
+    contact_last_name: "Castaignet",
+    contact_position: "directeur",
     contact_phone_number: "0112345678",
     operating_radius: 50,
     min_operating_surface: 100,

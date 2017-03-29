@@ -5,11 +5,11 @@
 <div class="questions-footer">
   <div class="progress-container">
     <div class="progress">
-      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-        60%
+      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+        <span id="progress-percent">0</span>%
       </div>
     </div>
-    <p>2 / <strong>10</strong></p>
+<!--     <p>2 / <strong>10</strong></p> -->
   </div>
 
   <div class="controls">
@@ -92,24 +92,29 @@
   <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
       <h3><span>5</span> <i class="fa fa-arrow-right"></i> Voici les travaux que je prévois de faire </h3>
-      <div class="input-container">
+      <div class="content-container">
         <div class="all-skills-btn" id="input_<%= question %>">
-          <button type="button">
+          <button type="button" class="btn-works">
             <div class="skills-btn">
               Peinture <i class="fa fa-paint-brush"></i>
             </div>
           </button>
-          <button type="button">
+          <button type="button" class="btn-works">
             <div class="skills-btn">
-              Réseau informatique <i class="fa fa-usb"></i>
+              Espace détente <i class="fa fa- fa-cutlery"></i>
             </div>
           </button>
-          <button type="button">
+          <button type="button" class="btn-works">
             <div class="skills-btn">
-              Peinture <i class="fa fa-paint-brush"></i>
+              Système d'alarme <i class="fa fa-lock"></i>
             </div>
           </button>
-          <button type="button">
+          <button type="button" class="btn-works">
+            <div class="skills-btn">
+              Réseau électrique <i class="fa fa-bolt"></i>
+            </div>
+          </button>
+          <button type="button" class="btn-works">
             <div class="skills-btn">
               Réseau informatique <i class="fa fa-usb"></i>
             </div>
@@ -128,8 +133,8 @@
 
   <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
-      <h3><span>6</span> <i class="fa fa-arrow-right"></i> Parmis les styles de locaux suivants, mes préférés sont : </h3>
-      <div class="input-container" id="input_<%= question %>">
+      <h3><span>6</span> <i class="fa fa-arrow-right"></i> Cliquez sur la photo qui correspond le plus à vos attentes : </h3>
+      <div class="content-container" id="input_<%= question %>">
         <select name="styles" multiple="multiple" class="image-picker show-html">
           <option data-img-src="<%= image_path 'startup.jpg' %>" class="image-picker-photo" value="startup">Dynamique / Startup</option>
           <option data-img-src="<%= image_path 'ancien.jpg' %>" class="image-picker-photo" value="classical">Ancien / Standing</option>
@@ -305,20 +310,25 @@
         };
       });
       $(window).scroll(function(e) {
-        if ($(this).scrollTop() === 502) {
-          var theWidth = 100 * 1 / 14
-          $('.progress-bar').css({'wdth': theWidth }).text(theWidth + '%');
+        var bodyHeight = $('body').height();
+        var heightLimit = bodyHeight * 90 / 100
+        var progressBar = $('.progress-bar');
+        var progressPercent = $('#progress-percent');
+        var stepHeight = (bodyHeight - 392) / 14
+        var theWidth = 100 * 1 / 14;
+        var stepNb = $(this).scrollTop() / stepHeight;
+        var newPercent = Math.round(theWidth * stepNb);
+        if ($(this).scrollTop() >= heightLimit) {
+          progressPercent.text(100);
+          progressBar.css({ "width": '100%'});
+        } else {
+          progressPercent.text(newPercent);
+          progressBar.css({ "width": newPercent + '%'});
         };
-        else if ($(this).scrollTop() === 392) {
-        var theWidth = 100 * 1 / 14
-        $('.progress-bar').css({'wdth': theWidth }).text(theWidth + '%');
-        };
-        else ($(this).scrollTop()) {
-        var theWidth = 100 * 1 / 14
-        $('.progress-bar').css({'wdth': theWidth }).text(theWidth + '%');
-        };
-        console.log($(this).scrollTop());
       });
+    $( ".btn-works" ).click(function() {
+      $( this ).toggleClass('btn-works-active');
+    });
     });
   </script>
 <% end %>

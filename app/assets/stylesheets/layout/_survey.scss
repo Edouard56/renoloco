@@ -3,6 +3,9 @@
   color: white;
 }
 
+.thumbnail {
+  border: none !important;
+}
 
 .questions-footer {
   position: fixed;
@@ -28,6 +31,13 @@
       border-radius: 2px;
     }
   }
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid black;
 }
 
 .progress-container {
@@ -70,6 +80,8 @@
     font-size: 20px;
     border-image-slice: 2;
     outline: none;
+    font-weight: bold;
+    color: #28262C;
   }
   input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: rgba(255, 255, 255, 0.3);
@@ -113,9 +125,10 @@
 
 .all-skills-btn {
   display: flex;
-
-  justify-content: space-around;
-  flex-direction: wrap;
+  margin-bottom: 10px;
+  button {
+    margin-right:10px;
+  }
 }
 
 .skills-btn {
@@ -124,10 +137,7 @@
   border: none;
   padding:2px;
 
-  &:hover {
-      transition: all 800ms ease;
-      background-color:#367591;
-    }
+
 }
 
 
@@ -148,11 +158,12 @@
 
 
 #final-btn {
-  margin-top: 50px;
-  border-width: 5px;
+  margin-top: 100px;
+  border-width: 4px;
   border: solid;
-  border-radius: 30px;
+  border-radius: 20px;
   background-color: #388659;
+  font-size:25px;
 }
 
 
@@ -183,3 +194,23 @@
   font-weight: lighter;
   box-shadow: none;
 }
+
+#customer_description {
+  border-radius:2px;
+  height: 100px;
+  background-color: #F2F2F2;
+  border:none !important;
+}
+
+.btn-works {
+  &:hover {
+    transition: all 800ms ease;
+    background-color:#367591;
+  }
+}
+
+.btn-works-active {
+  background: #999 !important;
+}
+
+
