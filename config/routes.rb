@@ -28,6 +28,8 @@ Rails.application.routes.draw do
 
   get 'formulaire', to: 'customers#new'
   get 'confirmation', to: 'customers#show'
+  get  'bien-choisir-son-entreprise-de-renovation', to: 'pages#choisir_son_renovateur'
   root to: 'pages#home'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
