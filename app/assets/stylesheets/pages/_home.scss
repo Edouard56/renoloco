@@ -41,14 +41,24 @@ nav {
     color: white;
     white-space: nowrap;
   }
-  .dropdown {
-  background-color: #4b4d58;
-  }
 }
 
 .navbar-inverse {
-    background-color: #4b4d58;
-    /* border-color: #090909; */
+  border: none;
+  border-top: 1px solid #f4f4f4;
+  background-color: white;
+
+  .navbar-nav {
+    li {
+      a {
+        color: #4b4d58;
+      }
+
+      a:hover, a:focus {
+        color: grey;
+      }
+    }
+  }
 }
 
 .navbar-collapse {
@@ -109,7 +119,7 @@ nav {
 
 a:hover, a:focus {
     color: #23527c;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .presentation-bloc {
@@ -122,8 +132,8 @@ a:hover, a:focus {
 }
 
 .wrapper-light-grey {
-  background-color: #edeff0;
-  padding-top: 40px;
+  background-color: white;
+  padding: 130px 0;
   border-radius: 5px;
   padding-bottom: 40px;
 }
@@ -151,11 +161,24 @@ a:hover, a:focus {
 }
 
 .articles-bloc {
-    background-color: white;
-    height: 370px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  padding-right: 70px;
+  background-color: white;
+
+  h3 {
+    margin: 0 0 35px;
+  }
+
+  span {
+    margin-bottom: 8px;
+    font-size: 1.2em;
+    color: #333;
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
 }
 
 .two-articles {
