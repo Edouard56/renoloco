@@ -184,7 +184,7 @@
 
   <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
-      <h3><span>9</span> <i class="fa fa-chevron-right"></i> et mon nom </h3>
+      <h3><span>9</span> <i class="fa fa-chevron-right"></i> Et mon nom </h3>
       <div class="input-container" id="input_<%= question %>">
         <%= f.input :last_name, placeholder: 'Dupont', label: false %>
       </div>
@@ -199,7 +199,7 @@
 
   <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
-      <h3><span>10</span> <i class="fa fa-chevron-right"></i> Voici mon numéro de téléphone portable si besoin </h3>
+      <h3><span>10</span> <i class="fa fa-chevron-right"></i> Voici mon numéro de téléphone portable </h3>
       <div class="input-container" id="input_<%= question %>">
         <%= f.input :mobile_phone_number, placeholder: '06 XX XX XX XX', label: false %>
       </div>
@@ -246,7 +246,7 @@
 
   <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
-      <h3><span>13</span> <i class="fa fa-chevron-right"></i> Il faut absolument que ce soit terminé le  </h3>
+      <h3><span>13</span> <i class="fa fa-chevron-right"></i> Et il faut absolument que ce soit terminé le  </h3>
       <div class="input-container" id="input_<%= question %>">
         <%= f.input :ends_at, label: false, input_html: {type: "text" , class: "datepicker"}, html5: true, placeholder: "24/12/2017" %>
       </div>
@@ -262,9 +262,9 @@
 
   <div id="question_<%= question += 1 %>" class="question-container">
     <div class="question-content">
-      <h3><span>14</span> <i class="fa fa-chevron-right"></i> Et j'allais oublier, je voulais vous dire que </h3>
+      <h3><span>14</span> <i class="fa fa-chevron-right"></i> Enfin, je voulais vous dire que </h3>
       <div class="input-container" id="input_<%= question %>">
-        <%= f.input :description, label: false, placeholder: "J'ai besoin de mobilier pour créer un espace détente" %>
+        <%= f.input :description, label: false, placeholder: "J'ai besoin de mobilier pour créer un espace détente..." %>
       </div>
       <div class="ok">
         <%= f.submit "Trouvez moi les meilleurs partenaires !", id: "final-btn" %>
