@@ -5,31 +5,21 @@
     font-size: 1.21429em;
     line-height: 1.3em;
     padding: 0 0 48px 0;
-    margin: 40px 0 0;
+    margin: 30px 0 0;
     display: block;
     font-size: 0.875em;
     font-family: "BrandonGrotesque-Regular";
     font-weight: 300;
     font-style: normal;
+
+    ul {
+    margin-right: 0px;
+    padding-right: 0px;
+    }
 }
 
 .row {
     display: block;
-}
-
-.btn-treehouse {
-  color: white;
-  padding: 10px 15px;
-  border-radius: 4px;
-  font-weight: bold;
-  background: #6AD58B;
-  transition: background 0.3s ease;
-}
-.btn-treehouse:hover {
-  opacity: 1;
-  background: #3ac162;
-  text-decoration: none;
-  color: white;
 }
 
 
