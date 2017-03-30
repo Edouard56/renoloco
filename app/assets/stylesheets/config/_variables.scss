@@ -2,9 +2,9 @@
  * Fonts
  * ------------------------------------- */
 // Google fonts
-@import url('https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800|Muli:200,300,400,600,700,800');
-$base-font: "Muli", "Helvetica", "sans-serif";
-$header-font: "Dosis", "Helvetica", "sans-serif";
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
+$base-font: 'Open Sans', sans-serif;
+$header-font: 'Lato', sans-serif;
 
 // Local fonts (uncomment following lines)
 // @font-face {

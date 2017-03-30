@@ -1,24 +1,42 @@
 .titre-soc {
-  margin-top: 20px;
-  margin-bottom : 10px;
+  margin: 20px 0;
+  margin-bottom: 40px;
+  padding:30px;
+  border-bottom: 2px solid #000 !important;
 }
 
-.photo-soc {
+.photos-soc {
   margin-top: 10px;
 }
 
+.photo-soc {
+  border-radius:3px;
+}
+
 .comm-soc {
-  color:#FFDD06;
   margin-top:10px;
 }
 
 .lien-soc {
-  margin-top:10px;
+  margin-top:15px;
+}
+
+.fa-star {
+  color:#58828B;
+}
+
+.fa-star-o {
+  color:#58828B;
+}
+
+.lien-societe {
+  font-size:18px;
 }
 
 .wrapper-profile-client {
   margin:15px;
   padding:5px;
+  margin-bottom:90px;
 }
 
 .customer-btn {

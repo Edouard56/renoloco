@@ -57,73 +57,17 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.56) 0%, rgba(123, 2, 1, 0.23) 50%), url(<%= asset_path 'banner_photo.jpg' %>) ">
   <div class="banner-content">
     <h1>Aménagez vos bureaux à votre image</h1>
-    <div class="row">
-      <div class="col-xs-12 col-md-3">
-        <h2>Nous trouvons pour vous les entreprises de rénovation qui réaliseront vos rêves</h2>
-      </div>
-    </div>
+    <i>Nous trouvons pour vous les entreprises de rénovation qui réaliseront vos rêves</i>
+    <%= link_to formulaire_path, class: "main-cta" do %>
+      <span>Remplir le questionnaire en 1 minute</span>
+    <% end %>
+    <ul class="main-features">
+      <li>Remplissez le questionnaire</li>
+      <li>Recevez vos plans et devis</li>
+      <li>Trouvez les meilleurs prestataires</li>
+    </ul>
   </div>
 </div>
-
-<div class="presentation_wrapper">
-  <div class="container">
-    <div id="frontpage-presentation">
-      <div class="row">
-        <div class="col-sm-12 text-center">
-          <span class="title-h2">
-            <h3>Les <strong>services</strong> Renoloco</h3>
-          </span>
-          <hr>
-        </div>
-      </div>
-      <div class="row">
-        <div class="presentation-bloc">
-          </div>
-          <div class="col-sm-4 text-center">
-            <div class="presentation-card">
-              <a href="#" title="Calculer mes aides"><span class="fa fa-calculator"></span></a>
-              <div class="presentation-text">
-                <p>
-                  <strong>Remplissez le questionnaire</strong>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 text-center">
-            <div class="presentation-card">
-              <a href="#" title="Demander ma prime énergie">
-                <span class="fa fa-eur"></span>
-              </a>
-              <div class="presentation-text">
-                <p>
-                  <strong>Recevez vos plans et devis</strong>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4 text-center">
-            <div class="presentation-card">
-              <a href="#" title="Outil d'aide au choix des travaux les plus rentables"><span class="fa fa-home"></span></a>
-              <div class="presentation-text">
-                <p>
-                  <strong>Trouvez les meilleurs prestataires</strong>.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="presentation-bloc">
-          <div class="col-sm-12">
-            <div class= "main-call-to-action text-center">
-              <%= link_to "Remplir le questionnaire en 1 minute", formulaire_path, class: "btn-treehouse"%>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
 <div class="wrapper-light-grey">
   <div class="container">
@@ -139,33 +83,13 @@
           </div>
           <div class="col-xs-12 col-sm-6 right-square">
             <div class="articles-bloc">
-              <div class="row">
-                <h3 class="text-center">L'essentiel de la <strong>rénovation</strong> en 3 articles</h3>
-                <div class="two-articles">
-                  <div class="col-sm-6">
-
-                    <div class="article-card">
-                      <a href="#"><span class="project-icon text-center"></span><span><strong>Bien choisir son entreprise de rénovation :</strong></span></a>
-                      <span class="project-icon project-icon-iso-m"></span>
-                      <p class="text-justify">Les 6 principaux points à bien prendre en compte au moment de choisir son entreprise de rénovation.</p>
-                    </div>
-                  </div>
-                  <div class="col-sm-6">
-                    <div class="article-card">
-                      <a href="#"><span class="project-icon"></span><span><strong>Bonnes pratiques et astuces :</strong></span></a>
-                      <span class="project-icon project-icon-iso-m"></span>
-                      <p class="text-justify">Il est parfois compliqué d'avoir une vue synthétique du projet de rénovation. Suivez le guide.</p>
-                    </div>
-                  </div>
-                 </div>
-                <div class="col-sm-12">
-                  <div class="article-card-inline">
-                    <a href="#"><span class="project-icon text-center"></span><span><strong>Le timing !</strong></span></a>
-                    <span class="project-icon project-icon-iso-m"></span>
-                    <p class="text-justify">Un élément décisif pour la réussite de votre projet.</p>
-                  </div>
-                </div>
-              </div>
+              <h3>L'essentiel de la <strong>rénovation</strong> en 3 articles</h3>
+              <span>Bien choisir son entreprise de rénovation :</span>
+              <p class="text-justify">Les 6 principaux points à bien prendre en compte au moment de choisir son entreprise de rénovation.</p>
+              <span>Bonnes pratiques et astuces :</span>
+              <p class="text-justify">Il est parfois compliqué d'avoir une vue synthétique du projet de rénovation. Suivez le guide.</p>
+              <span>Le timing !</span>
+              <p class="text-justify">Un élément décisif pour la réussite de votre projet.</p>
             </div>
           </div>
         </div>
