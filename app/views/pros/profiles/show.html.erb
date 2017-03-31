@@ -38,12 +38,58 @@
           </div>
           <div class="right-card-elem">
               <span>photos et types</span>
-              <% current_pro.photos.each do |photo| %>
-              <%= cl_image_tag photo.path, width: 300, height: 200, crop: :fill %>
-              <% end %>
+
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+      <h2>Mise à jour de profile</h2>
+
+        <%= simple_form_for(@pro, url: pros_profile_path(@pro)) do |f| %>
+          <%= f.error_notification %>
+
+          <%= f.input :email, required: true, autofocus: true %>
+          <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+          <%= f.input :password_confirmation, required: true %>
+          <%= f.input :pro_company_name %>
+          <%= f.input :address %>
+          <%= f.input :contact_first_name %>
+          <%= f.input :contact_last_name %>
+          <%= f.input :contact_position %>
+          <%= f.input :contact_phone_number %>
+          <%= f.input :operating_radius %>
+          <%= f.input :min_operating_surface %>
+          <%= f.input :max_operating_surface %>
+        <h3>Vos photos de startups</h3>
+          <%= f.input :photos_sup, as: :attachinary %>
+        <h3>Vos photos de bureaux anciens</h3>
+          <%= f.input :photos_old, as: :attachinary %>
+        <h3>Vos photos de bureaux modernes</h3>
+          <%= f.input :photos_new, as: :attachinary %>
+        <h3>Vos photos de bureaux modernes</h3>
+          <%= f.input :photo_company_logo, as: :attachinary %>
+        <%= f.button :submit, "Sauvegarder" %>
+      <% end %>
+        <% @pro.photos_sup.each do |photo_sup| %>
+          <%= cl_image_tag photo_sup.path, width: 400, height: 300, crop: :fill %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+

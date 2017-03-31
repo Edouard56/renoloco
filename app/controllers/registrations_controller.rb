@@ -6,7 +6,6 @@ class RegistrationsController < Devise::RegistrationsController
     pros_dashboard_path(resource) # Or :prefix_to_your_route
   end
 
-
 end
 
 
