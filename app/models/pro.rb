@@ -1,6 +1,10 @@
 class Pro < ApplicationRecord
   has_many :matches
-  has_attachments :photos, maximum: 2
+  has_attachments :photos_sup, maximum: 3
+  has_attachments :photos_old, maximum: 3
+  has_attachments :photos_new, maximum: 3
+  has_attachment :photo_company_logo
+
 
   validates :operating_radius, presence: :true
   validates :pro_company_name, presence: :true
