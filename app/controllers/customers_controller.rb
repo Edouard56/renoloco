@@ -1,4 +1,6 @@
 class CustomersController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:select_matches]
+
   def new
     @customer = Customer.new
   end
@@ -13,14 +15,39 @@ class CustomersController < ApplicationController
     end
 
     if @customer.save
-      redirect_to confirmation_path
+      redirect_to customer_confirmation_path(@customer)
     else
       render :new
     end
   end
 
+  # def de la page de confirmation qui présente les matches potentiels au customer
+  #celui selectionne les entreprises qu'il souhaite conserver (eux gardent les matches)
+
   def show
+    @customer = Customer.find(params[:customer_id])
+    @matching_matches = @customer.matches.where(status: "matching")
   end
+
+  def select_matches
+    @customer = Customer.find(params[:customer_id])
+    @matching_matches = @customer.matches.where(status: "matching")
+    raise
+    @matching_matches.each do |m|
+      if params[:status] exists ?
+        match.each do |m|
+          m.update(status: "waiting")
+      else
+
+        end
+
+      redirect_to root_path
+      else
+        render :show
+      end
+    end
+  end
+
 
   private
 

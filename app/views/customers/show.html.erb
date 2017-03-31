@@ -6,14 +6,36 @@
     <div class="row">
       <div class="col-xs-12">
         <div class="text-description text-center">
-          <h1>Merci pour ces informations</h1>
-          <h3 class="tagline">Voici les 4 sociétés qui répondent le plus à vos attentes, choisissez celles avec lesquelles vous souhaitez être mis en relation !</h3>
+          <h1>Merci pour ces informations <%= @customer.first_name %></h1>
+          <h3 class="tagline"><strong> <%= @matching_matches.count %> </strong> sociétés ont des prestations qui correspondent à vos attentes, sélectionnez celles avec qui vous souhaitez être mis en relation !</h3>
         </div>
       </div>
     </div>
   </div>
 </div>
 
+<form action="/customers/<%= @customer.id %>/selection" method="post">
+  <% i = 0 %>
+  <% @matching_matches.each do |match| %>
+    <ul>
+      <li>Société : <%= match.pro.pro_company_name %></li>
+      <%= match.pro.photos %>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" value="<%= match.pro.id %>" name="status_<%= i += 1%>">
+          Je souhaite être mis en relation avec <%= match.pro.pro_company_name %>
+        </label>
+      </div>
+    </ul>
+  <% end %>
+  <div class="container" id="espace-btn">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <input value="Je valide mes choix" type="submit" id="confirmation-btn" class="final-btn">
+      </div>
+    </div>
+  </div>
+</form>
 <!-- CD&B -->
 
   <div class="wrapper wrapper-profile-client">
@@ -223,15 +245,7 @@
         </div>
       </div>
     </div>
-    <div class="container" id="espace-btn">
-      <div class="row">
-        <div class="col-xs-12 text-center">
-          <%= link_to root_path, class: "final-btn", id: "confirmation-btn" do %>
-            <span>Je valide mes choix</span>
-          <% end %>
-        </div>
-      </div>
-    </div>
+
   </div>
 </div>
 
