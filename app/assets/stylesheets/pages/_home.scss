@@ -239,9 +239,34 @@ a:hover, a:focus {
   overflow: hidden;
   -webkit-transition: 300ms;
   transition: 300ms;
+
+  &::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left:-105%;
+    transition:300ms;
+    background: rgba(255,255,255,0.52);
+    transform:skew(-30deg);
+    }
+
+    &:hover:before{
+      left: 105%;
+
+    }
+
+    &:hover{
+      box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+      cursor:pointer;
+    }
 }
 
-
+.cards-home {
+  padding-bottom: 80px;
+  margin-top: 40px;
+}
 
 
 
