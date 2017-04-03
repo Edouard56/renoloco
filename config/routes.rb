@@ -6,8 +6,11 @@ Rails.application.routes.draw do
   # Edouard : j'ai overridé devise pour la redirection du sign up en créant un registrations controller
   devise_for :pros, controllers: { registrations: "registrations", sessions: "sessions" }
 
-  resources :customers, only: [ :create ]
+  resources :customers, only: [ :create ] do
+    get 'confirmation', to: 'customers#show'
+    post 'selection', to: 'customers#select_matches'
   # resources :pros, only: :show
+  end
 
   namespace :pros do
     resource :dashboard, only: :show
@@ -19,6 +22,7 @@ Rails.application.routes.draw do
         get :accepted
       end
 
+      #choix des pro entre accepter ou refuser dans leur dashboard
       member do
         patch :accept
         patch :refuse
@@ -27,7 +31,6 @@ Rails.application.routes.draw do
   end
 
   get 'formulaire', to: 'customers#new'
-  get 'confirmation', to: 'customers#show'
   get  'bien-choisir-son-entreprise-de-renovation', to: 'pages#choisir_son_renovateur'
   root to: 'pages#home'
 

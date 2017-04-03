@@ -43,17 +43,16 @@ class Customer < ApplicationRecord
     if pros == []
       pros = Pro.near(works_address, 200)
     else
-      new_pros = []
+      filtered_pros = []
       pros.each do |pro|
         if pro.min_operating_surface < needs_surface && needs_surface < pro.max_operating_surface
-          new_pros << pro
+          filtered_pros << pro
         end
       end
-      new_pros.each do |pro|
-        Match.create(pro: pro , customer: self, status: 'waiting')
+      filtered_pros.each do |pro|
+         Match.create(pro: pro , customer: self, status: 'matching')
       end
     end
-
   end
 
   def to_s

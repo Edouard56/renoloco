@@ -9,4 +9,6 @@ class CustomerMailer < ApplicationMailer
     @customer = customer
     mail(to: @customer.email, subject: 'Votre demande de devis_Renoloco')
   end
+
+
 end
