@@ -53,112 +53,104 @@
   </div>
   <!-- /.container-fluid -->
 </nav>
-
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.56) 0%, rgba(123, 2, 1, 0.23) 50%), url(<%= asset_path 'banner_photo.jpg' %>) ">
-  <div class="banner-content">
-    <h1>Aménagez vos bureaux à votre image</h1>
-    <i>Nous trouvons pour vous les entreprises de rénovation qui réaliseront vos rêves</i>
-    <%= link_to formulaire_path, class: "main-cta" do %>
-      <span>Trouvez-moi le bon pro</span>
-    <% end %>
-    <ul class="main-features">
-      <li>Définissez vos besoins</li>
-      <li>Nous trouvons les prestataires</li>
-      <li>Ils vous contactent</li>
-    </ul>
+<div class="wrapper">
+  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.3) 0%, rgba(123, 2, 1, 0.2) 50%), url(<%= asset_path 'home-banner.jpg' %>) ">
+    <div class="banner-content">
+      <h1>Aménagez vos bureaux à votre image</h1>
+      <i>Nous trouvons pour vous les entreprises de rénovation qui réaliseront vos rêves</i>
+      <%= link_to formulaire_path, class: "main-cta" do %>
+        <span>Trouver le bon pro</span>
+      <% end %>
+      <ul class="main-features">
+        <li>Définissez vos besoins</li>
+        <li>Nous trouvons les prestataires</li>
+        <li>Ils vous contactent</li>
+      </ul>
+    </div>
   </div>
 </div>
 
 <div class="wrapper-light-grey">
   <div class="container">
-      <div class="row">
-        <div id="front-articles">
-          <div class="col-xs-12 col-sm-6 left-square">
-            <div class="card-text-left" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.56) 0%, rgba(123, 2, 1, 0.23) 50%), url(<%= asset_path 'article_renovation.jpg' %>) ">
-              <div class="banner-content">
-                <h1 class="card-title-h1">Rénovation</h1>
-                <h2 class="card-title-h2">L'essentiel de l'aménagement</h2>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6 right-square">
-            <div class="articles-bloc">
-              <h3>L'essentiel de la <strong>rénovation</strong> en 3 articles</h3>
-              <span>Bien choisir son entreprise de rénovation :</span>
-              <p class="text-justify">Les 6 principaux points à bien prendre en compte au moment de choisir son entreprise de rénovation.</p>
-              <span>Bonnes pratiques et astuces :</span>
-              <p class="text-justify">Il est parfois compliqué d'avoir une vue synthétique du projet de rénovation. Suivez le guide.</p>
-              <span>Le timing !</span>
-              <p class="text-justify">Un élément décisif pour la réussite de votre projet.</p>
+    <div class="row">
+      <div id="front-articles">
+        <div class="col-xs-12 col-sm-6 left-square">
+          <div class="card-text-left" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.56) 0%, rgba(123, 2, 1, 0.23) 50%), url(<%= asset_path 'article_renovation.jpg' %>) ">
+            <div class="banner-content">
+              <h1 class="card-title-h1">Rénovation</h1>
+              <h2 class="card-title-h2">L'essentiel de l'aménagement</h2>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-</div>
-
-<div class="presentation_wrapper">
-  <div class="container">
-    <div id="frontpage-presentation">
-      <div class="row">
-        <div class="col-sm-12 text-center">
-          <span class="title-h2">
-            <h3>Ils nous ont fait confiance</h3>
-          </span>
-          <hr>
-        </div>
-      </div>
-      <div class="row">
-        <div class="presentation-bloc">
-          <div class="col-xs-12 col-sm-4 text-center">
-            <div class="photo-card">
-              <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.56) 0%, rgba(123, 2, 1, 0.23) 50%), url(<%= asset_path 'design_atypique.jpg' %>) ">
-              </div>
-              <div class="presentation-text">
-                <p>
-                  <strong>Le Wagon</strong>
-                  <span>Paris</span>
-                  <span>2017</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4 text-center">
-            <div class="photo-card">
-              <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.56) 0%, rgba(123, 2, 1, 0.23) 50%), url(<%= asset_path 'modern_office.jpg' %>) ">
-              </div>
-              <div class="presentation-text">
-                <p>
-                  <strong>Le Petit Ballon</strong>
-                  <span>Paris</span>
-                  <span>2017</span>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-4 text-center">
-            <div class="photo-card">
-              <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.56) 0%, rgba(123, 2, 1, 0.23) 50%), url(<%= asset_path 'startup.jpg' %>) ">
-              </div>
-              <div class="presentation-text">
-                <p>
-                  <strong>La fromagerie</strong>
-                  <span>Lyon</span>
-                  <span>2017</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="presentation-bloc">
-          <div class="col-sm-12">
-            <div class= "main-call-to-action text-center">
-              <%= link_to "Trouver ses bureaux avec Renoloco", formulaire_path, class: "btn-treehouse"%>
-            </div>
+        <div class="col-xs-12 col-sm-6 right-square">
+          <div class="articles-bloc">
+            <h3>L'essentiel de la <strong>rénovation</strong> en 3 articles</h3>
+            <span>Bien choisir son entreprise de rénovation :</span>
+            <p class="text-justify">Les 6 principaux points à bien prendre en compte au moment de choisir son entreprise de rénovation.</p>
+            <span>Bonnes pratiques et astuces :</span>
+            <p class="text-justify">Il est parfois compliqué d'avoir une vue synthétique du projet de rénovation. Suivez le guide.</p>
+            <span>Le timing !</span>
+            <p class="text-justify">Un élément décisif pour la réussite de votre projet.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <span class="title-h2">
+        <h3>Ils nous font confiance</h3>
+      </span>
+      <hr>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= asset_path 'design_atypique.jpg' %>);">
+        <div class="card-category"></div>
+        <div class="card-description">
+          <h2>Rémora SAS</h2>
+          <p>"Qualité de service et excellent conseil."</p>
+        </div>
+        <a class="card-link" href="#" ></a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= asset_path 'startup.jpg' %>);">
+        <div class="card-category"></div>
+        <div class="card-description">
+          <h2>Le petit ballon</h2>
+          <p>"On a adoré, les prestataires étaient très compétents."</p>
+        </div>
+        <a class="card-link" href="#" ></a>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= asset_path 'modern_office.jpg' %>);">
+        <div class="card-category"></div>
+        <div class="card-description">
+          <h2>Glaglacool</h2>
+          <p>"Ils ont su réaliser nos rêves !"</p>
+        </div>
+        <a class="card-link" href="#" ></a>
+      </div>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="presentation-bloc">
+      <div class="col-sm-12">
+        <div class= "main-call-to-action">
+          <%= link_to formulaire_path, id:"home-final-cta" do %>
+            <span>Trouver le bon pro</span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

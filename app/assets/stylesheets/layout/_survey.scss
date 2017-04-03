@@ -10,9 +10,9 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background: #DD5E89; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #DD5E89 , #F7BB97); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #DD5E89 , #F7BB97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #FFB75E; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FFB75E , #ED8F03); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FFB75E , #ED8F03); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     opacity: 0.7;
     z-index: -1;
   }
@@ -289,7 +289,6 @@ button:focus {
   padding: 16px 42px;
   font-size: 1em;
   margin-top: 45px;
-  margin-left: 80px;
   background: #63d360;
   border: none;
   line-height: 50px;
