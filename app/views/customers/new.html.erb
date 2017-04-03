@@ -12,10 +12,10 @@
 <!--     <p>2 / <strong>10</strong></p> -->
   </div>
 
-  <div class="controls">
+<!--   <div class="controls">
     <div class="control"><i class="fa fa-chevron-up"></i></div>
     <div class="control"><i class="fa fa-chevron-down"></i></div>
-  </div>
+  </div> -->
 </div>
 
 
@@ -94,31 +94,43 @@
       <h3><span>5</span> <i class="fa fa-chevron-right"></i> Voici les travaux que je prévois de faire </h3>
       <div class="content-container">
         <div class="all-skills-btn" id="input_<%= question %>">
-          <button type="button" class="btn-works">
-            <div class="skills-btn">
-              Peinture <i class="fa fa-paint-brush"></i>
+          <div class="row">
+            <div class="col-xs-12 col-sm-4">
+              <button type="button" class="btn-works">
+              <div class="skills-btn">
+                Peinture <i class="fa fa-paint-brush"></i>
+              </div>
+              </button>
             </div>
-          </button>
-          <button type="button" class="btn-works">
-            <div class="skills-btn">
-              Espace détente <i class="fa fa- fa-cutlery"></i>
+            <div class="col-xs-12 col-sm-4">
+            <button type="button" class="btn-works">
+              <div class="skills-btn">
+                Espace détente <i class="fa fa- fa-cutlery"></i>
+              </div>
+            </button>
             </div>
-          </button>
-          <button type="button" class="btn-works">
-            <div class="skills-btn">
-              Système d'alarme <i class="fa fa-lock"></i>
+            <div class="col-xs-12 col-sm-4">
+            <button type="button" class="btn-works">
+              <div class="skills-btn">
+                Système d'alarme <i class="fa fa-lock"></i>
+              </div>
+            </button>
             </div>
-          </button>
-          <button type="button" class="btn-works">
-            <div class="skills-btn">
-              Réseau électrique <i class="fa fa-bolt"></i>
+            <div class="col-xs-12 col-sm-4">
+            <button type="button" class="btn-works">
+              <div class="skills-btn">
+                Réseau électrique <i class="fa fa-bolt"></i>
+              </div>
+            </button>
             </div>
-          </button>
-          <button type="button" class="btn-works">
-            <div class="skills-btn">
-              Réseau informatique <i class="fa fa-usb"></i>
+            <div class="col-xs-12 col-sm-4">
+            <button type="button" class="btn-works">
+              <div class="skills-btn">
+                Réseau informatique <i class="fa fa-usb"></i>
+              </div>
+            </button>
             </div>
-          </button>
+          </div>
         </div>
       </div>
       <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
