@@ -47,46 +47,67 @@
 </div>
 
 
-<div class="wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-6">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
       <h2>Mise à jour de profile</h2>
-
-        <%= simple_form_for(@pro, url: pros_profile_path(@pro)) do |f| %>
-          <%= f.error_notification %>
-
-          <%= f.input :email, required: true, autofocus: true %>
-          <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-          <%= f.input :password_confirmation, required: true %>
-          <%= f.input :pro_company_name %>
-          <%= f.input :address %>
-          <%= f.input :contact_first_name %>
-          <%= f.input :contact_last_name %>
-          <%= f.input :contact_position %>
-          <%= f.input :contact_phone_number %>
-          <%= f.input :operating_radius %>
-          <%= f.input :min_operating_surface %>
-          <%= f.input :max_operating_surface %>
-        <h3>Vos photos de startups</h3>
-          <%= f.input :photos_sup, as: :attachinary %>
-        <h3>Vos photos de bureaux anciens</h3>
-          <%= f.input :photos_old, as: :attachinary %>
-        <h3>Vos photos de bureaux modernes</h3>
-          <%= f.input :photos_new, as: :attachinary %>
-        <h3>Vos photos de bureaux modernes</h3>
-          <%= f.input :photo_company_logo, as: :attachinary %>
-        <%= f.button :submit, "Sauvegarder" %>
-      <% end %>
-        <% @pro.photos_sup.each do |photo_sup| %>
-          <%= cl_image_tag photo_sup.path, width: 400, height: 300, crop: :fill %>
-        <% end %>
+    </div>
+    <div class="col-xs-12 col-md-4 card_formulaire"
+      <%= simple_form_for(@pro, url: pros_profile_path(@pro)) do |f| %>
+        <%= f.error_notification %>
+        <h5>Email</h5>
+        <%= f.input :email, required: true, label: false %>
+        <h5>Société</h5>
+        <%= f.input :pro_company_name, label: false %>
+        <h5>Adresse</h5>
+        <%= f.input :address, label: false %>
+        <h5>Prénom</h5>
+        <%= f.input :contact_first_name, label: false %>
+        <h5>Nom</h5>
+        <%= f.input :contact_last_name, label: false %>
+        <h5>Poste</h5>
+        <%= f.input :contact_position, label: false %>
+        <h5>Téléphone portable</h5>
+        <%= f.input :contact_phone_number, label: false %>
+        <h5>Distance maximale des chantiers (en km)</h5>
+        <%= f.input :operating_radius, label: false %>
+        <h5>Surface minimum des chantiers (en m2)</h5>
+        <%= f.input :min_operating_surface, label: false %>
+        <h5>Surface maximum des chantiers (en m2)</h5>
+        <%= f.input :max_operating_surface, label: false %>
+    </div>
+    <div class="cards_choix_photos">
+      <div class="col-xs-12 col-md-4 card_choix_photos">
+        <h4>Vos photos style startup (max 3)</h4>
+          <%= f.input :photos_sup, as: :attachinary, label: false %>
+          <br><br>
+        <h4>Vos photos style ancien (max 3)</h4>
+          <%= f.input :photos_old, as: :attachinary, label: false %>
       </div>
+      <div class="col-xs-12 col-md-4 card_choix_photos">
+        <h4>Vos photos style moderne (max 3)</h4>
+          <%= f.input :photos_new, as: :attachinary, label: false %>
+          <br><br>
+        <h4>Le logo de votre société</h4>
+          <%= f.input :photo_company_logo, as: :attachinary, label: false %>
+      </div>
+    </div>
+    <div class="col-xs-12 text-center">
+      <%= f.button :submit, "Sauvegarder", class: "btn btn-success" %>
+    <% end %>
     </div>
   </div>
 </div>
-
-
+      <%# @pro.photos_sup.each do |photo_sup| %>
+        <%#= cl_image_tag photo_sup.path, width: 400, height: 300, crop: :fill %>
+      <%# end %>
+      <%# @pro.photos_old.each do |photo_old| %>
+        <%#= cl_image_tag photo_old.path, width: 400, height: 300, crop: :fill %>
+      <%# end %>
+      <%# @pro.photos_new.each do |photo_new| %>
+        <%#= cl_image_tag photo_new.path, width: 400, height: 300, crop: :fill %>
+      <%# end %>
+      <%#= cl_image_tag @pro.photo_company_logo.path, width: 400, height: 300, crop: :fill %>
 
 
 
