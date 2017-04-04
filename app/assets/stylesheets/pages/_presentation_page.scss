@@ -1,0 +1,32 @@
+.presentation-page {
+  padding: 30px 100px 30px 100px;
+
+  h1 {
+    color: black;
+  }
+
+  p {
+    font-size: 1em;
+    line-height: 1.6em;
+    margin-top: 20px;
+    text-align: justify;
+   }
+
+  .italic {
+    font-style: italic;
+  }
+
+  .img-responsive {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100% \9;
+    max-width: 100%;
+    height: auto;
+  }
+
+  h3 {
+    margin-top: 35px;
+  }
+
+}
