@@ -9,7 +9,6 @@
         <span id="progress-percent">0</span>%
       </div>
     </div>
-<!--     <p>2 / <strong>10</strong></p> -->
   </div>
 
 <!--   <div class="controls">
@@ -244,7 +243,7 @@
     <div class="question-content">
       <h3><span>12</span> <i class="fa fa-chevron-right"></i> Je souhaite démarrer mes travaux le  </h3>
       <div class="input-container" id="input_<%= question %>">
-        <%= f.input :starts_at, label: false, input_html: {type: "text" , class: "datepicker"}, html5: true, placeholder: "27/11/2017" %>
+        <%= f.input :starts_at, label: false, input_html: {type: "text" , class: "datepicker datepicker-color"}, html5: true, placeholder: "27/11/2017" %>
       </div>
       <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
         <div class="ok">
@@ -260,7 +259,7 @@
     <div class="question-content">
       <h3><span>13</span> <i class="fa fa-chevron-right"></i> Et il faut absolument que ce soit terminé le  </h3>
       <div class="input-container" id="input_<%= question %>">
-        <%= f.input :ends_at, label: false, input_html: {type: "text" , class: "datepicker"}, html5: true, placeholder: "24/12/2017" %>
+        <%= f.input :ends_at, label: false, input_html: {type: "text" , class: "datepicker datepicker-color"}, html5: true, placeholder: "24/12/2017" %>
       </div>
       <button type="button" onClick="document.getElementById('question_<%= question + 1 %>').scrollIntoView();">
         <div class="ok">
