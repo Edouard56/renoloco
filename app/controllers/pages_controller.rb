@@ -13,4 +13,7 @@ class PagesController < ApplicationController
   def presentation
   end
 
+  def la_reglementation
+  end
+
 end
