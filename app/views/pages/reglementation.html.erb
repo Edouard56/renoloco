@@ -1,0 +1,63 @@
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.56) 0%, rgba(123, 2, 1, 0.23) 80%), url(<%= asset_path 'banner_photo_2.jpg' %>) ">
+  <div class="banner-content">
+    <h1>Réglementation</h1>
+    <div class="top-page-infos">
+      <span class="subtitle">Quelles sont les normes à respecter ?</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+
+      <%= render 'shared/article_left_navigation' %>
+
+      <div class="col-xs-12 col-md-9">
+        <div class='article-page'>
+
+          <h1 class="text-center">La réglementation de bureau</h1>
+          <p class="italic">Voici les principaux éléments de réglementation à respecter pour vos bureaux.</p>
+
+          <h3> Les toilettes </h3>
+          <p>Il faut un lavabo et une toilette pour 10 salariés. L'espace des toilettes doit être fourni en eau potable et doit être isolé des espaces de travail et L’espace qui les abrite doit être isolé des locaux de travail.</p>
+
+          <h3> La taille des locaux </h3>
+          <p>Il faut respecter un espace minimum par salarié.</p>
+          <ul>
+            <li> 10 mètres carrés par employés </li>
+            <li> 75,5cm : l'espace minimum pour les jambes </li>
+          </ul>
+
+          <h3> La lumière </h3>
+          <p>Les bureaux de travail doivent être suffisamment éclairés.</p>
+          <ul>
+            <li>120 lux pour un bureau classique</li>
+            <li>500 lux pour un poste d'ordinateur</li>
+            <li>750 lux pour un poste de dessin industriel </li>
+          </ul>
+
+          <h3> L'aération des bureaux </h3>
+          <p>L'aération minimale des bureaux dépend de différents facteurs .</p>
+          <ul>
+            <li>15 à 24 m3 : le minimum par personne et par heure si les bureaux sont munis d'ouverture sur l'extérieur</li>
+            <li>25 m3 : le minimum par personne et par heure pour le travail non physique</li>
+            <li>45 à 60 m3 : le minimum par personne et par heure pour le travail physique</li>
+          </ul>
+
+          <h3> Sécurité </h3>
+          <p>La lutte contre l'incendie et l'évacuation d'urgence doivent être pris en compte.</p>
+          <ul>
+            <li>300 m2 : le seuil où il faut installer un dispositif de désenfumage</li>
+            <li>Issue de secours : la dimension varie selon le nombre d'employé dans les locaux</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/article_bottom_navigation' %>
+

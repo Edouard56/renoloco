@@ -1,0 +1,32 @@
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-left">
+        <li><%= link_to "Pourquoi choisir renoloco ?", pourquoi_choisir_renoloco_path %></li>
+        <li><%= link_to "Trouver des rénovateurs", formulaire_path %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Le guide de la rénovation<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><li><%= link_to "Bien choisir son entreprise de rénovation", bien_choisir_son_entreprise_de_renovation_path %></li></li>
+            <li><%= link_to "La réglementation", la_reglementation_path %></li>
+            <li><a href="#">Bonnes pratiques et astuces</a></li>
+            <li><a href="#">Le timing !</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Le Blog</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Plus d'infos</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "L'entreprise", presentation_renoloco_path %></li>
+        <li><a href="#">Nous contacter</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
