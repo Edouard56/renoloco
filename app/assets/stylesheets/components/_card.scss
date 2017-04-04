@@ -2,7 +2,7 @@
   height: 175px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   background-size: cover !important;
-  color: white;
+  color: $gray;
   position: relative;
   border-radius: 2px;
 }
@@ -40,5 +40,5 @@
   opacity: 0;
 }
 .card-link:hover{
-  opacity: 0.1;
+  opacity: 0.2;
 }

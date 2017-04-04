@@ -1,13 +1,43 @@
 
+<!-- NAVBAR -->
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-left">
+        <li><a href="#">Pourquoi Renoloco ?</a></li>
+        <li><a href="#">Trouver des rénovateurs</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Le guide de la rénovation<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Bien choisir son entreprise de rénovation</a></li>
+            <li><a href="#">Bonnes pratiques et astuces</a></li>
+            <li><a href="#">Le timing !</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Le Blog</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Plus d'infos</a></li>
+          </ul>
+        </li>
+      </ul>
 
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">L'Entreprise</a></li>
+        <li><a href="#">Nous contacter</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
 
-
+<!-- Banner 1 main CTA -->
 
 <div class="wrapper">
   <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.3) 0%, rgba(123, 2, 1, 0.2) 50%), url(<%= asset_path 'home-banner.jpg' %>) ">
     <div class="banner-content">
       <h1>Aménagez vos bureaux à votre image</h1>
-      <i>Nous trouvons pour vous les entreprises de rénovation qui réaliseront vos rêves</i>
+      <i>Nous trouvons les entreprises de rénovation qui réaliseront vos rêves</i>
       <%= link_to formulaire_path, class: "main-cta" do %>
         <span>Trouver le bon pro</span>
       <% end %>
@@ -20,47 +50,62 @@
   </div>
 </div>
 
+
+<!-- Présentation service-->
 <div class="wrapper-light-grey">
   <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-md-4">
-        <div class="presentation-card">
-          <h4>Qu'est ce que Renoloco ?</h4>
-          <p>Renoloco est le site internet de référence de la rénovation de locaux. Notre mettons à votre disposition notre expertise du métier afin réussir vos démarches de rénovation. </p>
-        </div>
-      </div>
-      <div class="col-xs-12 col-md-4">
-        <div class="presentation-card">
-          <h4>Pourquoi passer par Renoloco ?</h4>
-          <p>Nous vous mettons en contact avec les meilleurs professionnels correspondants à vos besoins qui vous répondent dans les meilleurs délais. Gain de temps, d'efficacité.</p>
-        </div>
-      </div>
-      <div class="col-xs-12 col-md-4">
-        <div class="presentation-card">
-          <h4>Le plus Renoloco ?</h4>
-          <p>Penser la rénovation en terme techniques et pratiques, mais aussi en question d'affinité et de goût puisque comme c un endroit ou vous allez la notion d'envie, bien être</p>
-        </div>
-      </div>
+    <div class="row text-center">
+    <h2>Offrez à vos employés les bureaux qu'ils méritent!</h2>
     </div>
-    <div class="row">
-      <div id="front-articles">
-        <div class="col-xs-12 col-sm-6 left-square">
-          <div class="card-text-left" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.56) 0%, rgba(123, 2, 1, 0.23) 50%), url(<%= asset_path 'article_renovation.jpg' %>) ">
+    <div class="row text-center">
+      <h3><strong>90% des salariés</strong> se sentiraient plus productifs et créatifs dans des bureaux bien aménagés</h3>
+    </div>
+    <div class="row text-center text-justify">
+        <div class="col-xs-12 col-md-4 description-card">
+          <div class="presentation-card">
+            <h5 class="text-center"><strong>Qu'est ce que Renoloco ?</strong></h5>
+            <p>Renoloco est le site internet de référence de la <strong>rénovation de locaux professionnels</strong>. Nous avons développé pour vous un <strong>puissant outil</strong> permettant de trouver les sociétés d'aménagement professionnel qui saurons réaliser vos rêves.</p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4 description-card">
+          <div class="presentation-card">
+            <h5 class="text-center"><strong>Pourquoi passer par Renoloco ?</strong></h5>
+            <p>Ne perdez plus de temps, choisissez parmis les meilleurs du secteur le professionnel qui vous correspond. Rénoloco est un<strong> service gratuit et rapide.</strong></p>
+          </div>
+        </div>
+        <div class="col-xs-12 col-md-4 description-card">
+          <div class="presentation-card">
+            <h5 class="text-center"><strong>Le plus Renoloco ?</strong></h5>
+            <p>Nous pensons la rénovation en terme <strong>techniques et pratiques</strong>, mais c'est aussi une question d'<strong>affinité et de goût</strong> que seul vous pouvez arbitrer.</p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- Banner 2 lien articles -->
+<div class="wrapper">
+  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.3) 0%, rgba(123, 2, 1, 0.2) 50%), url(<%= asset_path 'banner_2.png' %>) ">
+    <div class="container">
+      <div class="row">
+        <div id="front-articles">
+          <div class="col-xs-12 col-sm-6">
             <div class="banner-content">
               <h1 class="card-title-h1">Rénovation</h1>
               <h2 class="card-title-h2">L'essentiel de l'aménagement</h2>
             </div>
           </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 right-square">
-          <div class="articles-bloc">
-            <h3>L'essentiel de la <strong>rénovation</strong> en 3 articles</h3>
-            <span>Bien choisir son entreprise de rénovation :</span>
-            <p class="text-justify">Les 6 principaux points à bien prendre en compte au moment de choisir son entreprise de rénovation.</p>
-            <span>Bonnes pratiques et astuces :</span>
-            <p class="text-justify">Il est parfois compliqué d'avoir une vue synthétique du projet de rénovation. Suivez le guide.</p>
-            <span>Le timing !</span>
-            <p class="text-justify">Un élément décisif pour la réussite de votre projet.</p>
+          <div class="col-xs-12 col-sm-6">
+            <div class="articles-bloc">
+              <h3>L'essentiel de la <strong>rénovation</strong> en 3 articles</h3>
+              <span>Bien choisir son entreprise de rénovation :</span>
+              <p class="text-justify">Les 6 principaux points à bien prendre en compte au moment de choisir son entreprise de rénovation.</p>
+              <span>Bonnes pratiques et astuces :</span>
+              <p class="text-justify">Il est parfois compliqué d'avoir une vue synthétique du projet de rénovation. Suivez le guide.</p>
+              <span>Le timing !</span>
+              <p class="text-justify">Un élément décisif pour la réussite de votre projet.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -68,13 +113,14 @@
   </div>
 </div>
 
+
+<!-- Ils nous font confiance -->
 <div class="container cards-home">
   <div class="row">
     <div class="col-sm-12 text-center">
       <span class="title-h2">
-        <h3>Ils nous font confiance</h3>
+        <h2>Ils nous font confiance</h2>
       </span>
-      <hr>
     </div>
   </div>
   <div class="row">
@@ -111,6 +157,7 @@
   </div>
 </div>
 
+<!-- CTA de fin -->
 <div class="container">
   <div class="row text-center">
     <div class="presentation-bloc">
