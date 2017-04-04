@@ -86,7 +86,7 @@ nav {
 
 
 #frontpage-presentation {
-    padding-top: 8px;
+  padding-top: 8px;
 }
 
 .title-h2 {
@@ -94,19 +94,19 @@ nav {
 }
 
 #frontpage-presentation hr {
-    border-color: #b9204f;
-    width: 200px;
-    margin-top: 4px;
-    margin-bottom: 25px;
+  border-color: #b9204f;
+  width: 200px;
+  margin-top: 4px;
+  margin-bottom: 25px;
 }
 
 #frontpage-presentation .col-sm-4 {
-    padding: 0 50px;;
+  padding: 0 50px;;
 }
 
 #frontpage-presentation .fa {
-    font-size: 72px;
-    color: #938181;
+  font-size: 72px;
+  color: #938181;
 }
 
 #frontpage-presentation .presentation-text {
@@ -134,11 +134,18 @@ a:hover, a:focus {
 }
 
 .wrapper-light-grey {
-  background-color: white;
-  padding: 130px 0;
-  border-radius: 5px;
-  padding-bottom: 40px;
+  padding: 100px 0 100px 0;
+  color: $black;
+
+  h3 {
+    padding: 0 0 40px 0;
+  }
+
+  h4 {
+    padding: 0 0 50px 0;
+  }
 }
+
 
 .card-text-left {
     height: 370px;
@@ -166,7 +173,6 @@ a:hover, a:focus {
   display: flex;
   flex-direction: column;
   padding-right: 70px;
-  background-color: white;
   margin: 0 auto;
 
   h3 {
@@ -220,9 +226,6 @@ a:hover, a:focus {
   text-shadow: 0 1px 2px rgba(0,0,0,0.8);
 }
 
-.home-wrapper {
-
-}
 
 #home-final-cta {
   font-family: 'Lato', sans-serif;
@@ -250,7 +253,6 @@ a:hover, a:focus {
     top: 0px;
     left:-105%;
     transition:300ms;
-    background: rgba(255,255,255,0.52);
     transform:skew(-30deg);
     }
 
@@ -268,6 +270,7 @@ a:hover, a:focus {
 .cards-home {
   padding-bottom: 80px;
   margin-top: 40px;
+  color: black;
 }
 
 
