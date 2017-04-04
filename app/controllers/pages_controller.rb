@@ -7,4 +7,10 @@ class PagesController < ApplicationController
   def choisir_son_renovateur
   end
 
+  def choix_renoloco
+  end
+
+  def presentation
+  end
+
 end
