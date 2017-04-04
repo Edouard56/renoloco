@@ -1,9 +1,8 @@
 
 
-
+<!-- NAVBAR -->
 <nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
-
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-left">
@@ -32,11 +31,13 @@
   </div>
   <!-- /.container-fluid -->
 </nav>
+
+<!-- Banner 1 main CTA -->
 <div class="wrapper">
   <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.3) 0%, rgba(123, 2, 1, 0.2) 50%), url(<%= asset_path 'home-banner.jpg' %>) ">
     <div class="banner-content">
       <h1>Aménagez vos bureaux à votre image</h1>
-      <i>Nous trouvons pour vous les entreprises de rénovation qui réaliseront vos rêves</i>
+      <i>Nous trouvons les entreprises de rénovation qui réaliseront vos rêves</i>
       <%= link_to formulaire_path, class: "main-cta" do %>
         <span>Trouver le bon pro</span>
       <% end %>
@@ -49,6 +50,8 @@
   </div>
 </div>
 
+
+<!-- Présentation service-->
 <div class="wrapper-light-grey">
   <div class="container">
     <div class="row text-center">
@@ -80,8 +83,10 @@
   </div>
 </div>
 
+
+<!-- Banner 2 lien articles -->
 <div class="wrapper">
-  <div class="banner", style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.3) 0%, rgba(123, 2, 1, 0.2) 50%), url(<%= asset_path 'banner_2.png' %>) ">
+  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.3) 0%, rgba(123, 2, 1, 0.2) 50%), url(<%= asset_path 'banner_2.png' %>) ">
     <div class="container">
       <div class="row">
         <div id="front-articles">
@@ -108,13 +113,14 @@
   </div>
 </div>
 
+
+<!-- Ils nous font confiance -->
 <div class="container cards-home">
   <div class="row">
     <div class="col-sm-12 text-center">
       <span class="title-h2">
-        <h3>Ils nous font confiance</h3>
+        <h2>Ils nous font confiance</h2>
       </span>
-      <hr>
     </div>
   </div>
   <div class="row">
@@ -151,6 +157,7 @@
   </div>
 </div>
 
+<!-- CTA de fin -->
 <div class="container">
   <div class="row text-center">
     <div class="presentation-bloc">

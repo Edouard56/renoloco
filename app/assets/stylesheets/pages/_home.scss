@@ -168,7 +168,6 @@ a:hover, a:focus {
   }
 }
 
-
 .card-text-left {
     height: 370px;
     position: relative;
@@ -292,7 +291,12 @@ a:hover, a:focus {
 .cards-home {
   padding-bottom: 80px;
   margin-top: 40px;
-  color: black;
+  color: $black;
+  font-size: lighter;
+
+  h2 {
+    padding-bottom: 50px;
+  }
 }
 
 
