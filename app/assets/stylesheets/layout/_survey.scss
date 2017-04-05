@@ -15,6 +15,7 @@
     background: linear-gradient(to left, #F09819 , #EDDE5D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     opacity: 0.7;
     z-index: -1;
+
   }
 }
 
@@ -124,6 +125,9 @@
     border-color: rgba(0,0,0,0.2);
     font-size: 20px;
     border-image-slice: 2;
+    min-width: 260px;
+    max-width: 300px;
+    margin-left: -60px;
     outline: none;
     font-weight: bold;
     color: #28262C;
@@ -142,7 +146,6 @@
   }
 
   button {
-    margin-left: 60px;
     margin-top: 36px;
     background: #ffffff;
     border: 1px solid #63d360;
@@ -247,12 +250,14 @@ button:focus {
 .image_picker_selector {
   display: flex;
   justify-content: space-between;
-  padding: 0 55px !important;
+  padding: 0 90px !important;
+  margin-left: -90px !important;
+
 
   .thumbnail {
-   width: 320px;
-   height: 210px;
-    overflow: hidden;
+  width: 320px;
+  height: 210px;
+  overflow: hidden;
 
     .image_picker_image {
       transition: all 0.3s ease-in-out;
@@ -295,9 +300,10 @@ button:focus {
 
 #customer_description {
   padding: 20px;
-  margin-left: 20px;
-  height: 220px;
-  border:none !important;
+  margin-left: -60px;
+  height: 203px;
+  min-width: 317px;
+  border: none !important;
 }
 
 .final-btn {
@@ -320,14 +326,14 @@ button:focus {
 
 #final-btn {
   font-family: 'Lato', sans-serif;
-  padding: 16px 42px;
+  padding: 21px 7px;
   font-size: 1em;
   margin-top: 45px;
-  margin-left: 80px;
+  margin-left: 0px;
   background: #63d360;
   border: none;
   line-height: 50px;
-  border-radius: 40px;
+  border-radius: 50px;
   text-align: center;
   color: #fff;
   font-weight: 400;
@@ -335,5 +341,10 @@ button:focus {
   margin-bottom: 30px;
   overflow: hidden;
   transition:300ms;
+
+  &:hover {
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  }
 }
 
