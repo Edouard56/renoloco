@@ -35,6 +35,8 @@ Rails.application.routes.draw do
   get 'pourquoi-choisir-renoloco', to: 'pages#choix_renoloco'
   get 'presentation-renoloco', to: 'pages#presentation'
   get 'la-reglementation', to: 'pages#reglementation'
+  get 'mener-une-strategie-de-renovation', to: 'pages#strategie_renovation'
+  get 'pourquoi-faire-appel-a-une-agence-de-renovation', to: 'pages#pourquoi_agence_renovation'
   root to: 'pages#home'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
