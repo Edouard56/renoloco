@@ -1,9 +1,10 @@
 $(document).ready(function(){
- $('.datepicker').datepicker({
+  $('.datepicker').datepicker({
     language: "fr",
     format: 'dd/mm/yyyy',
     autoclose: true,
     todayHighlight: true,
-    orientation: "bottom right"
+    orientation: "bottom auto"
  });
 });
+
