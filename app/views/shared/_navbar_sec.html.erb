@@ -4,27 +4,64 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-left">
-        <li><%= link_to "Pourquoi choisir renoloco ?", pourquoi_choisir_renoloco_path %></li>
+
         <li><%= link_to "Trouver des rénovateurs", formulaire_path %></li>
+
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Le guide de la rénovation<b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Les acteurs de la rénovation <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "agences de rénovation", root_path %></li>
+            <li><%= link_to "architectes", root_path %></li>
+            <li><%= link_to "décorateurs d'intérieur", root_path %></li>
+            <li><%= link_to "office stagers", root_path %></li>
+            <li><%= link_to "chief happiness officers", root_path %></li>
+            <li class="divider"></li>
+            <li><a href="#">les autres acteurs</a></li>
+            <li><%= link_to "loueurs de bureaux", root_path %></li>
+            <li><%= link_to "entreprises de déménagement", root_path %></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Le guide de la rénovation <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><%= link_to "Comment mener sa stratégie de rénovation", mener_une_strategie_de_renovation_path %></li>
             <li><%= link_to "Pourquoi faire appel à une agence de rénovation ?", pourquoi_faire_appel_a_une_agence_de_renovation_path %></li>
             <li><%= link_to "Bien choisir son agence de rénovation", bien_choisir_son_entreprise_de_renovation_path %></li>
+            <li><%= link_to "Les astuces pour optimiser son espace de travail", les_astuces_pour_optimiser_l_espace_de_travail_path %></li>
+            <li><%= link_to "Les chiffres de la rénovation", root_path %></li>
             <li><%= link_to "La réglementation", la_reglementation_path %></li>
-            <li><a href="#">Bonnes pratiques et astuces</a></li>
-            <li><a href="#">Le timing !</a></li>
             <li class="divider"></li>
-            <li><a href="#">Le Blog</a></li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">bien choisir ... <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "choisir son mobilier", root_path %></li>
+                <li><%= link_to "choisir son éclairage", root_path %></li>
+                <li><%= link_to "choisir son sol", root_path %></li>
+                <li><%= link_to "choisir sa couleur", root_path %></li>
+                <li><%= link_to "choisir son revêtement", root_path %></li>
+              </ul>
+            </li>
             <li class="divider"></li>
-            <li><a href="#">Plus d'infos</a></li>
+            <li><%= link_to "Inspiration : différents styles d'aménagement", root_path %></li>
+            <li><%= link_to "style classique", root_path %></li>
+            <li><%= link_to "style industriel", root_path %></li>
+            <li><%= link_to "style start up", root_path %></li>
+            <li><%= link_to "l'open space", root_path %></li>
+            <li><%= link_to "le desk sharing", root_path %></li>
           </ul>
         </li>
+
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "L'entreprise", presentation_renoloco_path %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">La société <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Pourquoi choisir renoloco ?", pourquoi_choisir_renoloco_path %></li>
+            <li><%= link_to "L'entreprise", presentation_renoloco_path %></li>
+          </ul>
+        </li>
         <li><a href="#">Nous contacter</a></li>
       </ul>
     </div>
