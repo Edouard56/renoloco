@@ -10,10 +10,14 @@ class PagesController < ApplicationController
   def choix_renoloco
   end
 
-  def presentation
-  end
+
 
   def la_reglementation
   end
+
+  def strategie_renovation
+  end
+
+
 
 end
