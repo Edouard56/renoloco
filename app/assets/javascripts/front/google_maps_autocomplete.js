@@ -22,6 +22,19 @@ $(document).ready(function() {
       }
     });
   }
+
+    var pro_address = $('#pro_address').get(0);
+
+  if (pro_address) {
+    var autocomplete = new google.maps.places.Autocomplete(pro_address, { types: ['geocode'] });
+    google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+    google.maps.event.addDomListener(works_address, 'keydown', function(e) {
+      if (e.keyCode == 13) {
+        e.preventDefault(); // Do not submit the form on Enter.
+      }
+    });
+  }
+
 });
 
 function onPlaceChanged() {

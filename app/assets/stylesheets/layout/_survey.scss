@@ -203,6 +203,11 @@
   button {
     margin-right:10px;
   }
+  .hidden-md {
+    button {
+      max-width: 150px;
+    }
+  }
 }
 
 .btn-works {
@@ -244,14 +249,21 @@ button:focus {
     height: 46px;
     top: -34px;
   }
+
 }
 
+  .hidden-md {
+    .skills-btn {
+    font-size: 18px;
+  }
+}
 
 .image_picker_selector {
   display: flex;
   justify-content: space-between;
   padding: 0 90px !important;
   margin-left: -90px !important;
+
 
 
   .thumbnail {
@@ -348,3 +360,6 @@ button:focus {
   }
 }
 
+#row-hidden-md {
+  margin-left: 0px;
+}
