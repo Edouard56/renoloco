@@ -15,11 +15,23 @@
   </div>
 </div>
 
+
 <form action="/customers/<%= @customer.id %>/selection" method="post">
   <% i = 0 %>
   <% @matching_matches.each do |match| %>
     <ul>
       <li>Société : <%= match.pro.pro_company_name %></li>
+
+      <% match.pro.photos_sup.each do |photo_sup| %>
+        <%= cl_image_tag photo_sup.path, width: 400, height: 300, crop: :fill %>
+      <% end %>
+      <% match.pro.photos_old.each do |photo_old| %>
+        <%= cl_image_tag photo_old.path, width: 400, height: 300, crop: :fill %>
+      <% end %>
+
+      <% match.pro.photos_new.each do |photo_new| %>
+        <%= cl_image_tag photo_new.path, width: 400, height: 300, crop: :fill %>
+      <% end %>
       <div class="checkbox">
         <label>
           <input type="checkbox" value="<%= match.pro.id %>" name="status_<%= i += 1%>">
