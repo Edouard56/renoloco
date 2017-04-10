@@ -20,7 +20,6 @@
   <% @matching_matches.each do |match| %>
     <ul>
       <li>Société : <%= match.pro.pro_company_name %></li>
-      <%= match.pro.photos %>
       <div class="checkbox">
         <label>
           <input type="checkbox" value="<%= match.pro.id %>" name="status_<%= i += 1%>">
