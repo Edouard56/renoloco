@@ -21,6 +21,7 @@
   <% @matching_matches.each do |match| %>
     <ul>
       <li>Société : <%= match.pro.pro_company_name %></li>
+
       <% match.pro.photos_sup.each do |photo_sup| %>
         <%= cl_image_tag photo_sup.path, width: 400, height: 300, crop: :fill %>
       <% end %>
