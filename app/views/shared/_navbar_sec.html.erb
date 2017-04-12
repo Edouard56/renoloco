@@ -5,10 +5,32 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-left">
 
-        <li><%= link_to "Nous vous guidons dans votre rénovation", formulaire_path %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Conseils avant de se lancer <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Comment mener sa stratégie de rénovation", mener_une_strategie_de_renovation_path %></li>
+            <li><%= link_to "Pourquoi faire appel à une agence de rénovation ?", pourquoi_faire_appel_a_une_agence_de_renovation_path %></li>
+            <li><%= link_to "Bien choisir son agence de rénovation", bien_choisir_son_entreprise_de_renovation_path %></li>
+            <li><%= link_to "Les astuces pour optimiser son espace de travail", les_astuces_pour_optimiser_l_espace_de_travail_path %></li>
+            <li><%= link_to "Les chiffres de la rénovation", root_path %></li>
+            <li><%= link_to "La réglementation", la_reglementation_path %></li>
+           <!--  <li class="divider"></li>
+              <li class="dropdown-submenu">
+                <a href="#" class="test" data-toggle="dropdown">bien choisir ... <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><%= link_to "choisir son mobilier", root_path %></li>
+                  <li><%= link_to "choisir son éclairage", root_path %></li>
+                  <li><%= link_to "choisir son sol", root_path %></li>
+                  <li><%= link_to "choisir sa couleur", root_path %></li>
+                  <li><%= link_to "choisir son revêtement", root_path %></li>
+                </ul>
+              </li> -->
+          </ul>
+        </li>
+
 
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Les acteurs<b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Qui choisir pour s'entourer<b class="caret"></b></a>
           <ul class="dropdown-menu">
             <li><%= link_to "agences de rénovation", root_path %></li>
             <li><%= link_to "architectes", root_path %></li>
@@ -19,29 +41,6 @@
             <li><a href="#">les autres acteurs</a></li>
             <li><%= link_to "loueurs de bureaux", root_path %></li>
             <li><%= link_to "entreprises de déménagement", root_path %></li>
-          </ul>
-        </li>
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Bien rénover ses bureaux <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><%= link_to "Comment mener sa stratégie de rénovation", mener_une_strategie_de_renovation_path %></li>
-            <li><%= link_to "Pourquoi faire appel à une agence de rénovation ?", pourquoi_faire_appel_a_une_agence_de_renovation_path %></li>
-            <li><%= link_to "Bien choisir son agence de rénovation", bien_choisir_son_entreprise_de_renovation_path %></li>
-            <li><%= link_to "Les astuces pour optimiser son espace de travail", les_astuces_pour_optimiser_l_espace_de_travail_path %></li>
-            <li><%= link_to "Les chiffres de la rénovation", root_path %></li>
-            <li><%= link_to "La réglementation", la_reglementation_path %></li>
-            <li class="divider"></li>
-              <li class="dropdown-submenu">
-                <a href="#" class="test" data-toggle="dropdown">bien choisir ... <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><%= link_to "choisir son mobilier", root_path %></li>
-                  <li><%= link_to "choisir son éclairage", root_path %></li>
-                  <li><%= link_to "choisir son sol", root_path %></li>
-                  <li><%= link_to "choisir sa couleur", root_path %></li>
-                  <li><%= link_to "choisir son revêtement", root_path %></li>
-                </ul>
-              </li>
           </ul>
         </li>
 
@@ -65,11 +64,11 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">La société <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><%= link_to "Pourquoi choisir renoloco ?", pourquoi_choisir_renoloco_path %></li>
-            <li><%= link_to "L'entreprise", presentation_renoloco_path %></li>
+            <li><%= link_to "Pourquoi passer par Renoloco ?", pourquoi_choisir_renoloco_path %></li>
+            <li><%= link_to "Qui sommes-nous ?", presentation_renoloco_path %></li>
           </ul>
         </li>
-        <li><a href="#">Nous contacter</a></li>
+        <li><%= link_to "Nous contacter", contact_path %></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->
@@ -90,9 +89,9 @@ $(document).ready(function(){
 <script>
 $(document).ready(function(){
   $('.dropdown-submenu a.test').hover(function() {
-    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(300);
+    $(this).find('.dropdown-submenu').stop(true, true).delay(200).fadeIn(300);
   }, function() {
-    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(300);
+    $(this).find('.dropdown-submenu').stop(true, true).delay(200).fadeOut(300);
   });
 });
 </script>
