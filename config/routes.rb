@@ -35,6 +35,7 @@ Rails.application.routes.draw do
   get 'pourquoi-choisir-renoloco', to: 'pages#choix_renoloco'
   get 'presentation-renoloco', to: 'pages#presentation'
   get 'la-reglementation', to: 'pages#reglementation'
+  get 'contact', to: 'pages#contact'
   get 'mener-une-strategie-de-renovation', to: 'pages#strategie_renovation'
   get 'pourquoi-faire-appel-a-une-agence-de-renovation', to: 'pages#pourquoi_agence_renovation'
   get 'les-astuces-pour-optimiser-l-espace-de-travail', to: 'pages#astuces_optimisation_espace'

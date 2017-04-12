@@ -1,8 +1,8 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0, 1, 3, 0.56) 0%, rgba(123, 2, 1, 0.23) 80%), url(<%= asset_path 'banner_photo_2.jpg' %>) ">
   <div class="banner-content">
-    <h1>Présentation Renoloco </h1>
+    <h1>Qui sommes-nous ? </h1>
     <div class="top-page-infos">
-      <span class="subtitle">Répondre à vos besoins</span>
+      <span class="subtitle">Deux profils complémentaires</span>
     </div>
   </div>
 </div>
@@ -15,16 +15,59 @@
         <div class='presentation-page'>
 
           <h3>Notre Histoire</h3>
-          <p>Renoloco est née du constat que la personne en charge de la rénovation des locaux d'une entreprise est compliquée car peu de temps, pas beaucoup d'informations. Offrir aux entreprises un service qui leur permettent d'appréhender ce moment délicat avec sérénité. </p>
-          <p>Nous souhaitons également sortir de la rénovation comme une corvée mais aussi l'aborder comme le plaisir qu'il doit être d'offrir un cadre de vie agréable aux travailleurs</p>
-          <h3><strong>L'équipe</strong></h3>
-          <h5>Guillaume Salin</h5>
-          <p>Diplômé de l'ISG, il a travaillé comme responsable de location de bureau chez BNP Paribas Real Estate pendant 7 ans.
-          <p class="italic">Guillaume s'occupe du commercial, co-fondateur, </p>
-          <h5>Edouard Castaignet, </h5>
-          <p>Diplômé de Sciences-Po Strasbourg et de l'EM Lyon, Edouard a été journaliste spécialisé en finance puis il a occupé différents postes au sein du Cercle des économistes, association de réflexion sur l'économie.</p>
-          <p class="italic">Edouard s'occupe de la communication et de la partie technique du site, co-fondateur, </p>
 
+          <p>Renoloco est née du constat que l'aménagement des espaces de travail n'est pas assez pris en compte par le management des entreprises. Les contraintes de temps, le manque d'information et la méconnaissance des enjeux font que les décisionnaires survolent parfois cette étape. </p>
+
+          <p> Or, c'est une étape fondatrice de la vie d'une entreprise. L'aménagement d'un lieu de travail est un événèment dont la singularité va de pair avec sa perennité. Il apporte (ou non) une certaine cohérence avec les valeurs de l'entreprise, une orientation dans les interactions entre employés et enfin une notion de bien être.</p>
+
+          <p>Nous avons créé Renoloco pour accompagner le gérant d'entreprise dans sa démarche de rénovation de bureaux. Notre engagement s'articule autour de deux actions : lui donner les bonnes informations et lui trouver les prestataires qualifiés qui correspondent à ses besoins et à ses goûts.</p>
+
+          <p>Notre vision est que l'aménagement de bureaux est un formidable terrain de jeux pour innover dans l'entreprise en redéfinissant le cadre des relations entre salariés mais aussi une démarche esthétique vouée à profiter au plus grand nombre.</p>
+
+
+          <h3><strong>L'équipe</strong></h3>
+          <br>
+
+          <div class="row">
+            <div class="col-xs-3 col-md-3">
+              <%= image_tag "Guillaume.jpg", width: 150, height: 200, crop: :fill  %>
+            </div>
+            <div class="col-xs-9 col-md-9">
+               <h5><strong>Guillaume Salin</strong></h5>
+                <p class="italic">Directeur commercial, co-fondateur</p>
+
+                <p>Diplômé de l'ISG. Après un passage chez L'oréal et Coca-cola en tant que commercial, Guillaume a été responsable de transaction en immobilier de bureau au sein de BNP Paribas Real Estate pendant 5 ans.</p>
+            </div>
+          </div>
+
+          <br>
+          <br>
+
+          <div class="row">
+            <div class="col-xs-3 col-md-3">
+              <%= image_tag "Edouard.jpg", width: 150, height: 200, crop: :fill  %>
+            </div>
+            <div class="col-xs-9 col-md-9">
+               <h5><strong>Edouard Castaignet</strong></h5>
+                <p class="italic">Directeur éditorial, co-fondateur</p>
+
+                <p>Diplômé de Sciences-Po Strasbourg et de l'EM Lyon, Edouard a commencé sa carrière comme journaliste puis il a occupé différents postes au sein du Cercle des économistes, association de réflexion sur l'économie, dont celui de responsable de la communication digitale.</p>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+         <h3><strong>Nous contacter</strong></h3>
+
+          <p>Vous avez une question, une remarque. Vous êtes une entreprise ou un professionnel. Merci de nous contacter par mail, nous vous rappelerons rapidement.</p>
+
+
+          <h5>contact@renoloco.fr</h5>
 
         </div>
       </div>
@@ -32,6 +75,3 @@
     </div>
   </div>
 </div>
-
-<%= render 'shared/article_bottom_navigation' %>
-
