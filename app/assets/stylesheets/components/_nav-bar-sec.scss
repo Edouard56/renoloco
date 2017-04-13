@@ -1,3 +1,53 @@
+
+
+// CSS de la navbar secondaire
+
+
+.navbar {
+  box-shadow: 5px 4px 5px #000;
+  margin-bottom: 0;
+  border-color: grey;
+  background-color: #4b4d58;
+}
+
+
+
+
+.navbar-inverse {
+  border: none;
+  border-top: 1px solid #f4f4f4;
+  background-color: white;
+
+  .navbar-nav {
+    li {
+      a {
+        color: #4b4d58;
+      }
+
+      a:hover, a:focus {
+        color: grey;
+      }
+    }
+  }
+}
+
+.navbar-collapse {
+  overflow-x: visible;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: white;
+    color: #4b4d58;
+    //background-color: darken(#4b4d58, 10%);
+    //color: #fff;
+}
+
+//tabs
+
 .tabs {
   height: 55px;
   background: #847681;
@@ -29,7 +79,43 @@
   color: black;
 }
 
-//submenu CSS
+//Dropdown
+
+nav {
+  .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  font-size: 16px;
+  text-align: left;
+  background-color: white;
+  //background-color: darken(#4b4d58, 10%);
+  //border: 1px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+  border-radius: 5px;
+  }
+
+  .dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.4;
+    color: white;
+    white-space: nowrap;
+  }
+}
+
+
+//Dropdown submenu CSS
 
 .dropdown-submenu {
     position: relative;
