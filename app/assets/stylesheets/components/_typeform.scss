@@ -137,3 +137,368 @@
 //   }
 // }
 
+.questions-container {
+  position: relative;
+
+  &::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: #F09819; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #F09819 , #EDDE5D); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #F09819 , #EDDE5D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    opacity: 0.7;
+    z-index: -1;
+
+  }
+}
+
+.thumbnail {
+  border: none !important;
+}
+
+.datepicker {
+  .day {
+    color: $dark-grey;
+  }
+  th {
+    color: $dark-grey;
+  }
+  .old {
+    color: $gray !important;
+  }
+  .new {
+    color: $gray !important;
+  }
+}
+
+.questions-footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+  height: 60px;
+  background: #E8E8E8;
+  z-index: 100;
+  max-width: auto;
+
+  .controls {
+    width: 100px;
+    display: flex;
+    .control {
+      padding: 10px;
+      color: white;
+      display: flex;
+      margin: 2px;
+      align-items: center;
+      background-color: #63d360;
+      border-radius: 2px;
+    }
+  }
+}
+
+.form-control:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  .progress {
+    width: 300px;
+    margin: 0px;
+  }
+  p {
+    padding-left: 10px;
+    margin: 0px;
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  .progress-bar {
+    background-color: #63d360 !important;
+  }
+}
+
+.question-container {
+  height: calc(100vh - 55px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h3 {
+    color: white;
+
+    span {
+      opacity: 0.6;
+      color: white;
+    }
+    i {
+      opacity: 0.6;
+      font-size: 20px;
+      margin-right: 20px;
+      top: -2px;
+      position: relative;
+      right: -7px;
+      color: white;
+    }
+    margin-bottom: 30px;
+  }
+  input {
+    background: transparent;
+    padding: 30px 0px;
+    border-bottom: 1px solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: rgba(0,0,0,0.2);
+    font-size: 20px;
+    border-image-slice: 2;
+    min-width: 260px;
+    max-width: 300px;
+    margin-left: -60px;
+    outline: none;
+    font-weight: bold;
+    color: #28262C;
+  }
+  input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgba(255, 255, 255, 0.6);
+  }
+  input::-moz-placeholder { /* Firefox 19+ */
+    color: rgba(255, 255, 255, 0.6);
+  }
+  input:-ms-input-placeholder { /* IE 10+ */
+    color: rgba(255, 255, 255, 0.6);
+  }
+  input:-moz-placeholder { /* Firefox 18- */
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  button {
+    margin-top: 36px;
+    background: #ffffff;
+    border: 1px solid #63d360;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 4px;
+    opacity: 1;
+    color: black;
+    font-size: 14px;
+
+    &:hover{
+      box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+      cursor:pointer;
+
+      .ok {
+        &::before{
+          left: 120%;
+        }
+      }
+    }
+
+    .ok {
+      position: relative;
+      background-color: #63d360;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      overflow: hidden;
+
+      &::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left:-120%;
+        transition:300ms;
+        background: rgba(255,255,255,0.52);
+        transform:skew(-30deg);
+      }
+    }
+
+    small {
+      padding-left: 10px;
+    }
+  }
+}
+
+.all-skills-btn {
+  display: flex;
+  margin-bottom: 10px;
+  button {
+    margin-right:10px;
+  }
+  .hidden-md {
+    button {
+      max-width: 150px;
+    }
+  }
+}
+
+.btn-works {
+  width: 200px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-works-active {
+  background: #63d360 !important;
+  color: white !important;
+
+  i {
+    color: #63d360 !important;
+  }
+}
+
+button:focus {
+  outline: none;
+}
+
+.skills-btn {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  padding:2px;
+
+  i {
+    position: absolute;
+    right: -31px;
+    background: white;
+    padding: 12px;
+    border-radius: 50%;
+    border: 1px solid #cdcdcd;
+    width: 46px;
+    height: 46px;
+    top: -34px;
+  }
+
+}
+
+  .hidden-md {
+    .skills-btn {
+    font-size: 18px;
+  }
+}
+
+.image_picker_selector {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 90px !important;
+  margin-left: -90px !important;
+
+
+
+  .thumbnail {
+  width: 320px;
+  height: 210px;
+  overflow: hidden;
+
+    .image_picker_image {
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      .image_picker_image {
+        filter: grayscale(100%);
+        border-radius: 0 !important;
+      }
+    }
+  }
+
+  li {
+    min-width: 25%;
+
+    .thumbnail.selected {
+      border:0px;
+      border-color: transparent;
+      background: #63d360 !important;
+    }
+  }
+}
+
+.thumbnail {
+  border-width: 0px;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.not-active {
+   pointer-events: none;
+   cursor: default;
+}
+
+.form-control {
+  font-weight: lighter;
+  box-shadow: none;
+}
+
+#customer_description {
+  padding: 20px;
+  margin-left: -60px;
+  height: 203px;
+  min-width: 317px;
+  border: none !important;
+}
+
+.final-btn {
+  font-family: 'Lato', sans-serif;
+  padding: 16px 42px;
+  font-size: 1em;
+  margin-top: 45px;
+  background: #63d360;
+  border: none;
+  line-height: 50px;
+  border-radius: 40px;
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition:300ms;
+}
+
+#final-btn {
+  font-family: 'Lato', sans-serif;
+  padding: 21px 7px;
+  font-size: 1em;
+  margin-top: 45px;
+  margin-left: 0px;
+  background: #63d360;
+  border: none;
+  line-height: 50px;
+  border-radius: 50px;
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+  position: relative;
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition:300ms;
+
+  &:hover {
+  box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  }
+}
+
+#row-hidden-md {
+  margin-left: 0px;
+}
