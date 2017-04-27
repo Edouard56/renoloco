@@ -76,9 +76,37 @@
       <span class="title-h2">
         <h2>Catégories d'articles</h2>
       </span>
+=======
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4">
+      <ul class="dropdown-lexique">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Les acteurs<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "agences de rénovation", root_path %></li>
+            <li><%= link_to "architectes", root_path %></li>
+            <li><%= link_to "décorateurs d'intérieur", root_path %></li>
+            <li><%= link_to "office stagers", root_path %></li>
+            <li><%= link_to "chief happiness officers", root_path %></li>
+            <li class="divider"></li>
+            <li><a href="#">les autres acteurs</a></li>
+            <li><%= link_to "loueurs de bureaux", root_path %></li>
+            <li><%= link_to "entreprises de déménagement", root_path %></li>
+          </ul>
+        </li>
+      </ul>
+
     </div>
   </div>
 </div>
+
 
 <div class="container">
   <div class="row">
@@ -87,6 +115,31 @@
         <%= image_tag "startup-indus.jpg", width: 250, height: 150, crop: :fill  %>
         <%= link_to "Se renseigner avant de commencer", root_path %>
         <p>Toutes les infos utiles avant de vous lancer dans la rénovation de vos locaux</p>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<!-- dropdown articles -->
+<div class="wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 col-sm-3">
+        <div><%= image_tag "banner2.jpg", class:"custom-dropdown-img" %></div>
+        <div class="dropdown show">
+          <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            DROP DOWN MENU
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <ul>
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+>
       </div>
     </div>
     <div class="col-xs-12 col-md-3">
@@ -135,9 +188,21 @@
           </ol>
           <!-- Carousel items -->
           <div class="carousel-inner">
-            <div class="active item"><%= image_tag "banner2.jpg" %></div>
-            <div class="item"><%= image_tag "banner_photo.jpg" %></div>
-            <div class="item"><%= image_tag "startup-indus.jpg" %></div>
+            <div class="active item photo-carousel"><%= image_tag "wefixphoto.png" %>
+              <div class="logo-carousel">
+                <span><%= image_tag "wefixlogo.png" %></span>
+              </div>
+            </div>
+            <div class="item photo-carousel"><%= image_tag "fishphoto.jpg" %>
+              <div class="logo-carousel">
+                <span><%= image_tag "fishlogo.png" %></span>
+              </div>
+            </div>
+            <div class="item photo-carousel"><%= image_tag "startup-indus.jpg" %>
+              <div class="logo-carousel">
+                <span><%= image_tag "designlogo.png" %></span>
+              </div>
+            </div>
           </div>
           <!-- Carousel nav -->
           <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
@@ -171,6 +236,12 @@
       $('.carousel').carousel('next')({
         interval: 3000;
       });
+
+      $('ul.dropdown-lexique li.dropdown').hover(function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(300);
+      }, function() {
+        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(300);
+      
     });
   </script>
 <% end %>

@@ -96,6 +96,22 @@ a:hover, a:focus {
   margin-top: 100px;
 }
 
+.photo-carousel {
+  position: relative;
+  opacity: 0,1;
+
+  .logo-carousel {
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+  }
+}
+
+
+.custom-dropdown-img {
+  max-width: 200px;
+  max-height: 200px;
+}
 // Dernier bouton vers formulaire
 
 #home-final-cta {
@@ -136,7 +152,6 @@ a:hover, a:focus {
       cursor:pointer;
     }
 }
-
 
 
 
